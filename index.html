@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experty.es — Русскоязычные специалисты в Испании</title>
+<meta name="description" content="Платформа проверенных русскоязычных специалистов в Испании. Бухгалтеры, юристы, психологи, риелторы, мастера красоты — все говорят по-русски.">
+<meta name="keywords" content="русскоязычные специалисты Испания, бухгалтер на русском Испания, юрист на русском Барселона, психолог на русском Испания, русские мастера Испания">
+<link rel="canonical" href="https://experty.es/">
+<meta property="og:title" content="Experty.es — Русскоязычные специалисты в Испании">
+<meta property="og:description" content="Проверенные русскоязычные специалисты в Испании. Бухгалтеры, юристы, психологи и другие эксперты.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://experty.es/">
+<meta property="og:image" content="https://experty.es/og-image.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Experty.es">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization",
+"name":"Experty.es","url":"https://experty.es",
+"description":"Платформа русскоязычных специалистов в Испании",
+"areaServed":{"@type":"Country","name":"España"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F7F5F2;--bg-alt:#EFEDE9;--ink:#1A1714;--ink-mid:#5C5650;--ink-light:#9A9590;
+  --gold:#C8A96E;--rule:rgba(26,23,20,0.10);--rule-mid:rgba(26,23,20,0.18);
+  --white:#FFFFFF;--serif:"Playfair Display",Georgia,serif;--sans:"Inter",system-ui,sans-serif;
+  --green:#2D6A4F;--green-light:rgba(45,106,79,0.08);
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans);cursor:pointer}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,245,242,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-logo{display:flex;align-items:baseline;gap:4px}
+.nav-logo-text{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--ink)}
+.nav-logo-dot{font-family:var(--serif);font-size:22px;color:var(--gold)}
+.nav-logo-es{font-size:13px;font-weight:600;color:var(--ink-light);letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-size:13px;color:var(--ink-mid);font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:10px 22px;font-size:13px;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:opacity .2s;white-space:nowrap}
+.nav-cta:hover{opacity:.85}
+
+/* HERO */
+.hero{padding-top:68px;background:var(--ink);min-height:88vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(200,169,110,0.12) 0%,transparent 70%)}
+.hero-inner{max-width:1200px;margin:0 auto;padding:56px 48px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero-flag{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,245,242,0.4);font-weight:500;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.hero-flag::before{content:'🇪🇸';font-size:16px;letter-spacing:0}
+.hero-h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,64px);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:var(--bg);margin-bottom:20px}
+.hero-h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:17px;line-height:1.75;color:rgba(247,245,242,0.65);font-weight:300;max-width:480px;margin-bottom:36px}
+.hero-sub strong{color:var(--bg);font-weight:500}
+.hero-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:15px 32px;font-size:14px;font-weight:600;letter-spacing:.04em;cursor:pointer;transition:opacity .2s,transform .15s}
+.btn-gold:hover{opacity:.85;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:rgba(247,245,242,0.7);border:1px solid rgba(247,245,242,0.2);border-radius:4px;padding:14px 28px;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s}
+.btn-ghost:hover{border-color:rgba(247,245,242,0.5);color:var(--bg)}
+.hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(247,245,242,0.08);border-radius:12px;overflow:hidden}
+.hero-stat{background:rgba(247,245,242,0.05);padding:28px 24px;text-align:center}
+.hero-stat-num{font-family:var(--serif);font-size:42px;font-weight:400;color:var(--gold);line-height:1;margin-bottom:6px}
+.hero-stat-label{font-size:13px;color:rgba(247,245,242,0.5);line-height:1.4}
+
+/* TRUST BAR */
+.trust-bar{background:var(--bg-alt);border-bottom:1px solid var(--rule);padding:16px 0}
+.trust-bar-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-mid);font-weight:500}
+.trust-icon{font-size:18px}
+
+/* CATEGORIES */
+.sec{padding:80px 0}
+.sec-alt{background:var(--bg-alt)}
+.sec-inner{max-width:1200px;margin:0 auto;padding:0 48px}
+.sec-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--gold)}
+.sec-title{font-family:var(--serif);font-size:clamp(28px,3.5vw,46px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+.sec-title em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:16px;color:var(--ink-mid);max-width:680px;line-height:1.7;margin-bottom:48px}
+
+.cats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat-card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:28px 24px;cursor:pointer;transition:all .22s;position:relative;overflow:hidden;text-decoration:none;display:block}
+.cat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,169,110,0) 0%,rgba(200,169,110,0.06) 100%);opacity:0;transition:opacity .22s}
+.cat-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,23,20,0.08)}
+.cat-card:hover::before{opacity:1}
+.cat-icon{font-size:36px;margin-bottom:14px;display:block}
+.cat-name{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.cat-count{font-size:12px;color:var(--ink-light);font-weight:500}
+.cat-card.featured{border-color:var(--gold);background:linear-gradient(135deg,#fdf8f0 0%,var(--white) 100%)}
+.cat-badge{display:inline-block;background:var(--gold);color:var(--ink);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:100px;margin-bottom:12px}
+
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.how-item{padding:36px 32px;border-right:1px solid var(--rule);position:relative}
+.how-item:last-child{border-right:none}
+.how-num{font-family:var(--serif);font-size:52px;font-weight:400;color:rgba(200,169,110,0.25);line-height:1;margin-bottom:16px}
+.how-item h3{font-family:var(--serif);font-size:20px;font-weight:500;margin-bottom:10px}
+.how-item p{font-size:14px;color:var(--ink-mid);line-height:1.7}
+
+/* FEATURED SPECIALIST */
+.specialist-card{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+.spec-left{background:var(--ink);padding:48px;display:flex;flex-direction:column;justify-content:space-between}
+.spec-category{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:20px}
+.spec-name{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:400;color:var(--bg);line-height:1.1;margin-bottom:14px}
+.spec-name em{font-style:italic;color:var(--gold)}
+.spec-desc{font-size:15px;color:rgba(247,245,242,0.65);line-height:1.75;margin-bottom:32px}
+.spec-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.spec-tag{background:rgba(247,245,242,0.08);border:1px solid rgba(247,245,242,0.12);color:rgba(247,245,242,0.7);border-radius:100px;padding:5px 14px;font-size:12px}
+.spec-cta{display:inline-block;background:var(--gold);color:var(--ink);border-radius:4px;padding:14px 28px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:opacity .2s}
+.spec-cta:hover{opacity:.85}
+.spec-right{background:var(--white);padding:48px;display:flex;flex-direction:column;gap:20px}
+.spec-feature{display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--bg);border-radius:10px;border:1px solid var(--rule)}
+.spec-feature-icon{font-size:24px;flex-shrink:0}
+.spec-feature h4{font-family:var(--serif);font-size:16px;font-weight:500;margin-bottom:4px}
+.spec-feature p{font-size:13px;color:var(--ink-mid);line-height:1.55}
+.spec-price{background:var(--bg-alt);border:1px solid var(--rule);border-radius:10px;padding:20px;text-align:center}
+.spec-price-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);margin-bottom:6px}
+.spec-price-value{font-family:var(--serif);font-size:32px;font-weight:400;color:var(--ink)}
+.spec-price-note{font-size:12px;color:var(--ink-light);margin-top:4px}
+
+/* WHY */
+.why-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.why-item{display:grid;grid-template-columns:60px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--rule);align-items:start}
+.why-icon{font-size:28px;padding-top:2px}
+.why-item h3{font-family:var(--serif);font-size:19px;font-weight:500;margin-bottom:6px}
+.why-item p{font-size:14px;color:var(--ink-mid);line-height:1.7}
+
+/* CTA BANNER */
+.cta-banner{background:var(--ink);padding:80px 48px;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(200,169,110,0.15) 0%,transparent 60%)}
+.cta-banner h2{font-family:var(--serif);font-size:clamp(26px,3.5vw,48px);font-weight:400;color:var(--bg);letter-spacing:-.02em;margin-bottom:14px;position:relative}
+.cta-banner h2 em{font-style:italic;color:var(--gold)}
+.cta-banner p{font-size:16px;color:rgba(247,245,242,0.55);margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto;position:relative}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+
+/* FOOTER */
+.footer{background:var(--ink);border-top:1px solid rgba(247,245,242,0.08);padding:48px 0 32px}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 48px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(247,245,242,0.08)}
+.footer-logo{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--bg);margin-bottom:12px}
+.footer-logo span{color:var(--gold)}
+.footer-desc{font-size:13px;color:rgba(247,245,242,0.4);line-height:1.7;max-width:240px}
+.footer-col h4{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,242,0.35);font-weight:600;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{font-size:13px;color:rgba(247,245,242,0.5);transition:color .2s}
+.footer-col ul li a:hover{color:rgba(247,245,242,0.85)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px}
+.footer-copy{font-size:12px;color:rgba(247,245,242,0.25)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:12px;color:rgba(247,245,242,0.25);transition:color .2s}
+.footer-links a:hover{color:rgba(247,245,242,0.5)}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(26,23,20,.6);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--white);border-radius:16px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;padding:44px 40px;position:relative;animation:mIn .25s ease}
+@keyframes mIn{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:18px;right:18px;width:34px;height:34px;border-radius:50%;background:var(--bg-alt);border:none;font-size:16px;color:var(--ink-mid);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+.modal-close:hover{background:var(--rule-mid)}
+.modal-title{font-family:var(--serif);font-size:26px;font-weight:400;margin-bottom:6px}
+.modal-sub{font-size:14px;color:var(--ink-light);margin-bottom:24px}
+.form-field{margin-bottom:14px}
+.form-field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);font-weight:500;margin-bottom:6px}
+.form-field input,.form-field select,.form-field textarea{width:100%;background:var(--bg);border:1px solid var(--rule-mid);border-radius:6px;padding:12px 16px;color:var(--ink);font-size:15px;font-family:var(--sans);outline:none;transition:border-color .2s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold)}
+.form-field textarea{resize:vertical;min-height:80px}
+.form-submit{width:100%;background:var(--gold);color:var(--ink);border:none;border-radius:6px;padding:15px;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:opacity .2s;margin-top:8px}
+.form-submit:hover{opacity:.85}
+.modal-div{display:flex;align-items:center;gap:10px;margin:16px 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light)}
+.modal-div::before,.modal-div::after{content:'';flex:1;height:1px;background:var(--rule)}
+.msg-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.msg-btn{display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 6px;border-radius:8px;border:1px solid var(--rule-mid);color:var(--ink);transition:border-color .18s,background .18s;text-decoration:none}
+.msg-btn:hover{border-color:var(--gold);background:var(--bg)}
+.msg-icon{font-size:22px}
+.msg-label{font-size:11px;color:var(--ink-mid)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .cats-grid{grid-template-columns:repeat(2,1fr)}
+  .how-grid{grid-template-columns:1fr}
+  .how-item{border-right:none;border-bottom:1px solid var(--rule)}
+  .how-item:last-child{border-bottom:none}
+  .specialist-card{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-stats{max-width:360px}
+}
+@media(max-width:768px){
+  .nav-inner{padding:0 20px}
+  .nav-links{display:none}
+  .nav-cta{padding:8px 16px;font-size:12px}
+  .hero-inner{padding:32px 20px 48px}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .trust-bar-inner{gap:20px;padding:0 20px}
+  .sec-inner{padding:0 20px}
+  .cats-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .cat-card{padding:20px 16px}
+  .spec-left,.spec-right{padding:28px 24px}
+  .cta-banner{padding:56px 20px}
+  .footer-inner{padding:0 20px}
+  .footer-top{grid-template-columns:1fr;gap:24px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .why-item{grid-template-columns:44px 1fr;gap:16px}
+}
+@media(max-width:390px){
+  .hero-h1{font-size:30px}
+  .cats-grid{grid-template-columns:1fr}
+  .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-text">Experty</span>
+      <span class="nav-logo-dot">.</span>
+      <span class="nav-logo-es">es</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#categories">Специалисты</a></li>
+      <li><a href="#how">Как работает</a></li>
+      <li><a href="experty-buhgalter.html">Бухгалтер</a></li>
+      <li><a href="#for-specialists">Я специалист</a></li>
+    </ul>
+    <button class="nav-cta" onclick="openModal('client')">Найти специалиста</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-flag">Испания · Русскоязычные специалисты</p>
+      <h1 class="hero-h1">Свои специалисты<br>в <em>Испании</em></h1>
+      <p class="hero-sub">Проверенные <strong>русскоязычные эксперты</strong> — бухгалтеры, юристы, психологи, мастера красоты и другие. Все говорят по-русски, работают в Испании.</p>
+      <div class="hero-actions">
+        <button class="btn-gold" onclick="openModal('client')">Найти специалиста →</button>
+        <button class="btn-ghost" onclick="openModal('specialist')">Я специалист</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">🇪🇸</div>
+        <div class="hero-stat-label">Работаем<br>по всей Испании</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">RU</div>
+        <div class="hero-stat-label">Все специалисты<br>говорят по-русски</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">✓</div>
+        <div class="hero-stat-label">Проверенные<br>специалисты</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">0₽</div>
+        <div class="hero-stat-label">Бесплатно для<br>клиентов</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span class="trust-icon">💬</span> Общение на русском</div>
+    <div class="trust-item"><span class="trust-icon">📍</span> Барселона · Мадрид · Вся Испания</div>
+    <div class="trust-item"><span class="trust-icon">⚡</span> Ответ в течение дня</div>
+    <div class="trust-item"><span class="trust-icon">🔒</span> Проверенные специалисты</div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="sec" id="categories">
+  <div class="sec-inner">
+    <div class="sec-label">Специалисты</div>
+    <h2 class="sec-title">Найдите нужного<br><em>эксперта</em></h2>
+    <p class="sec-sub">Все специалисты платформы — русскоязычные профессионалы которые живут и работают в Испании.</p>
+
+    <div class="cats-grid">
+      <a href="experty-buhgalter.html" class="cat-card featured">
+        <span class="cat-badge">Уже работаем</span>
+        <span class="cat-icon">📊</span>
+        <div class="cat-name">Бухгалтер и Gestor</div>
+        <div class="cat-count">Налоги · autónomo · SL · IRPF</div>
+      </a>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">⚖️</span>
+        <div class="cat-name">Юрист и адвокат</div>
+        <div class="cat-count">ВНЖ · Недвижимость · Трудовые споры</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🧠</span>
+        <div class="cat-name">Психолог</div>
+        <div class="cat-count">Онлайн · Адаптация · Семья</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🏠</span>
+        <div class="cat-name">Риелтор</div>
+        <div class="cat-count">Аренда · Покупка · ВНЖ через недвижимость</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">💅</span>
+        <div class="cat-name">Мастер красоты</div>
+        <div class="cat-count">Маникюр · Брови · Ресницы · Макияж</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">✂️</span>
+        <div class="cat-name">Парикмахер</div>
+        <div class="cat-count">Стрижки · Окрашивание · Укладка</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🏋️</span>
+        <div class="cat-name">Тренер и нутрициолог</div>
+        <div class="cat-count">Онлайн · Офлайн · Йога · Похудение</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">📋</span>
+        <div class="cat-name">ВНЖ и документы</div>
+        <div class="cat-count">Релокация · Гражданство · Цифровая виза</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED SPECIALIST -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="sec-label">Специалист месяца</div>
+    <h2 class="sec-title" style="margin-bottom:32px">Бухгалтер и gestor<br><em>на русском</em></h2>
+    <div class="specialist-card">
+      <div class="spec-left">
+        <div>
+          <div class="spec-category">📊 Бухгалтерия и налоги · Испания</div>
+          <div class="spec-name">Бухгалтерское<br>сопровождение<br><em>на русском</em></div>
+          <p class="spec-desc">Помогаем русскоязычным предпринимателям разобраться в испанской налоговой системе. Регистрация autónomo, квартальные декларации, бухгалтерия SL — всё объясняем понятно на родном языке.</p>
+          <div class="spec-tags">
+            <span class="spec-tag">autónomo</span>
+            <span class="spec-tag">SL</span>
+            <span class="spec-tag">IRPF</span>
+            <span class="spec-tag">IVA</span>
+            <span class="spec-tag">Онлайн по всей Испании</span>
+          </div>
+        </div>
+        <button class="spec-cta" onclick="openModal('client')">Записаться на консультацию →</button>
+      </div>
+      <div class="spec-right">
+        <div class="spec-feature">
+          <span class="spec-feature-icon">🗣️</span>
+          <div>
+            <h4>Всё на русском языке</h4>
+            <p>Объясняем испанскую налоговую систему без терминологических барьеров. Вы понимаете что происходит с вашими налогами.</p>
+          </div>
+        </div>
+        <div class="spec-feature">
+          <span class="spec-feature-icon">🌐</span>
+          <div>
+            <h4>Онлайн по всей Испании</h4>
+            <p>Работаем удалённо — документы через email и облако. Подходит для клиентов из любого города Испании.</p>
+          </div>
+        </div>
+        <div class="spec-feature">
+          <span class="spec-feature-icon">⚡</span>
+          <div>
+            <h4>Быстрая регистрация autónomo</h4>
+            <p>Регистрируем за 1–2 дня. Рассказываем какую систему налогообложения выбрать и почему.</p>
+          </div>
+        </div>
+        <div class="spec-price">
+          <div class="spec-price-label">Первичная консультация</div>
+          <div class="spec-price-value">Бесплатно</div>
+          <div class="spec-price-note">30 минут · По видеосвязи или Telegram</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <a href="experty-buhgalter.html" style="font-size:14px;color:var(--gold);font-weight:600">Подробнее о бухгалтерских услугах →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="how">
+  <div class="sec-inner">
+    <div class="sec-label">Как это работает</div>
+    <h2 class="sec-title">Просто и<br><em>понятно</em></h2>
+    <p class="sec-sub">Никаких регистраций и лишних шагов — найдите специалиста и свяжитесь с ним напрямую.</p>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="how-num">01</div>
+        <h3>Выберите специалиста</h3>
+        <p>Выберите нужную категорию и прочитайте о специалисте — опыт, услуги, цены. Всё прозрачно и на русском языке.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">02</div>
+        <h3>Свяжитесь напрямую</h3>
+        <p>Напишите в WhatsApp или Telegram прямо со страницы специалиста. Никаких посредников — общаетесь напрямую.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">03</div>
+        <h3>Получите помощь</h3>
+        <p>Первая консультация у большинства специалистов бесплатная. Без языкового барьера, без недопонимания.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR SPECIALISTS -->
+<section class="sec sec-alt" id="for-specialists">
+  <div class="sec-inner">
+    <div class="sec-label">Для специалистов</div>
+    <h2 class="sec-title">Вы специалист<br><em>в Испании?</em></h2>
+    <p class="sec-sub">Разместите свои услуги на Experty.es и получайте клиентов из русскоязычной диаспоры. Сейчас — бесплатно.</p>
+    <div class="why-list">
+      <div class="why-item">
+        <span class="why-icon">🎯</span>
+        <div>
+          <h3>Ваша аудитория уже здесь</h3>
+          <p>Русскоязычные в Испании активно ищут «своих» специалистов. Мы собираем эту аудиторию в одном месте — вам остаётся только быть здесь.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">🔍</span>
+        <div>
+          <h3>SEO которое работает</h3>
+          <p>Страница каждого специалиста оптимизирована под поисковые запросы русскоязычной аудитории в Испании. Вас находят в Google без рекламного бюджета.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">💸</span>
+        <div>
+          <h3>Сейчас бесплатно</h3>
+          <p>На этапе запуска платформы размещение бесплатное. Первые специалисты получают лучшие позиции и максимальную видимость.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-icon">⚡</span>
+        <div>
+          <h3>Быстрый старт</h3>
+          <p>Заполните форму — через 24–48 часов ваша страница появится на платформе. Никакого технического сопровождения не нужно.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:36px">
+      <button class="btn-gold" onclick="openModal('specialist')" style="font-size:14px;padding:16px 36px">Хочу разместиться на платформе →</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <h2>Нашли что искали?<br><em>Свяжитесь прямо сейчас</em></h2>
+  <p>Первая консультация у большинства специалистов — бесплатная. Напишите и убедитесь сами.</p>
+  <div class="cta-actions">
+    <button class="btn-gold" onclick="openModal('client')">Найти специалиста →</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Experty<span>.</span>es</div>
+        <p class="footer-desc">Платформа проверенных русскоязычных специалистов в Испании. Работаем из Барселоны.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Специалисты</h4>
+        <ul>
+          <li><a href="experty-buhgalter.html">Бухгалтер</a></li>
+          <li><a href="#categories">Юрист</a></li>
+          <li><a href="#categories">Психолог</a></li>
+          <li><a href="#categories">Риелтор</a></li>
+          <li><a href="#categories">Мастер красоты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Платформа</h4>
+        <ul>
+          <li><a href="#how">Как работает</a></li>
+          <li><a href="#for-specialists">Для специалистов</a></li>
+          <li><a href="#categories">Все категории</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="https://t.me/infoaccount1">Telegram</a></li>
+          <li><a href="https://wa.me/79167347616">WhatsApp</a></li>
+          <li><a href="mailto:info@experty.es">info@experty.es</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Experty.es · Барселона, Испания</p>
+      <div class="footer-links">
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 class="modal-title" id="modal-title">Найти специалиста</h2>
+    <p class="modal-sub" id="modal-sub">Оставьте контакт — подберём подходящего специалиста</p>
+    <form id="mf" action="https://formspree.io/f/mbdvdyjw" method="POST">
+      <input type="hidden" name="page" value="experty-index">
+      <input type="hidden" name="type" id="form-type" value="client">
+      <div class="form-field">
+        <label>Имя</label>
+        <input type="text" name="name" placeholder="Александра" required>
+      </div>
+      <div class="form-field">
+        <label>Telegram или WhatsApp</label>
+        <input type="text" name="contact" placeholder="+34 / @username" required>
+      </div>
+      <div class="form-field" id="category-field">
+        <label>Какой специалист нужен?</label>
+        <select name="category">
+          <option value="">Выберите...</option>
+          <option>Бухгалтер / Gestor</option>
+          <option>Юрист</option>
+          <option>Психолог</option>
+          <option>Риелтор</option>
+          <option>Мастер красоты</option>
+          <option>Парикмахер</option>
+          <option>Тренер / Нутрициолог</option>
+          <option>ВНЖ и документы</option>
+          <option>Другое</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Коротко о задаче</label>
+        <textarea name="message" placeholder="Расскажите что нужно..."></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="mfsub">Отправить →</button>
+      <div id="mfsuc" style="display:none;margin-top:12px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;font-size:14px;color:#166534">✓ Получили! Свяжемся в течение дня.</div>
+      <p style="font-size:12px;color:var(--ink-light);margin-top:10px;text-align:center">Бесплатно для клиентов</p>
+    </form>
+    <div class="modal-div">или напишите напрямую</div>
+    <div class="msg-row">
+      <a href="https://wa.me/79167347616" target="_blank" class="msg-btn"><span class="msg-icon">💬</span><span class="msg-label">WhatsApp</span></a>
+      <a href="https://t.me/infoaccount1" target="_blank" class="msg-btn"><span class="msg-icon">✈️</span><span class="msg-label">Telegram</span></a>
+      <a href="mailto:info@experty.es" class="msg-btn"><span class="msg-icon">✉️</span><span class="msg-label">Email</span></a>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(type){
+  const modal = document.getElementById('modal');
+  const title = document.getElementById('modal-title');
+  const sub = document.getElementById('modal-sub');
+  const catField = document.getElementById('category-field');
+  const formType = document.getElementById('form-type');
+  
+  if(type === 'specialist'){
+    title.textContent = 'Стать специалистом';
+    sub.textContent = 'Расскажите о себе — разместим на платформе';
+    catField.style.display = 'none';
+    formType.value = 'specialist';
+    document.querySelector('select[name="category"]').removeAttribute('required');
+  } else {
+    title.textContent = 'Найти специалиста';
+    sub.textContent = 'Оставьте контакт — подберём подходящего специалиста';
+    catField.style.display = 'block';
+    formType.value = 'client';
+  }
+  
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';}
+function closeModalOutside(e){if(e.target===document.getElementById('modal'))closeModal();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+const mf = document.getElementById('mf');
+if(mf){
+  mf.addEventListener('submit', async e=>{
+    e.preventDefault();
+    const sb = document.getElementById('mfsub');
+    sb.textContent = 'Отправляем...';
+    sb.disabled = true;
+    try{
+      const r = await fetch(mf.action,{method:'POST',body:new FormData(mf),headers:{'Accept':'application/json'}});
+      if(r.ok){document.getElementById('mfsuc').style.display='block';mf.reset();sb.textContent='Отправлено ✓';}
+      else throw new Error();
+    } catch{sb.textContent='Отправить →';sb.disabled=false;}
+  });
+}
+</script>
+</body>
+</html>
