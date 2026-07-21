@@ -547,6 +547,34 @@ button{font-family:var(--sans);cursor:pointer}
 </section>
 
 <!-- CTA -->
+
+<!-- ДЛЯ СПЕЦИАЛИСТОВ -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="sec-label">Для специалистов</div>
+    <h2 class="sec-title">Вы бухгалтер<br><em>в Испании?</em></h2>
+    <p class="sec-sub">Разместите свои услуги на Experty.es и получайте клиентов из русскоязычной диаспоры. Работаете как autónomo — никаких трудовых обязательств с нашей стороны.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:36px">
+      <div style="padding:24px;background:var(--white);border:1px solid var(--rule);border-radius:10px">
+        <div style="font-size:28px;margin-bottom:10px">🔍</div>
+        <h3 style="font-family:var(--serif);font-size:16px;font-weight:500;margin-bottom:6px">Клиенты из поиска</h3>
+        <p style="font-size:13px;color:var(--ink-mid);line-height:1.6">Ваша страница оптимизирована под Google. Клиенты находят вас по запросам «бухгалтер на русском Испания» без рекламного бюджета.</p>
+      </div>
+      <div style="padding:24px;background:var(--white);border:1px solid var(--rule);border-radius:10px">
+        <div style="font-size:28px;margin-bottom:10px">💸</div>
+        <h3 style="font-family:var(--serif);font-size:16px;font-weight:500;margin-bottom:6px">Сейчас бесплатно</h3>
+        <p style="font-size:13px;color:var(--ink-mid);line-height:1.6">На этапе запуска размещение бесплатное. Первые специалисты получают лучшие позиции и максимальную видимость.</p>
+      </div>
+      <div style="padding:24px;background:var(--white);border:1px solid var(--rule);border-radius:10px">
+        <div style="font-size:28px;margin-bottom:10px">⚡</div>
+        <h3 style="font-family:var(--serif);font-size:16px;font-weight:500;margin-bottom:6px">Быстрый старт</h3>
+        <p style="font-size:13px;color:var(--ink-mid);line-height:1.6">Заполните форму — через 24–48 часов ваша страница появится на платформе. Работаете как autónomo — всё по закону.</p>
+      </div>
+    </div>
+    <button onclick="openModalSpec()" style="background:var(--ink);color:var(--bg);border:none;border-radius:4px;padding:14px 32px;font-size:14px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:background .2s">Хочу разместиться →</button>
+  </div>
+</section>
+
 <div class="cta-banner">
   <h2>Первая консультация<br><em>бесплатно</em></h2>
   <p>Задайте любой вопрос по налогам в Испании — ответим честно и по-русски.</p>
@@ -556,7 +584,7 @@ button{font-family:var(--sans);cursor:pointer}
 <footer class="footer">
   <div class="footer-inner">
     <a href="experty-index.html" class="footer-logo">Experty<span>.</span>es</a>
-    <p class="footer-copy">© 2026 Experty.es · Барселона, Испания</p>
+    <p class="footer-copy">© 2026 SL Claros Asesores · Experty.es · Барселона · <a href="https://umniy-site.ru" target="_blank" style="color:var(--gold)">Сайт — Forma Studio</a></p>
   </div>
 </footer>
 
@@ -577,7 +605,7 @@ button{font-family:var(--sans);cursor:pointer}
     </form>
     <div class="modal-div">или напишите напрямую</div>
     <div class="msg-row">
-      <a href="https://wa.me/79167347616" target="_blank" class="msg-btn"><span class="msg-icon">💬</span><span class="msg-label">WhatsApp</span></a>
+      <a href="https://wa.me/34685093534" target="_blank" class="msg-btn"><span class="msg-icon">💬</span><span class="msg-label">WhatsApp</span></a>
       <a href="https://t.me/infoaccount1" target="_blank" class="msg-btn"><span class="msg-icon">✈️</span><span class="msg-label">Telegram</span></a>
       <a href="mailto:info@experty.es" class="msg-btn"><span class="msg-icon">✉️</span><span class="msg-label">Email</span></a>
     </div>
@@ -597,5 +625,30 @@ if(r.ok){document.getElementById('mfsuc').style.display='block';mf.reset();sb.te
 else throw new Error()}catch{sb.textContent='Записаться →';sb.disabled=false}})}
 function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!isOpen)item.classList.add('open')}
 </script>
+
+<!-- MODAL SPECIALIST -->
+<div class="modal-overlay" id="modal-spec" onclick="if(event.target===this)closeModalSpec()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModalSpec()">✕</button>
+    <h2 class="modal-title">Разместиться на Experty.es</h2>
+    <p class="modal-sub">Расскажите о себе — свяжемся в течение дня</p>
+    <form id="mf-spec" action="https://formspree.io/f/mbdvdyjw" method="POST">
+      <input type="hidden" name="page" value="experty-buhgalter-specialist">
+      <div class="form-field"><label>Имя и специализация</label><input type="text" name="name" placeholder="Анна, бухгалтер / gestor" required></div>
+      <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
+      <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Барселона / онлайн по всей Испании"></div>
+      <div class="form-field"><label>Коротко о себе и услугах</label><textarea name="message" placeholder="Опыт, специализация, что предлагаете клиентам..."></textarea></div>
+      <button type="submit" class="form-submit" id="mfsub-spec" style="background:var(--ink);color:var(--bg)">Отправить заявку →</button>
+      <div id="mfsuc-spec" style="display:none;margin-top:12px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;font-size:14px;color:#166534">✓ Получили! Свяжемся в течение дня.</div>
+    </form>
+    <div class="modal-div">или напишите напрямую</div>
+    <div class="msg-row">
+      <a href="https://wa.me/34685093534" target="_blank" class="msg-btn"><span class="msg-icon">💬</span><span class="msg-label">WhatsApp</span></a>
+      <a href="https://t.me/infoaccount1" target="_blank" class="msg-btn"><span class="msg-icon">✈️</span><span class="msg-label">Telegram</span></a>
+      <a href="mailto:info@experty.es" class="msg-btn"><span class="msg-icon">✉️</span><span class="msg-label">Email</span></a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
