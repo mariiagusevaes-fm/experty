@@ -183,7 +183,7 @@ button{font-family:var(--sans);cursor:pointer}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-  .cats-grid{grid-template-columns:repeat(2,1fr)}
+  .cats-grid{grid-template-columns:repeat(3,1fr)}
   .how-grid{grid-template-columns:1fr}
   .how-item{border-right:none;border-bottom:1px solid var(--rule)}
   .how-item:last-child{border-bottom:none}
@@ -214,6 +214,10 @@ button{font-family:var(--sans);cursor:pointer}
   .cats-grid{grid-template-columns:1fr}
   .nav-cta{display:none}
 }
+
+@media(max-width:768px){
+  div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;gap:24px!important}
+}
 </style>
 </head>
 <body>
@@ -229,7 +233,7 @@ button{font-family:var(--sans);cursor:pointer}
       <li><a href="#categories">Специалисты</a></li>
       <li><a href="#how">Как работает</a></li>
       <li><a href="experty-buhgalter.html">Бухгалтер</a></li>
-      <li><a href="#for-specialists">Я специалист</a></li>
+      <li><a href="experty-dlya-spetsialistov.html" style="color:var(--gold);font-weight:600">Я специалист →</a></li>
     </ul>
     <button class="nav-cta" onclick="openModal('client')">Найти специалиста</button>
   </div>
@@ -287,20 +291,30 @@ button{font-family:var(--sans);cursor:pointer}
 
     <div class="cats-grid">
       <a href="experty-buhgalter.html" class="cat-card featured">
-        <span class="cat-badge">Уже работаем</span>
+        <span class="cat-badge">Работаем сейчас</span>
         <span class="cat-icon">📊</span>
-        <div class="cat-name">Бухгалтер и Gestor</div>
+        <div class="cat-name">Бухгалтер / Gestor</div>
         <div class="cat-count">Налоги · autónomo · SL · IRPF</div>
       </a>
       <div class="cat-card" onclick="openModal('client')">
         <span class="cat-icon">⚖️</span>
         <div class="cat-name">Юрист и адвокат</div>
-        <div class="cat-count">ВНЖ · Недвижимость · Трудовые споры</div>
+        <div class="cat-count">ВНЖ · Трудовой · Семейный · Недвижимость</div>
       </div>
       <div class="cat-card" onclick="openModal('client')">
         <span class="cat-icon">🧠</span>
         <div class="cat-name">Психолог</div>
-        <div class="cat-count">Онлайн · Адаптация · Семья</div>
+        <div class="cat-count">Онлайн · Адаптация · Семья · Тревога</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">📚</span>
+        <div class="cat-name">Репетитор</div>
+        <div class="cat-count">Школьные предметы · Испанский · ЕГЭ</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">👶</span>
+        <div class="cat-name">Няня</div>
+        <div class="cat-count">Уход за детьми · Развитие · Русский язык</div>
       </div>
       <div class="cat-card" onclick="openModal('client')">
         <span class="cat-icon">🏠</span>
@@ -310,7 +324,7 @@ button{font-family:var(--sans);cursor:pointer}
       <div class="cat-card" onclick="openModal('client')">
         <span class="cat-icon">💅</span>
         <div class="cat-name">Мастер красоты</div>
-        <div class="cat-count">Маникюр · Брови · Ресницы · Макияж</div>
+        <div class="cat-count">Маникюр · Брови · Ресницы · Эпиляция</div>
       </div>
       <div class="cat-card" onclick="openModal('client')">
         <span class="cat-icon">✂️</span>
@@ -318,16 +332,56 @@ button{font-family:var(--sans);cursor:pointer}
         <div class="cat-count">Стрижки · Окрашивание · Укладка</div>
       </div>
       <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🧖</span>
+        <div class="cat-name">Косметолог</div>
+        <div class="cat-count">Уходы · Пилинги · Массаж лица</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
         <span class="cat-icon">🏋️</span>
-        <div class="cat-name">Тренер и нутрициолог</div>
-        <div class="cat-count">Онлайн · Офлайн · Йога · Похудение</div>
+        <div class="cat-name">Тренер / Нутрициолог</div>
+        <div class="cat-count">Онлайн · Офлайн · Йога · Питание</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🗣️</span>
+        <div class="cat-name">Логопед</div>
+        <div class="cat-count">Дети · Взрослые · Онлайн</div>
       </div>
       <div class="cat-card" onclick="openModal('client')">
         <span class="cat-icon">📋</span>
         <div class="cat-name">ВНЖ и документы</div>
         <div class="cat-count">Релокация · Гражданство · Цифровая виза</div>
       </div>
-    </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🛡️</span>
+        <div class="cat-name">Страховой агент</div>
+        <div class="cat-count">Здоровье · Авто · Жильё · Жизнь</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🧹</span>
+        <div class="cat-name">Клининг</div>
+        <div class="cat-count">Квартиры · Офисы · После ремонта</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🔧</span>
+        <div class="cat-name">Мастер на дом</div>
+        <div class="cat-count">Ремонт техники · Сборка мебели · Мелкий ремонт</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">📸</span>
+        <div class="cat-name">Фотограф</div>
+        <div class="cat-count">Свадьбы · Дети · Документы · Бизнес</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🎨</span>
+        <div class="cat-name">Дизайнер</div>
+        <div class="cat-count">Интерьер · Графика · Веб</div>
+      </div>
+      <div class="cat-card" onclick="openModal('client')">
+        <span class="cat-icon">🤱</span>
+        <div class="cat-name">Специалист по ГВ</div>
+        <div class="cat-count">Консультант по грудному вскармливанию</div>
+      </div>
+    </div></div>
   </div>
 </section>
 
@@ -418,39 +472,76 @@ button{font-family:var(--sans);cursor:pointer}
   <div class="sec-inner">
     <div class="sec-label">Для специалистов</div>
     <h2 class="sec-title">Вы специалист<br><em>в Испании?</em></h2>
-    <p class="sec-sub">Разместите свои услуги на Experty.es и получайте клиентов из русскоязычной диаспоры. Сейчас — бесплатно.</p>
-    <div class="why-list">
-      <div class="why-item">
-        <span class="why-icon">🎯</span>
-        <div>
-          <h3>Ваша аудитория уже здесь</h3>
-          <p>Русскоязычные в Испании активно ищут «своих» специалистов. Мы собираем эту аудиторию в одном месте — вам остаётся только быть здесь.</p>
+    <p class="sec-sub">Размещайтесь на Experty.es и получайте клиентов из русскоязычной диаспоры. Работаете как autónomo — никаких трудовых обязательств. Сейчас бесплатно.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:48px">
+      <div>
+        <h3 style="font-family:var(--serif);font-size:24px;font-weight:400;margin-bottom:20px">Как это работает</h3>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0">1</div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;margin-bottom:4px">Подаёте заявку</h4>
+              <p style="font-size:13px;color:var(--ink-mid);line-height:1.6">Заполняете форму — имя, специализация, город, услуги. Рассматриваем в течение 24 часов.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0">2</div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;margin-bottom:4px">Мы создаём вашу страницу</h4>
+              <p style="font-size:13px;color:var(--ink-mid);line-height:1.6">Профессиональная страница с SEO-оптимизацией под запросы вашей аудитории в Испании.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0">3</div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;margin-bottom:4px">Клиенты находят вас</h4>
+              <p style="font-size:13px;color:var(--ink-mid);line-height:1.6">Заявки приходят на вашу почту или Telegram напрямую. Вы сами общаетесь с клиентами и устанавливаете цены.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0">4</div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;margin-bottom:4px">Работаете по закону</h4>
+              <p style="font-size:13px;color:var(--ink-mid);line-height:1.6">Вы autónomo — сами платите налоги, сами ведёте клиентов. Мы предоставляем трафик, не трудовой договор.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="why-item">
-        <span class="why-icon">🔍</span>
-        <div>
-          <h3>SEO которое работает</h3>
-          <p>Страница каждого специалиста оптимизирована под поисковые запросы русскоязычной аудитории в Испании. Вас находят в Google без рекламного бюджета.</p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:24px">
+          <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px">Что вы получаете</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">✓</span><span>Страница с SEO под ваши запросы в Google</span></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">✓</span><span>Клиенты из русскоязычной диаспоры в Испании</span></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">✓</span><span>Размещение в каталоге по вашей специализации</span></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">✓</span><span>Форма заявки от клиентов прямо на вашу почту</span></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">✓</span><span>Никаких трудовых обязательств — вы autónomo</span></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">✓</span><span>Сейчас — бесплатно на этапе запуска</span></div>
+          </div>
         </div>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">💸</span>
-        <div>
-          <h3>Сейчас бесплатно</h3>
-          <p>На этапе запуска платформы размещение бесплатное. Первые специалисты получают лучшие позиции и максимальную видимость.</p>
-        </div>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">⚡</span>
-        <div>
-          <h3>Быстрый старт</h3>
-          <p>Заполните форму — через 24–48 часов ваша страница появится на платформе. Никакого технического сопровождения не нужно.</p>
+        <div style="background:var(--ink);border-radius:12px;padding:24px;text-align:center">
+          <div style="font-family:var(--serif);font-size:22px;font-weight:400;color:var(--bg);margin-bottom:6px">Старт — <em style="font-style:italic;color:var(--gold)">бесплатно</em></div>
+          <div style="font-size:13px;color:rgba(247,245,242,0.5);margin-bottom:20px">В будущем — от €30/мес за размещение</div>
+          <button onclick="openModal('specialist')" style="width:100%;background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:14px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer">Подать заявку →</button>
         </div>
       </div>
     </div>
-    <div style="margin-top:36px">
-      <button class="btn-gold" onclick="openModal('specialist')" style="font-size:14px;padding:16px 36px">Хочу разместиться на платформе →</button>
+
+    <div style="border-top:1px solid var(--rule);padding-top:32px">
+      <div style="font-size:13px;color:var(--ink-light);margin-bottom:16px;font-weight:500">Уже ищут специалистов в этих категориях:</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📊 Бухгалтер</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">⚖️ Юрист</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🧠 Психолог</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📚 Репетитор</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">👶 Няня</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">💅 Мастер красоты</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🔧 Мастер на дом</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📸 Фотограф</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🗣️ Логопед</span>
+        <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">+ ещё 8 категорий</span>
+      </div>
     </div>
   </div>
 </section>
@@ -494,13 +585,14 @@ button{font-family:var(--sans);cursor:pointer}
         <h4>Контакты</h4>
         <ul>
           <li><a href="https://t.me/infoaccount1">Telegram</a></li>
-          <li><a href="https://wa.me/79167347616">WhatsApp</a></li>
+          <li><a href="https://wa.me/34685093534">WhatsApp</a></li>
           <li><a href="mailto:info@experty.es">info@experty.es</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Experty.es · Барселона, Испания</p>
+    <div class="footer-bottom" style="flex-direction:column;gap:12px;text-align:center">
+      <p class="footer-copy">© 2026 <strong style="color:rgba(247,245,242,0.45)">SL Claros Asesores</strong> · Experty.es · Барселона, Испания</p>
+      <p class="footer-copy">Сайт разработан <a href="https://umniy-site.ru" target="_blank" style="color:rgba(200,169,110,0.6);transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(200,169,110,0.6)'">Forma Studio · umniy-site.ru</a></p>
       <div class="footer-links">
         <a href="#">Политика конфиденциальности</a>
       </div>
@@ -550,7 +642,7 @@ button{font-family:var(--sans);cursor:pointer}
     </form>
     <div class="modal-div">или напишите напрямую</div>
     <div class="msg-row">
-      <a href="https://wa.me/79167347616" target="_blank" class="msg-btn"><span class="msg-icon">💬</span><span class="msg-label">WhatsApp</span></a>
+      <a href="https://wa.me/34685093534" target="_blank" class="msg-btn"><span class="msg-icon">💬</span><span class="msg-label">WhatsApp</span></a>
       <a href="https://t.me/infoaccount1" target="_blank" class="msg-btn"><span class="msg-icon">✈️</span><span class="msg-label">Telegram</span></a>
       <a href="mailto:info@experty.es" class="msg-btn"><span class="msg-icon">✉️</span><span class="msg-label">Email</span></a>
     </div>
