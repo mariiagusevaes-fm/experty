@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Разместиться на Experty.es — для русскоязычных специалистов в Испании</title>
+<meta name="description" content="Разместите свои услуги на Experty.es и получайте клиентов из русскоязычной диаспоры в Испании. Бесплатно на старте. Работаете как autónomo — всё по закону.">
+<link rel="canonical" href="https://experty.es/dlya-spetsialistov">
+<meta property="og:title" content="Разместиться на Experty.es — для специалистов в Испании">
+<meta property="og:description" content="Получайте клиентов из русскоязычной диаспоры. Бесплатно на старте.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://experty.es/dlya-spetsialistov">
+<meta property="og:locale" content="ru_RU">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#F7F5F2;--bg-alt:#EFEDE9;--ink:#1A1714;--ink-mid:#5C5650;--ink-light:#9A9590;--gold:#C8A96E;--rule:rgba(26,23,20,0.10);--rule-mid:rgba(26,23,20,0.18);--white:#FFFFFF;--serif:"Playfair Display",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans);cursor:pointer}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,245,242,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:baseline;gap:3px}
+.nav-logo-text{font-family:var(--serif);font-size:20px;font-weight:500}
+.nav-logo-dot{font-family:var(--serif);font-size:20px;color:var(--gold)}
+.nav-logo-es{font-size:12px;font-weight:600;color:var(--ink-light)}
+.nav-back{font-size:13px;color:var(--ink-light)}
+.nav-back:hover{color:var(--ink)}
+.nav-cta{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:10px 22px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+/* HERO */
+.hero{padding-top:68px;background:var(--ink);min-height:82vh;display:flex;align-items:center}
+.hero-inner{max-width:1200px;margin:0 auto;padding:48px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero-tag{display:inline-block;background:rgba(200,169,110,0.15);border:1px solid rgba(200,169,110,0.3);color:var(--gold);border-radius:100px;padding:5px 16px;font-size:12px;font-weight:600;letter-spacing:.06em;margin-bottom:20px}
+.hero-h1{font-family:var(--serif);font-size:clamp(32px,4vw,58px);font-weight:400;line-height:1.05;color:var(--bg);margin-bottom:18px}
+.hero-h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:16px;line-height:1.75;color:rgba(247,245,242,0.6);margin-bottom:32px}
+.hero-sub strong{color:var(--bg)}
+.btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:15px 32px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s}
+.btn-gold:hover{opacity:.85}
+.hero-note{font-size:12px;color:rgba(247,245,242,0.35);margin-top:10px}
+/* STATS */
+.stats-dark{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(247,245,242,0.08);border-radius:12px;overflow:hidden}
+.stat-dark{background:rgba(247,245,242,0.04);padding:28px 24px;text-align:center}
+.stat-dark-num{font-family:var(--serif);font-size:38px;font-weight:400;color:var(--gold);margin-bottom:6px}
+.stat-dark-label{font-size:13px;color:rgba(247,245,242,0.45);line-height:1.4}
+/* SECTIONS */
+.sec{padding:80px 0}
+.sec-alt{background:var(--bg-alt)}
+.sec-inner{max-width:1200px;margin:0 auto;padding:0 48px}
+.sec-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--gold)}
+.sec-title{font-family:var(--serif);font-size:clamp(26px,3.5vw,44px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+.sec-title em{font-style:italic;color:var(--gold)}
+.sec-sub{font-size:16px;color:var(--ink-mid);max-width:680px;line-height:1.7;margin-bottom:40px}
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:0}
+.step{display:grid;grid-template-columns:72px 1fr;gap:24px;padding:32px 0;border-top:1px solid var(--rule);align-items:start}
+.step:last-child{border-bottom:1px solid var(--rule)}
+.step-num{width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;font-weight:500;flex-shrink:0}
+.step h3{font-family:var(--serif);font-size:20px;font-weight:500;margin-bottom:8px}
+.step p{font-size:14px;color:var(--ink-mid);line-height:1.7}
+.step-note{font-size:12px;color:var(--ink-light);margin-top:6px;padding-top:6px;border-top:1px solid var(--rule)}
+/* BENEFITS */
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.benefit{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:28px 24px}
+.benefit-icon{font-size:32px;margin-bottom:14px}
+.benefit h3{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px}
+.benefit p{font-size:14px;color:var(--ink-mid);line-height:1.65}
+/* FAQ */
+.faq-list{max-width:760px}
+.faq-item{border-top:1px solid var(--rule)}
+.faq-item:last-child{border-bottom:1px solid var(--rule)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;background:transparent;border:none;color:var(--ink);text-align:left;cursor:pointer}
+.faq-question{font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.3}
+.faq-icon{width:26px;height:26px;border:1px solid var(--rule-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink-mid);flex-shrink:0;transition:all .3s}
+.faq-item.open .faq-icon{background:var(--ink);border-color:var(--ink);color:var(--bg);transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .38s ease}
+.faq-item.open .faq-body{max-height:300px}
+.faq-bi p{font-size:15px;color:var(--ink-mid);line-height:1.75;padding-bottom:20px}
+/* FORM */
+.form-section{background:var(--ink);padding:80px 0}
+.form-inner{max-width:760px;margin:0 auto;padding:0 48px}
+.form-title{font-family:var(--serif);font-size:clamp(26px,3.5vw,44px);font-weight:400;color:var(--bg);margin-bottom:10px}
+.form-title em{font-style:italic;color:var(--gold)}
+.form-sub{font-size:16px;color:rgba(247,245,242,0.5);margin-bottom:40px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{margin-bottom:14px}
+.form-field.full{grid-column:1/-1}
+.form-field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,245,242,0.4);font-weight:500;margin-bottom:6px}
+.form-field input,.form-field select,.form-field textarea{width:100%;background:rgba(247,245,242,0.07);border:1px solid rgba(247,245,242,0.12);border-radius:6px;padding:12px 16px;color:var(--bg);font-size:15px;font-family:var(--sans);outline:none;transition:border-color .2s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold)}
+.form-field input::placeholder,.form-field textarea::placeholder{color:rgba(247,245,242,0.25)}
+.form-field select{color:var(--bg);background:rgba(247,245,242,0.07)}
+.form-field select option{background:var(--ink);color:var(--bg)}
+.form-field textarea{resize:vertical;min-height:100px}
+.form-submit{background:var(--gold);color:var(--ink);border:none;border-radius:6px;padding:15px 40px;font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:opacity .2s}
+.form-submit:hover{opacity:.85}
+/* FOOTER */
+.footer{border-top:1px solid var(--rule);background:var(--bg-alt);padding:24px 0}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-logo{font-family:var(--serif);font-size:18px}
+.footer-logo span{color:var(--gold)}
+.footer-copy{font-size:13px;color:var(--ink-light)}
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(26,23,20,.6);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--white);border-radius:16px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;padding:40px 36px;position:relative;animation:mIn .25s ease}
+@keyframes mIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--bg-alt);border:none;font-size:15px;color:var(--ink-mid);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.modal-div{display:flex;align-items:center;gap:10px;margin:14px 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light)}
+.modal-div::before,.modal-div::after{content:'';flex:1;height:1px;background:var(--rule)}
+.msg-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.msg-btn{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 6px;border-radius:8px;border:1px solid var(--rule-mid);text-decoration:none;color:var(--ink);transition:border-color .18s}
+.msg-btn:hover{border-color:var(--gold)}
+.msg-icon{font-size:20px}
+.msg-label{font-size:11px;color:var(--ink-mid)}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .benefits-grid{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-inner,.sec-inner,.form-inner,.footer-inner{padding-left:20px;padding-right:20px}
+  .hero-inner{padding:32px 20px 48px}
+  .step{grid-template-columns:1fr;gap:12px;padding:24px 0}
+  .benefits-grid{grid-template-columns:1fr}
+  .form-section{padding:56px 0}
+  .footer-inner{flex-direction:column;text-align:center}
+}
+@media(max-width:390px){
+  .hero-h1{font-size:28px}
+  .nav-cta{font-size:11px;padding:8px 12px}
+}
+@media(max-width:1280px){
+  .hero-inner,.sec-inner,.form-inner{padding-left:32px;padding-right:32px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="experty-index.html" class="nav-logo">
+      <span class="nav-logo-text">Experty</span>
+      <span class="nav-logo-dot">.</span>
+      <span class="nav-logo-es">es</span>
+    </a>
+    <a href="experty-index.html" class="nav-back">← Главная</a>
+    <button class="nav-cta" onclick="document.getElementById('join-form').scrollIntoView({behavior:'smooth'})">Подать заявку</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">🇪🇸 Для специалистов · Испания</span>
+      <h1 class="hero-h1">Получайте клиентов<br>из русскоязычной<br><em>диаспоры</em></h1>
+      <p class="hero-sub">Разместите свои услуги на Experty.es. <strong>Бесплатно на старте.</strong> Работаете как autónomo — никаких трудовых обязательств. Вы сами устанавливаете цены и общаетесь с клиентами напрямую.</p>
+      <button class="btn-gold" onclick="document.getElementById('join-form').scrollIntoView({behavior:'smooth'})">Подать заявку бесплатно →</button>
+      <p class="hero-note">Рассматриваем заявки в течение 24 часов</p>
+    </div>
+    <div class="stats-dark">
+      <div class="stat-dark">
+        <div class="stat-dark-num">18</div>
+        <div class="stat-dark-label">категорий<br>специалистов</div>
+      </div>
+      <div class="stat-dark">
+        <div class="stat-dark-num">€0</div>
+        <div class="stat-dark-label">стоимость<br>на старте</div>
+      </div>
+      <div class="stat-dark">
+        <div class="stat-dark-num">24ч</div>
+        <div class="stat-dark-label">до публикации<br>вашей страницы</div>
+      </div>
+      <div class="stat-dark">
+        <div class="stat-dark-num">🔍</div>
+        <div class="stat-dark-label">SEO под ваши<br>запросы в Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАК РАБОТАЕТ -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-label">Как это работает</div>
+    <h2 class="sec-title">От заявки до<br><em>первых клиентов</em></h2>
+    <p class="sec-sub">Простой процесс без лишней бюрократии. Вы приносите экспертизу — мы обеспечиваем трафик.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Подаёте заявку</h3>
+          <p>Заполняете форму ниже — имя, специализация, город, краткое описание услуг. Если есть сайт или Instagram — прикладываете ссылку. Больше ничего не нужно.</p>
+          <div class="step-note">⏱ Занимает 5 минут</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Мы связываемся с вами</h3>
+          <p>В течение 24 часов связываемся в Telegram или WhatsApp. Уточняем детали, договариваемся об условиях размещения. На старте — бесплатно.</p>
+          <div class="step-note">⏱ В течение 24 часов</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Создаём вашу страницу</h3>
+          <p>Мы делаем профессиональную страницу с описанием ваших услуг, ценами, формой заявки. Оптимизируем под SEO-запросы вашей аудитории — например «психолог на русском Барселона» или «репетитор русского языка Мадрид».</p>
+          <div class="step-note">⏱ 24–48 часов после согласования</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Получаете клиентов</h3>
+          <p>Заявки от клиентов приходят напрямую на вашу почту или Telegram. Вы сами общаетесь, назначаете встречи, устанавливаете цены. Мы не вмешиваемся в ваши отношения с клиентами.</p>
+          <div class="step-note">🔍 Первые позиции в Google — через 4–8 недель</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="sec-label">Почему Experty.es</div>
+    <h2 class="sec-title">Что вы<br><em>получаете</em></h2>
+    <p class="sec-sub">Мы специализируемся на русскоязычной аудитории в Испании — это наша единственная ниша.</p>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="benefit-icon">🔍</div>
+        <h3>SEO под русскоязычные запросы</h3>
+        <p>Ваша страница оптимизирована под конкретные запросы которые вводят ваши клиенты в Google: «бухгалтер на русском Испания», «логопед для детей онлайн». Конкуренция в этих запросах — минимальная.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🎯</div>
+        <h3>Целевая аудитория</h3>
+        <p>На Experty.es приходят русскоязычные которым нужен конкретный специалист прямо сейчас. Не случайные посетители — люди с задачей и готовностью платить.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">⚖️</div>
+        <h3>Всё по закону</h3>
+        <p>Работаете как autónomo — сами платите налоги, сами ведёте клиентов. Никаких трудовых договоров, никакого минимального оклада, никаких обязательств с нашей стороны. Чисто и прозрачно.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">💸</div>
+        <h3>Сейчас — бесплатно</h3>
+        <p>На этапе запуска платформы размещение бесплатное. Первые специалисты получают лучшие позиции в каталоге. В будущем введём подписку — но ранние участники получат льготные условия.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🚀</div>
+        <h3>Быстрый старт</h3>
+        <p>Ваша страница появляется через 24–48 часов после согласования. Не нужно создавать сайт, разбираться в SEO или платить за рекламу. Мы берём это на себя.</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">📊</div>
+        <h3>Независимость</h3>
+        <p>Вы не привязаны к платформе. Клиенты которых мы приводим — ваши клиенты. Вы можете вести их как угодно, предлагать что угодно, устанавливать любые цены.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ДЛЯ КОГО -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-label">Кто может разместиться</div>
+    <h2 class="sec-title">Подходите ли<br><em>вы нам</em></h2>
+    <p class="sec-sub">Мы работаем с широким кругом специалистов — главное говорить по-русски и работать в Испании.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:8px">
+      <div>
+        <h3 style="font-family:var(--serif);font-size:20px;font-weight:500;color:#166534;margin-bottom:16px">✓ Подходит</h3>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#166534;font-weight:700;flex-shrink:0">✓</span> Говорите по-русски</div>
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#166534;font-weight:700;flex-shrink:0">✓</span> Работаете в Испании (онлайн или офлайн)</div>
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#166534;font-weight:700;flex-shrink:0">✓</span> Зарегистрированы как autónomo или работаете легально</div>
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#166534;font-weight:700;flex-shrink:0">✓</span> Профессиональный опыт в своей области</div>
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#166534;font-weight:700;flex-shrink:0">✓</span> Любая специализация из нашего каталога</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:var(--serif);font-size:20px;font-weight:500;color:#991b1b;margin-bottom:16px">✗ Не подходит</h3>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#991b1b;font-weight:700;flex-shrink:0">✗</span> Работа без регистрации (не можем размещать)</div>
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#991b1b;font-weight:700;flex-shrink:0">✗</span> Деятельность требующая лицензии без её наличия</div>
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#991b1b;font-weight:700;flex-shrink:0">✗</span> Продажа товаров (только услуги)</div>
+          <div style="display:flex;gap:10px;font-size:14px;color:var(--ink-mid)"><span style="color:#991b1b;font-weight:700;flex-shrink:0">✗</span> Не русскоязычная аудитория</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="sec-label">Вопросы и ответы</div>
+    <h2 class="sec-title">FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-question">Нужно ли быть autónomo чтобы разместиться?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body"><div class="faq-bi"><p>Да — мы работаем только с теми кто работает легально в Испании. Это обязательное условие для нас, потому что мы сами работаем по закону и не хотим сотрудничать с теми кто не платит налоги. Если вы ещё не зарегистрированы — рекомендуем это сделать. Наш бухгалтер на платформе поможет с регистрацией.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-question">Сколько будет стоить размещение в будущем?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body"><div class="faq-bi"><p>Пока бесплатно — платформа в стадии запуска. В будущем планируем два варианта: базовое размещение от €30/мес и премиум с приоритетом в каталоге и дополнительными инструментами от €60/мес. Первые специалисты которые придут сейчас получат льготные условия при переходе на платный тариф.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-question">Как приходят заявки от клиентов?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body"><div class="faq-bi"><p>Клиент заполняет форму на вашей странице или пишет напрямую в WhatsApp / Telegram которые вы укажете при регистрации. Заявки из формы приходят на вашу почту. Никаких посредников — всё общение напрямую между вами и клиентом.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-question">Могу ли я разместиться если веду клиентов только онлайн?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body"><div class="faq-bi"><p>Да, онлайн-специалисты приветствуются. Ваша страница будет оптимизирована под запросы по всей Испании, а не только по одному городу. Это особенно выгодно для психологов, репетиторов, бухгалтеров, тренеров и консультантов.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span class="faq-question">Могу ли я убрать свою страницу если захочу?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body"><div class="faq-bi"><p>Да, в любой момент. Напишите нам — удалим в течение 24 часов. Никаких штрафов и обязательств. Вы свободны прекратить сотрудничество когда захотите.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ФОРМА ЗАЯВКИ -->
+<section class="form-section" id="join-form">
+  <div class="form-inner">
+    <h2 class="form-title">Подать заявку<br><em>на размещение</em></h2>
+    <p class="form-sub">Заполните форму — свяжемся в течение 24 часов и расскажем о следующих шагах</p>
+    <form id="mf" action="https://formspree.io/f/mbdvdyjw" method="POST">
+      <input type="hidden" name="page" value="experty-dlya-spetsialistov">
+      <div class="form-grid">
+        <div class="form-field">
+          <label>Ваше имя</label>
+          <input type="text" name="name" placeholder="Анна Смирнова" required>
+        </div>
+        <div class="form-field">
+          <label>Специализация</label>
+          <select name="specialty" required>
+            <option value="">Выберите...</option>
+            <option>Бухгалтер / Gestor</option>
+            <option>Юрист / Адвокат</option>
+            <option>Психолог</option>
+            <option>Репетитор</option>
+            <option>Няня</option>
+            <option>Риелтор</option>
+            <option>Мастер красоты / Маникюр</option>
+            <option>Парикмахер</option>
+            <option>Косметолог / Эпиляция</option>
+            <option>Тренер / Нутрициолог</option>
+            <option>Логопед</option>
+            <option>Страховой агент</option>
+            <option>Клининг</option>
+            <option>Мастер на дом</option>
+            <option>Фотограф</option>
+            <option>Дизайнер</option>
+            <option>Специалист по ГВ</option>
+            <option>Другое</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Telegram или WhatsApp</label>
+          <input type="text" name="contact" placeholder="+34 / @username" required>
+        </div>
+        <div class="form-field">
+          <label>Город / Формат работы</label>
+          <input type="text" name="city" placeholder="Барселона / онлайн / вся Испания">
+        </div>
+        <div class="form-field full">
+          <label>Опыт и услуги</label>
+          <textarea name="about" placeholder="Расскажите о себе: опыт, образование, что предлагаете клиентам, цены если есть..."></textarea>
+        </div>
+        <div class="form-field full">
+          <label>Ссылка на сайт или Instagram (если есть)</label>
+          <input type="text" name="link" placeholder="https://...">
+        </div>
+      </div>
+      <button type="submit" class="form-submit" id="mfsub">Отправить заявку →</button>
+      <div id="mfsuc" style="display:none;margin-top:16px;padding:14px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:8px;font-size:14px;color:#4ade80">✓ Заявка получена! Свяжемся с вами в течение 24 часов.</div>
+      <p style="font-size:12px;color:rgba(247,245,242,0.3);margin-top:12px">Нажимая «Отправить» вы соглашаетесь с условиями размещения</p>
+    </form>
+    <div style="display:flex;align-items:center;gap:10px;margin:20px 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,245,242,0.25)">
+      <div style="flex:1;height:1px;background:rgba(247,245,242,0.1)"></div>
+      или напишите напрямую
+      <div style="flex:1;height:1px;background:rgba(247,245,242,0.1)"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+      <a href="https://t.me/infoaccount1" target="_blank" style="display:flex;align-items:center;gap:10px;padding:14px;border-radius:8px;border:1px solid rgba(247,245,242,0.1);color:rgba(247,245,242,0.6);transition:border-color .18s;text-decoration:none" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(247,245,242,0.1)'">
+        <span style="font-size:22px">✈️</span><span style="font-size:14px">Telegram @infoaccount1</span>
+      </a>
+      <a href="https://wa.me/34685093534" target="_blank" style="display:flex;align-items:center;gap:10px;padding:14px;border-radius:8px;border:1px solid rgba(247,245,242,0.1);color:rgba(247,245,242,0.6);transition:border-color .18s;text-decoration:none" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(247,245,242,0.1)'">
+        <span style="font-size:22px">💬</span><span style="font-size:14px">WhatsApp +34 685 093 534</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="experty-index.html" class="footer-logo">Experty<span>.</span>es</a>
+    <p class="footer-copy">© 2026 SL Claros Asesores · Барселона · <a href="https://umniy-site.ru" target="_blank" style="color:var(--gold)">Сайт сделан Forma Studio</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!isOpen)item.classList.add('open')}
+const mf=document.getElementById('mf');
+if(mf){mf.addEventListener('submit',async e=>{e.preventDefault();
+const sb=document.getElementById('mfsub');sb.textContent='Отправляем...';sb.disabled=true;
+try{const r=await fetch(mf.action,{method:'POST',body:new FormData(mf),headers:{'Accept':'application/json'}});
+if(r.ok){document.getElementById('mfsuc').style.display='block';mf.reset();sb.textContent='Заявка отправлена ✓'}
+else throw new Error()}catch{sb.textContent='Отправить заявку →';sb.disabled=false}})}
+</script>
+</body>
+</html>
