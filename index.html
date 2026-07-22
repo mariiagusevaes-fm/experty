@@ -7,6 +7,8 @@
 <meta name="description" content="Платформа проверенных русскоязычных специалистов в Испании. Бухгалтеры, юристы, психологи, риелторы, мастера красоты — все говорят по-русски.">
 <meta name="keywords" content="русскоязычные специалисты Испания, бухгалтер на русском Испания, юрист на русском Барселона, психолог на русском Испания, русские мастера Испания">
 <link rel="canonical" href="https://experty.es/">
+<link rel="alternate" hreflang="ru" href="https://experty.es/">
+<link rel="alternate" hreflang="x-default" href="https://experty.es/">
 <meta property="og:title" content="Experty.es — Русскоязычные специалисты в Испании">
 <meta property="og:description" content="Проверенные русскоязычные специалисты в Испании. Бухгалтеры, юристы, психологи и другие эксперты.">
 <meta property="og:type" content="website">
@@ -218,6 +220,13 @@ button{font-family:var(--sans);cursor:pointer}
 @media(max-width:768px){
   div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;gap:24px!important}
 }
+
+@media(max-width:1280px){
+  .nav-inner,.sec-inner,.specialists-inner,.crosslinks-inner,.footer-inner{padding-left:32px;padding-right:32px}
+  .hero-inner{padding-left:32px;padding-right:32px}
+  .cta-banner,.crosslinks{padding-left:32px;padding-right:32px}
+  .page-hero-inner,.form-inner{padding-left:32px;padding-right:32px}
+}
 </style>
 </head>
 <body>
@@ -232,8 +241,8 @@ button{font-family:var(--sans);cursor:pointer}
     <ul class="nav-links">
       <li><a href="#categories">Специалисты</a></li>
       <li><a href="#how">Как работает</a></li>
-      <li><a href="experty-buhgalter.html">Бухгалтер</a></li>
-      <li><a href="experty-dlya-spetsialistov.html" style="color:var(--gold);font-weight:600">Я специалист →</a></li>
+      <li><a href="buhgalter.html">Бухгалтер</a></li>
+      <li><a href="dlya-spetsialistov.html" style="color:var(--gold);font-weight:600">Я специалист →</a></li>
     </ul>
     <button class="nav-cta" onclick="openModal('client')">Найти специалиста</button>
   </div>
@@ -290,7 +299,7 @@ button{font-family:var(--sans);cursor:pointer}
     <p class="sec-sub">Все специалисты платформы — русскоязычные профессионалы которые живут и работают в Испании.</p>
 
     <div class="cats-grid">
-      <a href="experty-buhgalter.html" class="cat-card featured">
+      <a href="buhgalter.html" class="cat-card featured">
         <span class="cat-badge">Работаем сейчас</span>
         <span class="cat-icon">📊</span>
         <div class="cat-name">Бухгалтер / Gestor</div>
@@ -436,7 +445,7 @@ button{font-family:var(--sans);cursor:pointer}
       </div>
     </div>
     <div style="text-align:center;margin-top:20px">
-      <a href="experty-buhgalter.html" style="font-size:14px;color:var(--gold);font-weight:600">Подробнее о бухгалтерских услугах →</a>
+      <a href="buhgalter.html" style="font-size:14px;color:var(--gold);font-weight:600">Подробнее о бухгалтерских услугах →</a>
     </div>
   </div>
 </section>
@@ -566,7 +575,7 @@ button{font-family:var(--sans);cursor:pointer}
       <div class="footer-col">
         <h4>Специалисты</h4>
         <ul>
-          <li><a href="experty-buhgalter.html">Бухгалтер</a></li>
+          <li><a href="buhgalter.html">Бухгалтер</a></li>
           <li><a href="#categories">Юрист</a></li>
           <li><a href="#categories">Психолог</a></li>
           <li><a href="#categories">Риелтор</a></li>
