@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://experty.es/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://experty.es/buhgalter</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/buhgalter"/>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://experty.es/psiholog</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/psiholog"/>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://experty.es/logoped</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/logoped"/>
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://experty.es/finansoviy-konsultant</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/finansoviy-konsultant"/>
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://experty.es/yurist</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/yurist"/>
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://experty.es/strahovoy-agent</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/strahovoy-agent"/>
@@ -59,7 +59,7 @@
   </url>
   <url>
     <loc>https://experty.es/rieltor</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/rieltor"/>
@@ -67,15 +67,63 @@
   </url>
   <url>
     <loc>https://experty.es/trener</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/trener"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
   </url>
   <url>
+    <loc>https://experty.es/avto</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/avto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
+    <loc>https://experty.es/repetitor</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/repetitor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
+    <loc>https://experty.es/fotograf</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/fotograf"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
+    <loc>https://experty.es/master-na-dom</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/master-na-dom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
+    <loc>https://experty.es/nyanya</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/nyanya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
+    <loc>https://experty.es/master-krasoty</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/master-krasoty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
     <loc>https://experty.es/buhgalter/elena-petrova</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/buhgalter/elena-petrova"/>
@@ -83,7 +131,7 @@
   </url>
   <url>
     <loc>https://experty.es/psiholog/anna-volkova</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/psiholog/anna-volkova"/>
@@ -91,7 +139,7 @@
   </url>
   <url>
     <loc>https://experty.es/logoped/maria-sokolova</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/logoped/maria-sokolova"/>
@@ -99,7 +147,7 @@
   </url>
   <url>
     <loc>https://experty.es/finansoviy-konsultant/maksim-gusev</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/finansoviy-konsultant/maksim-gusev"/>
@@ -107,15 +155,31 @@
   </url>
   <url>
     <loc>https://experty.es/trener/anna-kozlova</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/trener/anna-kozlova"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
   </url>
   <url>
+    <loc>https://experty.es/repetitor/elena-volkova</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/repetitor/elena-volkova"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
+    <loc>https://experty.es/fotograf/anna-smirnova</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/fotograf/anna-smirnova"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/"/>
+  </url>
+  <url>
     <loc>https://experty.es/dlya-spetsialistov</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/dlya-spetsialistov"/>
