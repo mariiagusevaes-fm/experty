@@ -90,7 +90,7 @@ button{font-family:var(--sans);cursor:pointer}
 .sec-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--gold)}
 .sec-title{font-family:var(--serif);font-size:clamp(24px,3.2vw,40px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px}
 .sec-title em{font-style:italic;color:var(--gold)}
-.sec-sub{font-size:15px;color:var(--ink-mid);max-width:680px;line-height:1.75;margin-bottom:32px}
+.sec-sub{font-size:15px;color:var(--ink-mid);line-height:1.75;margin-bottom:32px}
 .insight{background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:24px 28px;margin-bottom:32px}
 .insight-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
 .insight p{font-size:15px;color:var(--ink-mid);line-height:1.8}
@@ -140,7 +140,7 @@ button{font-family:var(--sans);cursor:pointer}
 .join-banner h3 em{font-style:italic;color:var(--gold)}
 .join-banner p{font-size:13px;color:rgba(247,245,242,0.5);line-height:1.6}
 .btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:12px 24px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
-.faq-list{max-width:780px;display:flex;flex-direction:column}
+.faq-list{display:flex;flex-direction:column}
 .faq-item{border-top:1px solid var(--rule)}
 .faq-item:last-child{border-bottom:1px solid var(--rule)}
 .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;background:transparent;border:none;color:var(--ink);text-align:left;cursor:pointer}
@@ -183,6 +183,19 @@ button{font-family:var(--sans);cursor:pointer}
 @media(max-width:1024px){.page-hero-inner{grid-template-columns:1fr}.topics-grid,.vnj-grid{grid-template-columns:repeat(2,1fr)}.specialists-grid{grid-template-columns:repeat(2,1fr)}.join-banner{grid-template-columns:1fr}}
 @media(max-width:768px){.nav-inner,.sec-inner,.specialists-inner,.footer-inner{padding-left:20px;padding-right:20px}.page-hero-inner{padding:32px 20px 0}.cta-banner{padding:48px 20px}.topics-grid,.vnj-grid{grid-template-columns:1fr}.specialists-grid{grid-template-columns:1fr}.mistake{flex-direction:column;gap:8px}.footer-inner{flex-direction:column;text-align:center}}
 @media(max-width:390px){.page-h1{font-size:26px}.nav-cta{font-size:11px;padding:8px 12px}}
+.spec-card{background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;transition:all .22s;cursor:pointer;text-decoration:none;color:var(--ink);display:block}
+.spec-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,23,20,0.08)}
+.spec-card-photo{height:200px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.spec-card-badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700;z-index:1}
+.spec-card-body{padding:20px}
+.spec-card-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:3px}
+.spec-card-title{font-size:12px;color:var(--ink-light);margin-bottom:10px}
+.spec-card-meta{display:flex;gap:12px;font-size:12px;color:var(--ink-mid);margin-bottom:10px}
+.spec-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.spec-card-tag{background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)}
+.spec-card-actions{display:flex;gap:8px}
+.spec-btn-wa{flex:1;background:#25D366;color:#fff;border:none;border-radius:6px;padding:8px;font-size:12px;font-weight:600;text-align:center;text-decoration:none;display:block}
+.spec-btn-tg{flex:1;background:#0088cc;color:#fff;border:none;border-radius:6px;padding:8px;font-size:12px;font-weight:600;text-align:center;text-decoration:none;display:block}
 </style>
 </head>
 <body>
@@ -315,11 +328,25 @@ button{font-family:var(--sans);cursor:pointer}
     <h2 class="sec-title">Юристы<br><em>на Experty.es</em></h2>
     <p class="sec-sub">Выберите специалиста и запишитесь напрямую. Все юристы работают как autónomo — вы платите им напрямую, без посредников.</p>
     <div class="specialists-grid">
-      <div class="coming-soon-card">
-        <div class="icon">⚖️</div>
-        <p>Скоро здесь появится первый юрист платформы</p>
-        <button onclick="openModal()">Мне нужна консультация</button>
-      </div>
+      <a href="yurist-aleksandr-morozov.html" class="spec-card">
+        <div class="spec-card-photo">
+          <img src="foto-aleksandr-morozov.jpg" alt="Александр Морозов" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+          <span class="spec-card-badge">⭐ На платформе</span>
+        </div>
+        <div class="spec-card-body">
+          <div class="spec-card-name">Александр Морозов</div>
+          <div class="spec-card-title">Юрист · ВНЖ и документы</div>
+          <div class="spec-card-meta">
+            <span>📍 Барселона</span>
+            <span>💼 9 лет</span>
+          </div>
+          <div class="spec-card-tags"><span class="spec-card-tag">ВНЖ</span> <span class="spec-card-tag">Бизнес</span> <span class="spec-card-tag">Семейное право</span></div>
+          <div class="spec-card-actions">
+            <a href="https://wa.me/34611000001" target="_blank" class="spec-btn-wa" onclick="event.stopPropagation()">💬 WhatsApp</a>
+            <a href="https://t.me/aleksandr_yurist" target="_blank" class="spec-btn-tg" onclick="event.stopPropagation()">✈️ Telegram</a>
+          </div>
+        </div>
+      </a>
       <div class="coming-soon-card">
         <div class="icon">⚖️</div>
         <p>Здесь появится следующий юрист платформы</p>
@@ -360,21 +387,21 @@ button{font-family:var(--sans);cursor:pointer}
   <button class="btn-gold" onclick="openModal()">Получить консультацию →</button>
 </div>
 
-<div style="border-top:1px solid var(--rule);padding:22px 48px;background:var(--bg-alt)">
-  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-    <span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);font-weight:500;margin-right:4px">Другие специалисты</span>
+<div style="border-top:1px solid var(--rule);padding:24px 48px;background:var(--bg-alt)">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);font-weight:500;margin-bottom:12px">Другие специалисты на платформе</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
     <a href="buhgalter.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📊 Бухгалтер</a>
     <a href="finansoviy-konsultant.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">💼 Финансовый консультант</a>
+    <a href="rieltor.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🏠 Риелтор</a>
+    <a href="strahovoy-agent.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🛡️ Страховой агент</a>
+    <a href="avto.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🚗 Авто</a>
     <a href="psiholog.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🧠 Психолог</a>
+    <a href="fotograf.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📷 Фотограф</a>
     <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🇪🇸 Все специалисты</a>
+    </div>
   </div>
 </div>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <a href="index.html" class="footer-logo">Experty<span>.</span>es</a>
-    <p class="footer-copy">© 2026 SL Claros Asesores · <a href="https://umniy-site.ru" target="_blank" style="color:var(--gold)">Forma Studio</a></p>
-  </div>
 </footer>
 
 <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
