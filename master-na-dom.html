@@ -76,7 +76,7 @@ button{font-family:var(--sans);cursor:pointer}
 .sec-label::before{content:'';display:inline-block;width:20px;height:1px;background:var(--gold)}
 .sec-title{font-family:var(--serif);font-size:clamp(24px,3.2vw,40px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:12px}
 .sec-title em{font-style:italic;color:var(--gold)}
-.sec-sub{font-size:15px;color:var(--ink-mid);max-width:680px;line-height:1.75;margin-bottom:32px}
+.sec-sub{font-size:15px;color:var(--ink-mid);line-height:1.75;margin-bottom:32px}
 .insight{background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:24px 28px;margin-bottom:32px}
 .insight-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
 .insight p{font-size:15px;color:var(--ink-mid);line-height:1.8}
@@ -128,7 +128,7 @@ button{font-family:var(--sans);cursor:pointer}
 .join-banner h3 em{font-style:italic;color:var(--gold)}
 .join-banner p{font-size:13px;color:rgba(247,245,242,0.5);line-height:1.6}
 .btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:12px 24px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
-.faq-list{max-width:780px;display:flex;flex-direction:column}
+.faq-list{display:flex;flex-direction:column}
 .faq-item{border-top:1px solid var(--rule)}
 .faq-item:last-child{border-bottom:1px solid var(--rule)}
 .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;background:transparent;border:none;color:var(--ink);text-align:left;cursor:pointer}
@@ -325,21 +325,21 @@ button{font-family:var(--sans);cursor:pointer}
   <button class="btn-gold" onclick="openModal()">Вызвать мастера →</button>
 </div>
 
-<div style="border-top:1px solid var(--rule);padding:22px 48px;background:var(--bg-alt)">
-  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-    <span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);font-weight:500;margin-right:4px">Другие специалисты</span>
-    <a href="strahovoy-agent.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🛡️ Страховой агент</a>
-    <a href="yurist.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">⚖️ Юрист</a>
+<div style="border-top:1px solid var(--rule);padding:24px 48px;background:var(--bg-alt)">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);font-weight:500;margin-bottom:12px">Другие специалисты на платформе</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+    <a href="klining.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🧹 Клининг</a>
     <a href="rieltor.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🏠 Риелтор</a>
+    <a href="buhgalter.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📊 Бухгалтер</a>
+    <a href="yurist.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">⚖️ Юрист</a>
+    <a href="strahovoy-agent.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🛡️ Страховой агент</a>
+    <a href="master-krasoty.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">💅 Мастер красоты</a>
+    <a href="fotograf.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📷 Фотограф</a>
     <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🇪🇸 Все специалисты</a>
+    </div>
   </div>
 </div>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <a href="index.html" class="footer-logo">Experty<span>.</span>es</a>
-    <p class="footer-copy">© 2026 SL Claros Asesores · <a href="https://umniy-site.ru" target="_blank" style="color:var(--gold)">Forma Studio</a></p>
-  </div>
 </footer>
 
 <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
