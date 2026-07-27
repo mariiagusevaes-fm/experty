@@ -245,6 +245,19 @@ button{font-family:var(--sans);cursor:pointer}
   .page-h1{font-size:28px}
   .nav-cta{font-size:11px;padding:8px 12px}
 }
+.spec-card{background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;transition:all .22s;cursor:pointer;text-decoration:none;color:var(--ink);display:block}
+.spec-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,23,20,0.08)}
+.spec-card-photo{height:200px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.spec-card-badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700;z-index:1}
+.spec-card-body{padding:20px}
+.spec-card-name{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:3px}
+.spec-card-title{font-size:12px;color:var(--ink-light);margin-bottom:10px}
+.spec-card-meta{display:flex;gap:12px;font-size:12px;color:var(--ink-mid);margin-bottom:10px}
+.spec-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.spec-card-tag{background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)}
+.spec-card-actions{display:flex;gap:8px}
+.spec-btn-wa{flex:1;background:#25D366;color:#fff;border:none;border-radius:6px;padding:8px;font-size:12px;font-weight:600;text-align:center;text-decoration:none;display:block}
+.spec-btn-tg{flex:1;background:#0088cc;color:#fff;border:none;border-radius:6px;padding:8px;font-size:12px;font-weight:600;text-align:center;text-decoration:none;display:block}
 </style>
 </head>
 <body>
@@ -393,46 +406,40 @@ button{font-family:var(--sans);cursor:pointer}
     <p style="font-size:15px;color:var(--ink-mid);max-width:680px;line-height:1.75;margin-bottom:36px">Выберите специалиста и запишитесь напрямую — без посредников. Каждый специалист ведёт клиентов самостоятельно.</p>
 
     <div class="specialists-grid">
-
-      <!-- КАРТОЧКА 1 — пример заполненной -->
-      <div class="spec-card" onclick="window.location.href='logoped-maria-sokolova.html'">
+      <a href="ryabova-lyudmila.html" class="spec-card">
         <div class="spec-card-photo">
-          <span class="spec-card-photo-placeholder">👩</span>
-          <span class="spec-card-badge">⭐ Топ платформы</span>
+          <img src="foto-lyudmila-ryabova.jpg" alt="Людмила Рябова — логопед Барселона" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+          <span class="spec-card-badge">⭐ На платформе</span>
         </div>
         <div class="spec-card-body">
-          <div class="spec-card-name">Мария Соколова</div>
-          <div class="spec-card-title">Логопед · Дефектолог</div>
-          <div class="spec-card-tags">
-            <span class="spec-card-tag">Билингвизм</span>
-            <span class="spec-card-tag">ЗРР</span>
-            <span class="spec-card-tag">Дети 1.5–12 лет</span>
-            <span class="spec-card-tag">Онлайн</span>
+          <div class="spec-card-name">Людмила Рябова</div>
+          <div class="spec-card-title">Логопед · Нейрореабилитация · АВА</div>
+          <div class="spec-card-meta">
+            <span>📍 Барселона</span>
+            <span>💼 30+ лет опыта</span>
           </div>
-          <p class="spec-card-desc">Логопед-дефектолог с 8-летним опытом. Специализируюсь на детях-билингвах в испаноязычной среде. Помогаю сохранить русский язык и скорректировать речевые нарушения.</p>
-          <div class="spec-card-footer">
-            <div>
-              <div class="spec-card-price">от <strong>€45</strong> / занятие</div>
-              <div class="spec-card-online">Онлайн · вся Испания</div>
-            </div>
-            <a href="logoped-maria-sokolova.html" class="spec-card-btn" onclick="event.stopPropagation()">Открыть →</a>
+          <div class="spec-card-tags">
+            <span class="spec-card-tag">РАС</span>
+            <span class="spec-card-tag">Билингвизм</span>
+            <span class="spec-card-tag">АВА</span>
+            <span class="spec-card-tag">Нейрореабилитация</span>
+          </div>
+          <div class="spec-card-actions">
+            <a href="tel:+34640865084" class="spec-btn-wa" onclick="event.stopPropagation()" style="background:#1A1714">📞 Позвонить</a>
+            <a href="mailto:ludmilaryabova71@gmail.com" class="spec-btn-tg" onclick="event.stopPropagation()" style="background:#5C5650">✉️ Email</a>
           </div>
         </div>
-      </div>
-
-      <!-- КАРТОЧКИ "СКОРО" -->
+      </a>
       <div class="coming-soon-card">
         <div class="icon">🗣️</div>
         <p>Здесь появится следующий логопед платформы</p>
-        <button onclick="openModal()">Я логопед — хочу разместиться</button>
+        <button onclick="openModalSpec()">Я логопед — разместиться</button>
       </div>
-
       <div class="coming-soon-card">
         <div class="icon">🗣️</div>
         <p>Здесь появится следующий логопед платформы</p>
-        <button onclick="openModal()">Я логопед — хочу разместиться</button>
+        <button onclick="openModalSpec()">Я логопед — разместиться</button>
       </div>
-
     </div>
 
     <!-- Баннер для специалистов -->
@@ -546,7 +553,7 @@ button{font-family:var(--sans);cursor:pointer}
     <p class="modal-sub">Логопед · Получите личную страницу</p>
     <form id="mf-spec" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="page" value="experty-logoped-specialist">
-      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Мария Соколова" required></div>
+      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя" required></div>
       <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
       <div class="form-field"><label>О себе и специализации</label><textarea name="message" placeholder="Образование, опыт, с кем работаете, направления..."></textarea></div>
       <button type="submit" class="form-submit" style="background:var(--ink);color:var(--bg)" id="mfsub-spec">Подать заявку →</button>
