@@ -294,41 +294,48 @@ button{font-family:var(--sans);cursor:pointer}
     <h2 class="sec-title" style="font-family:var(--serif);font-size:clamp(24px,3.2vw,40px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:14px">Логопеды<br><em style="font-style:italic;color:var(--gold)">на Experty.es</em></h2>
     <p style="font-size:15px;color:var(--ink-mid);max-width:680px;line-height:1.75;margin-bottom:36px">Выберите специалиста и запишитесь напрямую — без посредников. Каждый специалист ведёт клиентов самостоятельно.</p>
 
-    <div class="specialists-grid">
-      <a href="ryabova-lyudmila.html" class="spec-card">
-        <div class="spec-card-photo">
-          <img src="foto-lyudmila-ryabova.jpg" alt="Людмила Рябова — логопед Барселона" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
-          <span class="spec-card-badge">⭐ На платформе</span>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px">
+
+      <!-- КАРТОЧКА ЛЮДМИЛЫ РЯБОВОЙ -->
+      <a href="ryabova-lyudmila.html" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--ink);transition:all .22s;cursor:pointer">
+        <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative">
+          <img src="foto-lyudmila-ryabova.jpg" alt="Людмила Рябова — логопед Барселона" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.parentElement.innerHTML='<div style=width:100%;height:100%;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-size:48px>👩‍⚕️</div>'">
+          <span style="position:absolute;top:10px;left:10px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700">⭐ На платформе</span>
         </div>
-        <div class="spec-card-body">
-          <div class="spec-card-name">Людмила Рябова</div>
-          <div class="spec-card-title">Логопед · Нейрореабилитация · АВА</div>
-          <div class="spec-card-meta">
+        <div style="padding:18px;display:flex;flex-direction:column;flex:1">
+          <div style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px">Людмила Рябова</div>
+          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.04em;margin-bottom:10px">ЛОГОПЕД · НЕЙРОРЕАБИЛИТАЦИЯ · АВА</div>
+          <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
             <span>📍 Барселона</span>
             <span>💼 30+ лет опыта</span>
           </div>
-          <div class="spec-card-tags">
-            <span class="spec-card-tag">РАС</span>
-            <span class="spec-card-tag">Билингвизм</span>
-            <span class="spec-card-tag">АВА</span>
-            <span class="spec-card-tag">Нейрореабилитация</span>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px">
+            <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">РАС</span>
+            <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Билингвизм</span>
+            <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">АВА</span>
+            <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Нейрореабилитация</span>
           </div>
-          <div class="spec-card-actions">
-            <a href="tel:+34640865084" class="spec-btn-wa" onclick="event.stopPropagation()" style="background:#1A1714">📞 Позвонить</a>
-            <a href="mailto:ludmilaryabova71@gmail.com" class="spec-btn-tg" onclick="event.stopPropagation()" style="background:#5C5650">✉️ Email</a>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a href="tel:+34640865084" onclick="event.stopPropagation()" style="flex:1;background:var(--ink);color:var(--bg);border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none">📞 Позвонить</a>
+            <a href="mailto:ludmilaryabova71@gmail.com" onclick="event.stopPropagation()" style="flex:1;background:var(--ink-mid);color:var(--bg);border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none">✉️ Email</a>
           </div>
         </div>
       </a>
-      <div class="coming-soon-card">
-        <div class="icon">🗣️</div>
-        <p>Здесь появится следующий логопед платформы</p>
-        <button onclick="openModalSpec()">Я логопед — разместиться</button>
+
+      <!-- COMING SOON 1 -->
+      <div style="background:var(--bg-alt);border:2px dashed var(--rule-mid);border-radius:14px;padding:40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="font-size:36px;opacity:.4">🗣️</div>
+        <p style="font-size:13px;color:var(--ink-light)">Здесь появится следующий логопед платформы</p>
+        <button onclick="openModalSpec()" style="background:transparent;border:1px solid var(--rule-mid);border-radius:4px;padding:7px 16px;font-size:12px;color:var(--ink-mid);cursor:pointer">Я логопед — разместиться</button>
       </div>
-      <div class="coming-soon-card">
-        <div class="icon">🗣️</div>
-        <p>Здесь появится следующий логопед платформы</p>
-        <button onclick="openModalSpec()">Я логопед — разместиться</button>
+
+      <!-- COMING SOON 2 -->
+      <div style="background:var(--bg-alt);border:2px dashed var(--rule-mid);border-radius:14px;padding:40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <div style="font-size:36px;opacity:.4">🗣️</div>
+        <p style="font-size:13px;color:var(--ink-light)">Здесь появится следующий логопед платформы</p>
+        <button onclick="openModalSpec()" style="background:transparent;border:1px solid var(--rule-mid);border-radius:4px;padding:7px 16px;font-size:12px;color:var(--ink-mid);cursor:pointer">Я логопед — разместиться</button>
       </div>
+
     </div>
 
     <!-- Баннер для специалистов -->
