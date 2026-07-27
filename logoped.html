@@ -297,14 +297,14 @@ button{font-family:var(--sans);cursor:pointer}
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px">
 
       <!-- КАРТОЧКА ЛЮДМИЛЫ РЯБОВОЙ -->
-      <a href="ryabova-lyudmila.html" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--ink);transition:all .22s;cursor:pointer">
-        <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative">
-          <img src="foto-lyudmila-ryabova.jpg" alt="Людмила Рябова — логопед Барселона" style="width:100%;height:100%;object-fit:cover;object-position:top" onerror="this.parentElement.innerHTML='<div style=width:100%;height:100%;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-size:48px>👩‍⚕️</div>'">
+      <div onclick="location.href='ryabova-lyudmila.html'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
+        <div style="height:220px;overflow:hidden;flex-shrink:0;position:relative">
+          <img src="foto-lyudmila-ryabova.jpg" alt="Людмила Рябова — логопед Барселона" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
           <span style="position:absolute;top:10px;left:10px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700">⭐ На платформе</span>
         </div>
         <div style="padding:18px;display:flex;flex-direction:column;flex:1">
-          <div style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px">Людмила Рябова</div>
-          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.04em;margin-bottom:10px">ЛОГОПЕД · НЕЙРОРЕАБИЛИТАЦИЯ · АВА</div>
+          <div style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink)">Людмила Рябова</div>
+          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Логопед · Нейрореабилитация · АВА</div>
           <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
             <span>📍 Барселона</span>
             <span>💼 30+ лет опыта</span>
@@ -316,11 +316,11 @@ button{font-family:var(--sans);cursor:pointer}
             <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Нейрореабилитация</span>
           </div>
           <div style="display:flex;gap:8px;margin-top:auto">
-            <a href="tel:+34640865084" onclick="event.stopPropagation()" style="flex:1;background:var(--ink);color:var(--bg);border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none">📞 Позвонить</a>
-            <a href="mailto:ludmilaryabova71@gmail.com" onclick="event.stopPropagation()" style="flex:1;background:var(--ink-mid);color:var(--bg);border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none">✉️ Email</a>
+            <a href="tel:+34640865084" onclick="event.stopPropagation()" style="flex:1;background:var(--ink);color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">📞 Позвонить</a>
+            <a href="mailto:ludmilaryabova71@gmail.com" onclick="event.stopPropagation()" style="flex:1;background:var(--ink-mid);color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">✉️ Email</a>
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- COMING SOON 1 -->
       <div style="background:var(--bg-alt);border:2px dashed var(--rule-mid);border-radius:14px;padding:40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px">
