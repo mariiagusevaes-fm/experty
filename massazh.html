@@ -662,13 +662,28 @@ button{font-family:var(--sans);cursor:pointer}
       </div>
 
       <!-- Coming soon -->
-      <div style="background:var(--bg-alt);border:2px dashed var(--rule-mid);border-radius:14px;padding:40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px">
-        <div style="font-size:36px;opacity:.4">💆</div>
-        <p style="font-size:13px;color:var(--ink-light)">Здесь появится следующий массажист платформы</p>
-        <button onclick="openModalSpec()" style="background:transparent;border:1px solid var(--rule-mid);border-radius:4px;padding:7px 16px;font-size:12px;color:var(--ink-mid);cursor:pointer">Я массажист — разместиться</button>
+      <div onclick="location.href='gizzatova-leysан.html'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
+        <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative;background:var(--bg-alt)">
+          <img src="foto-leysан-gizzatova.jpg" alt="Лейсан Гиззатова — массажист Барселона" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'">
+          <span style="position:absolute;top:10px;left:10px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700">⭐ На платформе</span>
+        </div>
+        <div style="padding:18px;display:flex;flex-direction:column;flex:1">
+          <div style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink)">Лейсан Гиззатова</div>
+          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Массажист · 10+ лет · Барселона</div>
+          <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
+            <span>📍 Барселона</span><span>💼 10+ лет</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px">
+            <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Антистресс</span>
+            <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Спортивный</span>
+            <span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Горячие камни</span>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a href="tel:+34658669661" onclick="event.stopPropagation()" style="flex:1;background:var(--ink);color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">📞 Звонок</a>
+            <a href="https://wa.me/34658669661" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
+          </div>
+        </div>
       </div>
-
-    </div>
     <div class="join-banner">
       <div>
         <h3>Вы массажист и работаете<br>с русскоязычными <em>в Испании?</em></h3>
