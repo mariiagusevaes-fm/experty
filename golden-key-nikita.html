@@ -132,7 +132,7 @@ button{font-family:var(--sans);cursor:pointer}
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><span class="nav-logo-text">Experty</span><span class="nav-logo-dot">.</span><span class="nav-logo-es">es</span></a>
     <a href="rieltor.html" class="nav-back">← Риелторы</a>
-    <button class="nav-cta" onclick="document.getElementById('booking-form').scrollIntoView({behavior:'smooth'})">Записаться</button>
+    <button class="nav-cta" onclick="document.getElementById('review-form').scrollIntoView({behavior:'smooth'})">Оставить отзыв</button>
   </div>
 </nav>
 
@@ -149,7 +149,7 @@ button{font-family:var(--sans);cursor:pointer}
       <span class="profile-meta-item"><span class="profile-meta-icon">📋</span>Миграционное сопровождение</span>
       <span class="profile-meta-item"><span class="profile-meta-icon">✨</span>Премиум-уровень</span></div>
     <div class="profile-actions">
-      <button class="btn-primary" onclick="document.getElementById('booking-form').scrollIntoView({behavior:'smooth'})">Записаться бесплатно →</button>
+      <button class="btn-primary" onclick="document.getElementById('review-form').scrollIntoView({behavior:'smooth'})">Записаться бесплатно →</button>
       <a href="tel:+34641034430" class="btn-outline">📞 Позвонить</a>
       <a href="https://wa.me/34641034430" target="_blank" class="btn-outline">💬 WhatsApp</a>
       <a href="https://t.me/dss2121" target="_blank" class="btn-outline">✈️ Telegram</a>
@@ -201,29 +201,7 @@ button{font-family:var(--sans);cursor:pointer}
         <p style="font-size:12px;color:var(--ink-light);margin-top:14px">Стоимость рассчитывается индивидуально под вашу ситуацию — напишите в WhatsApp или Telegram.</p>
       </div>
 
-      <div class="content-block">
-        <h2 class="block-title">Документы и условия аренды жилья в Испании</h2>
-        <p style="font-size:14px;color:var(--ink-mid);line-height:1.8;margin-bottom:20px">Чтобы арендовать квартиру, дом или студию, нужно предоставить базовые документы и информацию. Условия могут немного отличаться в зависимости от владельца и типа недвижимости.</p>
-
-        <h3 style="font-family:var(--serif);font-size:16px;font-weight:500;margin-bottom:10px">Основные документы</h3>
-        <div class="credentials" style="margin-bottom:24px">
-          <div class="cred-item"><span class="cred-icon">🛂</span><div><h4>Паспорт (или NIE, если есть)</h4></div></div>
-          <div class="cred-item"><span class="cred-icon">💶</span><div><h4>Подтверждение дохода</h4><p>Требуется не всегда: трудовой договор, справка о доходах, выписка со счёта, подтверждение пенсии или другого стабильного дохода</p></div></div>
-          <div class="cred-item"><span class="cred-icon">👨‍👩‍👧</span><div><h4>Информация о проживающих</h4><p>Сколько человек будет жить, есть ли дети и животные</p></div></div>
-        </div>
-
-        <h3 style="font-family:var(--serif);font-size:16px;font-weight:500;margin-bottom:10px">Условия оплаты при аренде</h3>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px">
-          <div style="padding:16px;background:var(--bg-alt);border:1px solid var(--rule);border-radius:8px"><div style="font-size:13px;font-weight:600;margin-bottom:4px">Стандартный вариант</div><div style="font-size:12px;color:var(--ink-mid);line-height:1.6">Первый месяц + депозит + комиссия агенту</div></div>
-          <div style="padding:16px;background:var(--bg-alt);border:1px solid var(--rule);border-radius:8px"><div style="font-size:13px;font-weight:600;margin-bottom:4px">Часто встречается</div><div style="font-size:12px;color:var(--ink-mid);line-height:1.6">Первый и последний месяц + депозит + комиссия</div></div>
-          <div style="padding:16px;background:var(--bg-alt);border:1px solid var(--rule);border-radius:8px"><div style="font-size:13px;font-weight:600;margin-bottom:4px">Иногда</div><div style="font-size:12px;color:var(--ink-mid);line-height:1.6">Два депозита — особенно без подтверждения дохода или при долгосрочном контракте</div></div>
-        </div>
-
-        <div class="insight" style="background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px">
-          <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px">Важно знать</div>
-          <p style="font-size:13px;color:var(--ink-mid);line-height:1.8">Все депозиты возвращаются при выезде, если жильё остаётся в хорошем состоянии. Контракт заключается официально — с указанием всех условий и сроков. Мы всегда заранее уточняем условия у собственника, чтобы избежать недоразумений.</p>
-        </div>
-      </div>
+      
 
       <div class="content-block">
         <h2 class="block-title">О специалисте</h2>
@@ -263,17 +241,25 @@ button{font-family:var(--sans);cursor:pointer}
         </div>
       </div>
 
-      <div class="content-block" id="booking-form">
-        <h2 class="block-title">Записаться на консультацию</h2>
-        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:20px">Первичная консультация — бесплатно. Без обязательств.</p>
-        <form id="booking" action="https://formspree.io/f/mbdvdyjw" method="POST">
-          <input type="hidden" name="specialist" value="Никита — Golden Key">
-          <input type="hidden" name="type" value="booking-golden-key-nikita">
-          <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя" required></div>
-          <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
-          <div class="form-field"><label>Вопрос или комментарий</label><textarea name="message" placeholder="Расскажите коротко о вашей ситуации..."></textarea></div>
-          <button type="submit" class="form-submit" id="booking-sub">Записаться бесплатно →</button>
-          <div id="booking-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Отлично! Никита свяжется с вами в течение дня.</div>
+      <div class="content-block" id="review-form">
+        <h2 class="block-title">Оставить отзыв</h2>
+        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:20px">Работали с Никитой? Поделитесь впечатлением — это поможет другим клиентам принять решение.</p>
+        <form id="review-form-el" action="https://formspree.io/f/mbdvdyjw" method="POST">
+          <input type="hidden" name="type" value="review-nikita-golden-key">
+          <input type="hidden" name="specialist" value="Никита — Golden Key, риелтор Барселона">
+          <div style="display:flex;gap:6px;margin-bottom:14px">
+            <span onclick="setStars(1)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
+            <span onclick="setStars(2)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
+            <span onclick="setStars(3)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
+            <span onclick="setStars(4)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
+            <span onclick="setStars(5)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
+          </div>
+          <input type="hidden" name="rating" id="rating-val" value="5">
+          <div class="form-field"><label>Ваше имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div>
+          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Расскажите о вашем опыте..." required></textarea></div>
+          <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Барселона..."></div>
+          <button type="submit" class="form-submit" id="review-sub">Отправить отзыв →</button>
+          <div id="review-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
         </form>
       </div>
 
@@ -301,7 +287,7 @@ button{font-family:var(--sans);cursor:pointer}
         <p style="font-size:12px;color:var(--ink-light);line-height:1.7">Этот профиль размещён на платформе <a href="index.html" style="color:var(--gold);font-weight:600">Experty.es</a> — сервисе для поиска русскоязычных специалистов в Испании.</p>
         <a href="rieltor.html" style="display:inline-block;margin-top:10px;font-size:12px;color:var(--gold);font-weight:600">Другие риелторы →</a>
       </div>
-      <button class="sidebar-cta" onclick="document.getElementById('booking-form').scrollIntoView({behavior:'smooth'})">Записаться бесплатно →</button>
+      <button class="sidebar-cta" onclick="document.getElementById('review-form').scrollIntoView({behavior:'smooth'})">Записаться бесплатно →</button>
       <p style="font-size:12px;color:var(--ink-light);text-align:center;margin-top:8px">Первая консультация — бесплатно</p>
     </div>
   </div>
