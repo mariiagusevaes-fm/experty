@@ -293,18 +293,34 @@ button{font-family:var(--sans);cursor:pointer}
 
       <!-- ОТЗЫВЫ -->
       <div class="content-block">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-          <h2 class="block-title" style="margin-bottom:0">Отзывы клиентов</h2>
-        </div>
-        <div class="reviews-grid">
-          <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text" style="font-size:13px;color:var(--ink-mid);font-style:italic">Первым оставьте отзыв — это поможет другим принять решение.</p>
+        <h2 class="block-title">Отзывы клиентов</h2>
+
+        <div style="background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:22px;margin-bottom:16px">
+          <div style="display:flex;gap:4px;margin-bottom:10px"><span style="color:#F59E0B;font-size:18px">★★★★★</span></div>
+          <p style="font-size:14px;color:var(--ink);line-height:1.8;font-style:italic">«Отличный специалист! Очень внимательный и профессиональный массажист. Перед началом уточнил мои пожелания и проблемные зоны, а во время сеанса всё было максимально комфортно. После массажа почувствовала, что напряжение в мышцах ушло, а самочувствие заметно улучшилось. Спасибо за качественную работу и индивидуальный подход. Обязательно повторю курс и рекомендую всем!»</p>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--ink)">Анна П.</div>
+              <div style="font-size:12px;color:var(--ink-light)">📍 Жирона</div>
+            </div>
+            <div style="font-size:11px;color:var(--ink-light);letter-spacing:.04em">⭐ Подтверждённый отзыв</div>
           </div>
         </div>
+
+        <div style="background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:22px">
+          <div style="display:flex;gap:4px;margin-bottom:10px"><span style="color:#F59E0B;font-size:18px">★★★★★</span></div>
+          <p style="font-size:14px;color:var(--ink);line-height:1.8;font-style:italic">«Каждый год приезжаем отдыхать на побережье, заранее записываюсь к Сергею! За время отпуска он буквально собирает меня заново после целого года за компьютером. В этом году снова только к нему — рекомендую, мастер с золотыми руками и огромным опытом! 🔥🙌»</p>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--ink)">Павел</div>
+              <div style="font-size:12px;color:var(--ink-light)">📍 Фрибург</div>
+            </div>
+            <div style="font-size:11px;color:var(--ink-light);letter-spacing:.04em">⭐ Подтверждённый отзыв</div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- FAQ -->
       <div class="content-block">
         <h2 class="block-title">Частые вопросы</h2>
         <div class="faq-list">
@@ -331,7 +347,6 @@ button{font-family:var(--sans);cursor:pointer}
         </div>
       </div>
 
-      <!-- ФОРМА ОТЗЫВА -->
       <div class="content-block" id="review-form">
         <h2 class="block-title">Оставить отзыв</h2>
         <p style="font-size:14px;color:var(--ink-mid);margin-bottom:20px">Были на сеансе у Сергея? Поделитесь впечатлением — это поможет другим клиентам.</p>
@@ -353,6 +368,8 @@ button{font-family:var(--sans);cursor:pointer}
           <div id="review-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
         </form>
       </div>
+
+
 
     </div>
 
