@@ -302,7 +302,7 @@ button{font-family:var(--sans);cursor:pointer}
 .svc-services{font-size:13px;color:var(--ink-mid);margin-bottom:10px;line-height:1.6}
 .svc-tags,.svc-list{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .svc-tag{background:var(--bg-alt);border:1px solid var(--rule);border-radius:100px;padding:4px 12px;font-size:12px;color:var(--ink-mid)}
-.svc-price{font-size:13px;color:var(--ink-mid);border-top:1px solid var(--rule);padding-top:12px}
+.svc-price{font-size:13px;color:var(--ink-mid);border-top:1px solid var(--rule);padding-top:12px;margin-top:8px}
 .svc-price strong{color:var(--ink);font-weight:600}
 
 /* SERVICES GRID */
@@ -422,7 +422,6 @@ button{font-family:var(--sans);cursor:pointer}
     </div>
     <div class="services-big-grid">
 
-      <!-- МАНИКЮР -->
       <div class="svc-card" id="manikyur">
         <div class="svc-card-head">
           <div class="svc-icon">💅</div>
@@ -431,19 +430,9 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="svc-card-sub">Ногтевой сервис</div>
           </div>
         </div>
-        <p>Классический и аппаратный маникюр, гель-лак, наращивание, дизайн. Педикюр с обработкой. Мастера работают дома у клиента или принимают у себя.</p>
-        <div class="svc-services">
-          <span class="svc-tag">Гель-лак</span>
-          <span class="svc-tag">Наращивание</span>
-          <span class="svc-tag">Аппаратный маникюр</span>
-          <span class="svc-tag">Дизайн ногтей</span>
-          <span class="svc-tag">Педикюр</span>
-          <span class="svc-tag">Снятие</span>
-        </div>
-        <div class="svc-price">от <strong>€25–40</strong> / маникюр · <strong>€35–50</strong> / педикюр</div>
+        <div class="svc-tags"><span class="svc-tag">Гель-лак</span><span class="svc-tag">Наращивание</span><span class="svc-tag">Аппаратный маникюр</span><span class="svc-tag">Дизайн ногтей</span><span class="svc-tag">Педикюр</span><span class="svc-tag">Снятие</span></div>
+        <div class="svc-price">от €25–40 / маникюр · €35–50 / педикюр</div>
       </div>
-
-      <!-- ПАРИКМАХЕР -->
       <div class="svc-card" id="parikmakher">
         <div class="svc-card-head">
           <div class="svc-icon">✂️</div>
@@ -452,20 +441,9 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="svc-card-sub">Волосы и стиль</div>
           </div>
         </div>
-        <p>Стрижки женские и мужские, окрашивание, осветление, мелирование, кератин, ламинирование, укладки. Мастер который понимает что такое «пепельный» и «балаяж».</p>
-        <div class="svc-services">
-          <span class="svc-tag">Стрижка</span>
-          <span class="svc-tag">Окрашивание</span>
-          <span class="svc-tag">Балаяж</span>
-          <span class="svc-tag">Кератин</span>
-          <span class="svc-tag">Ламинирование</span>
-          <span class="svc-tag">Укладка</span>
-          <span class="svc-tag">Детская стрижка</span>
-        </div>
-        <div class="svc-price">от <strong>€30</strong> / стрижка · от <strong>€80</strong> / окрашивание</div>
+        <div class="svc-tags"><span class="svc-tag">Стрижка</span><span class="svc-tag">Окрашивание</span><span class="svc-tag">Балаяж</span><span class="svc-tag">Кератин</span><span class="svc-tag">Ламинирование</span><span class="svc-tag">Укладка</span><span class="svc-tag">Детская стрижка</span></div>
+        <div class="svc-price">от €30 / стрижка · от €80 / окрашивание</div>
       </div>
-
-      <!-- КОСМЕТОЛОГ -->
       <div class="svc-card" id="kosmetolog">
         <div class="svc-card-head">
           <div class="svc-icon">🧖</div>
@@ -474,39 +452,20 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="svc-card-sub">Уход и омоложение</div>
           </div>
         </div>
-        <p>Чистки лица, пилинги, уходовые процедуры, биоревитализация, мезотерапия, RF-лифтинг. Работа с кожей лица и тела — с пониманием ваших запросов на русском.</p>
-        <div class="svc-services">
-          <span class="svc-tag">Чистка лица</span>
-          <span class="svc-tag">Пилинги</span>
-          <span class="svc-tag">Мезотерапия</span>
-          <span class="svc-tag">Биоревитализация</span>
-          <span class="svc-tag">RF-лифтинг</span>
-          <span class="svc-tag">Уходовые маски</span>
-        </div>
-        <div class="svc-price">от <strong>€50</strong> / чистка · от <strong>€80</strong> / аппаратные процедуры</div>
+        <div class="svc-tags"><span class="svc-tag">Чистка лица</span><span class="svc-tag">Пилинги</span><span class="svc-tag">Мезотерапия</span><span class="svc-tag">Биоревитализация</span><span class="svc-tag">RF-лифтинг</span><span class="svc-tag">Уходовые маски</span></div>
+        <div class="svc-price">от €50 / чистка · от €80 / аппаратные процедуры</div>
       </div>
-
-      <!-- БРОВИ И РЕСНИЦЫ -->
       <div class="svc-card" id="brovi">
         <div class="svc-card-head">
           <div class="svc-icon">👁️</div>
           <div>
             <div class="svc-card-name">Брови и ресницы</div>
-            <div class="svc-card-sub">Оформление взгляда</div>
+            <div class="svc-card-sub">Взгляд и форма</div>
           </div>
         </div>
-        <p>Коррекция и окрашивание бровей, ламинирование бровей, наращивание и ламинирование ресниц, долговременная укладка. Мастер с чувством формы и понимания вашего типа лица.</p>
-        <div class="svc-services">
-          <span class="svc-tag">Коррекция бровей</span>
-          <span class="svc-tag">Окрашивание бровей</span>
-          <span class="svc-tag">Ламинирование бровей</span>
-          <span class="svc-tag">Наращивание ресниц</span>
-          <span class="svc-tag">Ламинирование ресниц</span>
-        </div>
-        <div class="svc-price">от <strong>€20</strong> / коррекция · от <strong>€40</strong> / ламинирование</div>
+        <div class="svc-tags"><span class="svc-tag">Архитектура бровей</span><span class="svc-tag">Окрашивание хной</span><span class="svc-tag">Ламинирование ресниц</span><span class="svc-tag">Наращивание ресниц</span><span class="svc-tag">Коррекция</span></div>
+        <div class="svc-price">от €25 / брови · от €60 / ресницы</div>
       </div>
-
-      <!-- МАССАЖ -->
       <div class="svc-card" id="massazh">
         <div class="svc-card-head">
           <div class="svc-icon">💆</div>
@@ -515,41 +474,21 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="svc-card-sub">Тело и расслабление</div>
           </div>
         </div>
-        <p>Классический расслабляющий, лечебный, антицеллюлитный, лимфодренажный, массаж лица. Приезжают на дом или принимают в кабинете. Объясните что болит — поймут правильно.</p>
-        <div class="svc-services">
-          <span class="svc-tag">Расслабляющий</span>
-          <span class="svc-tag">Лечебный</span>
-          <span class="svc-tag">Антицеллюлитный</span>
-          <span class="svc-tag">Лимфодренажный</span>
-          <span class="svc-tag">Массаж лица</span>
-          <span class="svc-tag">На дому</span>
-        </div>
-        <div class="svc-price">от <strong>€50</strong> / 60 мин · от <strong>€70</strong> / 90 мин</div>
+        <div class="svc-tags"><span class="svc-tag">Расслабляющий</span><span class="svc-tag">Лимфодренажный</span><span class="svc-tag">Антицеллюлитный</span><span class="svc-tag">Медовый</span><span class="svc-tag">Тайский</span><span class="svc-tag">Спортивный</span></div>
+        <div class="svc-price">от €40 / 30 мин · от €70 / 60 мин</div>
       </div>
-
-      <!-- ДЕПИЛЯЦИЯ -->
       <div class="svc-card" id="depilyaciya">
         <div class="svc-card-head">
           <div class="svc-icon">✨</div>
           <div>
-            <div class="svc-card-name">Депиляция и шугаринг</div>
-            <div class="svc-card-sub">Удаление волос</div>
+            <div class="svc-card-name">Депиляция</div>
+            <div class="svc-card-sub">Гладкость кожи</div>
           </div>
         </div>
-        <p>Восковая депиляция, шугаринг (сахарная паста), лазерная депиляция — зоны лица, тела, бикини. В Испании это популярная услуга — важно чтобы мастер понял какая именно зона нужна.</p>
-        <div class="svc-services">
-          <span class="svc-tag">Шугаринг</span>
-          <span class="svc-tag">Восковая депиляция</span>
-          <span class="svc-tag">Лазерная депиляция</span>
-          <span class="svc-tag">Бикини</span>
-          <span class="svc-tag">Лицо</span>
-          <span class="svc-tag">Ноги</span>
-        </div>
-        <div class="svc-price">от <strong>€15</strong> / зона · от <strong>€50</strong> / полное тело</div>
+        <div class="svc-tags"><span class="svc-tag">Шугаринг</span><span class="svc-tag">Воск</span><span class="svc-tag">Лазерная</span><span class="svc-tag">Фотоэпиляция</span><span class="svc-tag">Элос-эпиляция</span></div>
+        <div class="svc-price">от €15 / зона · от €80 / лазер</div>
       </div>
-
-      <!-- ПЕРМАНЕНТНЫЙ МАКИЯЖ -->
-      <div class="svc-card" id="permanentny">
+      <div class="svc-card" id="perm-makiyazh">
         <div class="svc-card-head">
           <div class="svc-icon">🖊️</div>
           <div>
@@ -557,37 +496,9 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="svc-card-sub">Татуаж и микроблейдинг</div>
           </div>
         </div>
-        <p>Перманентный макияж бровей (пудровые, волосковые, комбо), губ, стрелок. Микроблейдинг. Коррекция. Это деликатная работа — особенно важно точно объяснить желаемый результат.</p>
-        <div class="svc-services">
-          <span class="svc-tag">Пудровые брови</span>
-          <span class="svc-tag">Микроблейдинг</span>
-          <span class="svc-tag">Перманент губ</span>
-          <span class="svc-tag">Стрелки</span>
-          <span class="svc-tag">Коррекция</span>
-        </div>
-        <div class="svc-price">от <strong>€150</strong> / брови · от <strong>€180</strong> / губы</div>
+        <div class="svc-tags"><span class="svc-tag">Брови (микроблейдинг)</span><span class="svc-tag">Стрелки</span><span class="svc-tag">Губы</span><span class="svc-tag">Веки</span><span class="svc-tag">Межресничный татуаж</span></div>
+        <div class="svc-price">от €150 / процедура</div>
       </div>
-
-      <!-- ВИЗАЖИСТ -->
-      <div class="svc-card" id="vizazh">
-        <div class="svc-card-head">
-          <div class="svc-icon">💄</div>
-          <div>
-            <div class="svc-card-name">Визажист</div>
-            <div class="svc-card-sub">Макияж на событие</div>
-          </div>
-        </div>
-        <p>Макияж на свадьбу, вечеринку, фотосессию, деловое мероприятие. Дневной и вечерний. Визажист который слышит вас и делает то что хотите — а не то что привык делать сам.</p>
-        <div class="svc-services">
-          <span class="svc-tag">Свадебный макияж</span>
-          <span class="svc-tag">Вечерний</span>
-          <span class="svc-tag">Дневной</span>
-          <span class="svc-tag">Для фотосессии</span>
-          <span class="svc-tag">Выезд</span>
-        </div>
-        <div class="svc-price">от <strong>€60</strong> / макияж · от <strong>€100</strong> / свадьба</div>
-      </div>
-
     </div>
   </div>
 </section>
