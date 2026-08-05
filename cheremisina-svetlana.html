@@ -103,6 +103,14 @@ button{font-family:var(--sans);cursor:pointer}
 @media(max-width:1024px){.profile-content-inner{grid-template-columns:1fr}.profile-sidebar{position:static}}
 @media(max-width:768px){.nav-inner,.profile-content,.stats-bar-inner,.footer-inner{padding-left:20px;padding-right:20px}.profile-hero-inner{padding-left:20px;padding-right:20px;padding-top:32px}.stats-bar-inner{grid-template-columns:repeat(2,1fr)}.profile-content-inner{padding:32px 0 48px}.profile-actions{flex-direction:column;align-items:center}.btn-primary,.btn-outline{width:100%;text-align:center}.footer-inner{flex-direction:column;text-align:center}}
 @media(max-width:390px){.profile-name{font-size:24px}.profile-photo{width:120px;height:120px}.nav-cta{font-size:11px;padding:8px 12px}}
+
+/* REVIEWS */
+.reviews-grid{display:flex;flex-direction:column;gap:16px}
+.review-card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:22px}
+.review-stars{color:#F59E0B;font-size:18px;margin-bottom:10px;letter-spacing:2px}
+.review-text{font-size:14px;color:var(--ink);line-height:1.8;font-style:italic;margin-bottom:14px}
+.review-author{font-size:14px;font-weight:600;color:var(--ink)}
+.review-date{font-size:12px;color:var(--ink-light)}
 </style>
 </head>
 <body>
@@ -294,7 +302,32 @@ button{font-family:var(--sans);cursor:pointer}
       </div>
 
       <!-- ФОРМА ОТЗЫВА -->
-      <div class="content-block" id="review-form">
+      
+      <!-- ОТЗЫВЫ -->
+      <div class="content-block">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <h2 class="block-title" style="margin-bottom:0">Отзывы клиентов</h2>
+          <div style="display:inline-flex;align-items:center;gap:8px;background:var(--bg-alt);border:1px solid var(--rule);border-radius:100px;padding:5px 14px">
+            <span style="color:#F59E0B;font-size:13px;letter-spacing:1px">★★★★★</span>
+            <span style="font-weight:600;font-size:13px">5.0</span>
+            <span style="font-size:12px;color:var(--ink-light)">· 1 отзыв</span>
+          </div>
+        </div>
+        <div class="reviews-grid">
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Хочу выразить огромную благодарность моему психологу. С первых встреч я почувствовала бережное и уважительное отношение к себе как к клиенту. На каждой сессии я ощущаю, что меня внимательно слушают, понимают и принимают без осуждения. Рядом со Светланой всегда спокойно и комфортно, благодаря чему становится легче открываться и говорить даже о самых сложных переживаниях. Спасибо за профессионализм, чуткость и искреннюю поддержку. Очень ценю возможность работать с таким специалистом и с уверенностью могу рекомендовать его тем, кто ищет внимательного, деликатного и компетентного психолога.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="review-author">Ольга</span>
+              <span class="review-date">📍 Мадрид</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+<div class="content-block" id="review-form">
         <h2 class="block-title">Оставить отзыв</h2>
         <p style="font-size:14px;color:var(--ink-mid);margin-bottom:20px">Работали со Светланой? Поделитесь впечатлением — это поможет другим людям решиться на первый шаг.</p>
         <form id="review-form-el" action="https://formspree.io/f/mbdvdyjw" method="POST">
