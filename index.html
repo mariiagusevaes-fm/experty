@@ -309,8 +309,8 @@ button{font-family:var(--sans);cursor:pointer}
       <h1 class="hero-h1">Свои специалисты<br>в <em>Испании</em></h1>
       <p class="hero-sub">Проверенные <strong>русскоязычные эксперты</strong> — бухгалтеры, юристы, психологи, мастера красоты и другие. Все говорят по-русски, работают в Испании.</p>
       <div class="hero-actions">
-        <button class="btn-gold" onclick="openModal('client')">Найти специалиста →</button>
-        <button class="btn-ghost" onclick="openModal('specialist')">Я специалист</button>
+        <button class="btn-gold" onclick="location.href='#categories'">Найти специалиста →</button>
+        <button class="btn-ghost" onclick="location.href='dlya-spetsialistov.html'">Я специалист</button>
       </div>
     </div>
     <div class="hero-stats">
@@ -805,7 +805,9 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
   </div>
-</section>
+
+      <div style="text-align:center;margin-top:28px"><a href="dlya-spetsialistov.html" style="font-size:14px;color:rgba(247,245,242,0.5);border-bottom:1px solid rgba(247,245,242,0.2);padding-bottom:2px;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(247,245,242,0.5)'">Подробнее о размещении на платформе →</a></div>
+    </section>
 
 <!-- CTA -->
       
@@ -822,7 +824,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <h2>Нашли что искали?<br><em>Свяжитесь прямо сейчас</em></h2>
   <p>Первая консультация у большинства специалистов — бесплатная. Напишите и убедитесь сами.</p>
   <div class="cta-actions">
-    <button class="btn-gold" onclick="openModal('client')">Найти специалиста →</button>
+    <button class="btn-gold" onclick="location.href='#categories'">Найти специалиста →</button>
   </div>
 </div>
 
@@ -832,6 +834,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a href="index.html" class="footer-logo">Experty<span>.</span>es</a>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:right">
       <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end">
+        <a href="dlya-spetsialistov.html" style="font-size:13px;color:var(--ink-light)">Разместить профиль</a>
         <a href="aviso-legal.html" style="font-size:12px;color:var(--ink-light)">Aviso Legal</a>
         <a href="privacidad.html" style="font-size:12px;color:var(--ink-light)">Privacidad</a>
         <a href="cookies.html" style="font-size:12px;color:var(--ink-light)">Cookies</a>
