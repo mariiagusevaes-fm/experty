@@ -372,6 +372,7 @@ button{font-family:var(--sans);cursor:pointer}
   .two-col{grid-template-columns:1fr!important}
   .why-grid{grid-template-columns:1fr!important}
 }
+@media(max-width:900px){.nav-inner>a[href="/realestate/"]{display:none}}
 </style>
 </head>
 <body>
@@ -380,6 +381,7 @@ button{font-family:var(--sans);cursor:pointer}
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><span class="nav-logo-text">Experty</span><span class="nav-logo-dot">.</span><span class="nav-logo-es">es</span></a>
     <a href="index.html" class="nav-back">← Все специалисты</a>
+    <a href="/realestate/" style="font-size:13px;color:var(--gold);font-weight:600;white-space:nowrap">Недвижимость</a>
     <button class="nav-cta" onclick="openModal()">Найти мастера</button>
   </div>
 </nav>
