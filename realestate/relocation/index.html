@@ -51,7 +51,7 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Experty.es","item":"https://experty.es/"},{"@type":"ListItem","position":2,"name":"Недвижимость","item":"https://experty.es/realestate/"},{"@type":"ListItem","position":3,"name":"Переезд в Испанию","item":"https://experty.es/realestate/relocation/"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Что входит в базовый пакет переезда?","acceptedAnswer":{"@type":"Answer","text":"Консультационное сопровождение по получению визы под вашу ситуацию, запись и подготовка документов на NIE, открытие счёта в испанском банке, помощь с первичной регистрацией. Пример состава: виза + NIE + банк — ориентировочно 1200 €. Точный состав и цена фиксируются в договоре."}},{"@type":"Question","name":"Как считается оплата, если пакет полный и идёт вместе с покупкой недвижимости?","acceptedAnswer":{"@type":"Answer","text":"Полный пакет — консультационное сопровождение переезда плюс координация сделки с недвижимостью. Стоимость складывается из фиксированной части за переезд и процента от риелторской сделки. Пример: переезд семьи плюс покупка квартиры за 250 000 € — пакет около 2500 € плюс комиссия с риелторской сделки (её платит продавец)."}},{"@type":"Question","name":"Что будет с оплатой, если сделка с недвижимостью сорвётся?","acceptedAnswer":{"@type":"Answer","text":"Выполненная консультационная работа оплачивается по факту, невыполненная — не оплачивается или переносится на новый объект. Процент от сделки платится только при состоявшейся сделке. Порядок пересчёта прописан в договоре заранее."}},{"@type":"Question","name":"Обязательно ли покупать недвижимость, чтобы заказать переезд?","acceptedAnswer":{"@type":"Answer","text":"Нет. Базовый пакет переезда работает отдельно. Но чаще всего переезд и покупка идут вместе — тогда удобнее вести их одной командой, и это отражается на итоговой стоимости."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Что входит в базовый пакет переезда?","acceptedAnswer":{"@type":"Answer","text":"Консультация: какая виза подходит вашей ситуации, — плюс запись и подготовка документов на NIE, открытие счёта в испанском банке, помощь с первичной регистрацией. Пример состава: консультация по визе + NIE + банк — ориентировочно 1200 €. Полная подготовка и подача документов на визу — отдельная услуга, от 2000 € за заявителя. Точный состав и цена фиксируются в договоре."}},{"@type":"Question","name":"Как считается оплата, если пакет полный и идёт вместе с покупкой недвижимости?","acceptedAnswer":{"@type":"Answer","text":"Полный пакет — консультационное сопровождение переезда плюс координация сделки с недвижимостью. Стоимость складывается из фиксированной части за переезд и процента от риелторской сделки. Пример: переезд семьи плюс покупка квартиры за 250 000 € — пакет около 2500 € плюс комиссия с риелторской сделки (её платит продавец). Если нужна полная подача документов на визу — плюс от 2000 € за заявителя."}},{"@type":"Question","name":"Что будет с оплатой, если сделка с недвижимостью сорвётся?","acceptedAnswer":{"@type":"Answer","text":"Выполненная консультационная работа оплачивается по факту, невыполненная — не оплачивается или переносится на новый объект. Процент от сделки платится только при состоявшейся сделке. Порядок пересчёта прописан в договоре заранее."}},{"@type":"Question","name":"Обязательно ли покупать недвижимость, чтобы заказать переезд?","acceptedAnswer":{"@type":"Answer","text":"Нет. Базовый пакет переезда работает отдельно. Но чаще всего переезд и покупка идут вместе — тогда удобнее вести их одной командой, и это отражается на итоговой стоимости."}}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -286,6 +286,18 @@ img{display:block;max-width:100%}
 
 .note-line{font-size:12.5px;color:var(--ink-light);line-height:1.7;margin-top:16px;padding:12px 16px;background:var(--bg-alt);border-radius:8px}
 @media(max-width:768px){.two-col,.pkg-grid{grid-template-columns:1fr!important}}
+
+/* REGION SWITCH */
+.region-switch{background:var(--bg-alt);border-bottom:1px solid var(--rule);padding:20px 0}
+.region-switch-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.region-switch-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);font-weight:600;white-space:nowrap}
+.region-switch-row{display:flex;flex-wrap:wrap;gap:8px}
+.region-chip{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:7px 16px;font-size:13px;color:var(--ink-mid);white-space:nowrap}
+.region-chip:hover{border-color:var(--gold);color:var(--ink)}
+@media(max-width:768px){.region-switch-inner{padding:0 20px}}
+
+/* REGION HERO SUB-NAME */
+.region-kicker{font-size:13px;color:var(--gold);letter-spacing:.04em;margin-bottom:10px}
 </style>
 </head>
 <body>
@@ -317,7 +329,7 @@ img{display:block;max-width:100%}
       </div>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-num">€800+</div><div class="hero-stat-label">Базовый пакет:<br>виза + NIE + банк</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">€800+</div><div class="hero-stat-label">Базовый пакет:<br>консультация, NIE, банк</div></div>
       <div class="hero-stat"><div class="hero-stat-num">2500 €</div><div class="hero-stat-label">Полный пакет —<br>пример со сделкой</div></div>
       <div class="hero-stat"><div class="hero-stat-num">RU</div><div class="hero-stat-label">Весь процесс<br>на русском</div></div>
       <div class="hero-stat"><div class="hero-stat-num">1</div><div class="hero-stat-label">Координатор<br>на весь переезд</div></div>
@@ -342,12 +354,12 @@ img{display:block;max-width:100%}
         <div class="pkg-name">Базовый пакет</div>
         <div class="pkg-price">800–1500 €</div>
         <ul class="mini-list">
-          <li>Консультация по визе под вашу ситуацию</li>
+          <li>Консультация: какая виза подходит именно вам</li>
           <li>Подготовка документов и запись на NIE</li>
           <li>Открытие счёта в испанском банке</li>
           <li>Помощь с первичной регистрацией (empadronamiento)</li>
         </ul>
-        <div class="pkg-example">Пример разбивки: <strong>виза + NIE + банк ≈ 1200 €</strong>. Итоговый состав и цена зависят от типа визы и состава семьи и фиксируются в договоре.</div>
+        <div class="pkg-example">Пример разбивки: <strong>консультация по визе + оформление NIE + открытие счёта ≈ 1200 €</strong>. Это консультация и сопровождение процесса, а не подача документов на визу — она оформляется отдельно (см. ниже). Итоговый состав и цена зависят от типа визы и состава семьи и фиксируются в договоре.</div>
       </div>
       <div class="pkg-card featured">
         <div class="pkg-name">Полный пакет + сделка с недвижимостью</div>
@@ -356,11 +368,15 @@ img{display:block;max-width:100%}
           <li>Всё из базового пакета</li>
           <li>Координация сделки с недвижимостью от подбора до нотариуса</li>
           <li>Налоговое сопровождение сделки (бухгалтер команды)</li>
-          <li>Юрист по визам на весь цикл «недвижимость + переезд»</li>
+          <li>Юрист по визам сопровождает весь цикл «недвижимость + переезд» (консультации на каждом этапе)</li>
           <li>Один координатор на весь процесс</li>
         </ul>
-        <div class="pkg-example">Пример: <strong>переезд семьи + покупка квартиры 250 000 € = пакет ≈ 2500 € + комиссия с риелторской сделки</strong> (комиссию агенту платит продавец).</div>
+        <div class="pkg-example">Пример: <strong>переезд семьи + покупка квартиры 250 000 € = пакет ≈ 2500 € + комиссия с риелторской сделки</strong> (её платит продавец). Если семье нужна полная подача документов на визу — это плюс от 2000 € за заявителя сверх пакета.</div>
       </div>
+    </div>
+    <div class="insight" style="margin-top:24px">
+      <div class="insight-label">Отдельная услуга</div>
+      <p>Если нужна не консультация, а <strong>полная подготовка и подача пакета документов на визу</strong> (например, non-lucrative и похожие типы) — это отдельная услуга: от 2000 € за сопровождение одного заявителя, без учёта государственных пошлин и сборов. Добавляется к любому из пакетов при необходимости.</p>
     </div>
     <p class="note-line">Цены — ориентировочные вилки. Точная стоимость зависит от типа визы, состава семьи, региона и объёма координации и фиксируется в договоре до начала работы.</p>
   </div>
@@ -386,11 +402,11 @@ img{display:block;max-width:100%}
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Что входит в базовый пакет переезда?</span><span class="faq-icon">+</span></button>
-        <div class="faq-body"><div class="faq-bi"><p>Консультационное сопровождение по получению визы под вашу ситуацию, запись и подготовка документов на NIE, открытие счёта в испанском банке, помощь с первичной регистрацией. Пример состава: виза + NIE + банк — ориентировочно 1200 €. Точный состав и цена фиксируются в договоре.</p></div></div>
+        <div class="faq-body"><div class="faq-bi"><p>Консультация: какая виза подходит вашей ситуации, — плюс запись и подготовка документов на NIE, открытие счёта в испанском банке, помощь с первичной регистрацией. Пример состава: консультация по визе + NIE + банк — ориентировочно 1200 €. Полная подготовка и подача документов на визу — отдельная услуга, от 2000 € за заявителя. Точный состав и цена фиксируются в договоре.</p></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Как считается оплата, если пакет полный и идёт вместе с покупкой недвижимости?</span><span class="faq-icon">+</span></button>
-        <div class="faq-body"><div class="faq-bi"><p>Полный пакет — консультационное сопровождение переезда плюс координация сделки с недвижимостью. Стоимость складывается из фиксированной части за переезд и процента от риелторской сделки. Пример: переезд семьи плюс покупка квартиры за 250 000 € — пакет около 2500 € плюс комиссия с риелторской сделки (её платит продавец).</p></div></div>
+        <div class="faq-body"><div class="faq-bi"><p>Полный пакет — консультационное сопровождение переезда плюс координация сделки с недвижимостью. Стоимость складывается из фиксированной части за переезд и процента от риелторской сделки. Пример: переезд семьи плюс покупка квартиры за 250 000 € — пакет около 2500 € плюс комиссия с риелторской сделки (её платит продавец). Если нужна полная подача документов на визу — плюс от 2000 € за заявителя.</p></div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Что будет с оплатой, если сделка с недвижимостью сорвётся?</span><span class="faq-icon">+</span></button>

@@ -393,4 +393,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/realestate/relocation/"/>
   </url>
 
+  <!-- Региональные хаб-страницы «Недвижимость» — сентябрь 2026 -->
+
+  <url>
+    <loc>https://experty.es/realestate/regions/barcelona/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/realestate/regions/barcelona/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/realestate/regions/barcelona/"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/realestate/regions/costa-blanca/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/realestate/regions/costa-blanca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/realestate/regions/costa-blanca/"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/realestate/regions/madrid/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/realestate/regions/madrid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/realestate/regions/madrid/"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/realestate/regions/costa-del-sol/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/realestate/regions/costa-del-sol/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/realestate/regions/costa-del-sol/"/>
+  </url>
+
 </urlset>
