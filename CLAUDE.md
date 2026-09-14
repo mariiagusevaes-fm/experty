@@ -65,8 +65,29 @@ Platform contacts: WhatsApp `wa.me/34685093534`, Telegram `t.me/infoaccount1`,
 - `<link rel="canonical">`, `og:*` meta, and one or more `application/ld+json` blocks
   (`Organization`/`WebSite`/`FAQPage` on landing pages; `Person` + `BreadcrumbList` + `FAQPage`
   on profiles).
-- **Canonical URLs and `sitemap.xml` are extensionless** (`https://experty.es/guseva-maria`),
-  but inter-page `<a href>` links use `.html` (`guseva-maria.html`). Keep both forms in sync.
+- **Canonical URLs and `sitemap.xml` are extensionless** (`https://experty.es/guseva-maria`).
+  GitHub Pages' own static serving is the reason both `/foo` and `/foo.html` return `200` for
+  the same file with no redirect between them — this is not Jekyll (the repo has no
+  `_config.yml`/`.nojekyll`) but GH Pages' extensionless-URL fallback. That duplication is being
+  consolidated page by page via Cloudflare Bulk Redirects (301, `.html` → bare), so **inter-page
+  `<a href>` link format is currently mixed, not uniform** — link to whichever form is that
+  target page's current state:
+  - **Bare, no `.html`** (redirect already live in Cloudflare) — `rieltor`, `avto`, `nyanya`,
+    `psiholog`, `massazh`, `klining`, `trener`, `fotograf`, `logoped`, `repetitor`,
+    `master-krasoty`, `gv-doula`, `yurist`, `dizayner`, `ryabova-lyudmila`,
+    `cheremisina-svetlana`, `patrenina-marina`, `gribovich-zlata`, `vilkova-diana`,
+    `ardani-anna`, `lakaev-aleksandr`, `flacorus-sergey`.
+  - **`.html`** (still current — no redirect configured yet) — every other specialist/category
+    page. These already declare a bare `<link rel="canonical">` too, but until their Cloudflare
+    redirect exists, linking to the bare URL would just be linking to the unredirected duplicate,
+    not a real fix — leave them as `.html` for now.
+  - **`.html`, and canonical points at `.html` too (not bare)** — `aviso-legal.html`,
+    `cookies.html`, `privacidad.html`. The reverse inconsistency; unresolved, separate from the
+    above two groups — don't fold them into either list.
+
+  This is a migration in progress, not a permanent split. Once the remaining ~37 pages get their
+  own Cloudflare redirect, the rule collapses back to "bare everywhere" and this section should
+  be rewritten to say that plainly again.
 
 ## Adding a new specialist
 
