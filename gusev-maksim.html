@@ -32,107 +32,249 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#F7F5F2;--bg-alt:#EFEDE9;--ink:#1A1714;--ink-mid:#5C5650;--ink-light:#9A9590;--gold:#C8A96E;--rule:rgba(26,23,20,0.10);--rule-mid:rgba(26,23,20,0.18);--white:#FFFFFF;--serif:"Playfair Display",Georgia,serif;--sans:"Inter",system-ui,sans-serif}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+:root{
+  --bg:#F7F5F2;--paper:#FFFFFF;--panel:#EFEDE9;
+  --ink:#1A1714;--ink-mid:#5C5650;--ink-soft:#9A9590;
+  --rule:rgba(26,23,20,0.10);--rule-strong:rgba(26,23,20,0.18);
+  --gold:#C8A96E;--gold-weak:rgba(200,169,110,0.14);--gold-light:#C8A96E;
+  --serif:"Playfair Display",Georgia,serif;--sans:"Inter",system-ui,-apple-system,sans-serif;
+  --t-label:.78rem;
+  --t-body:clamp(1rem,.96rem + .2vw,1.125rem);
+  --t-lead:clamp(1.15rem,1rem + .6vw,1.5rem);
+  --t-h2:clamp(1.6rem,1.25rem + 1.6vw,2.5rem);
+  --t-h1:clamp(2.4rem,1.2rem + 5.6vw,6rem);
+  --pad:clamp(24px,6vw,80px);--maxw:1240px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:var(--t-body);line-height:1.75;font-weight:400;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+h1{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacing:-.02em;color:var(--ink)}
+h2,h3{font-family:var(--sans);font-weight:600;line-height:1.25;letter-spacing:-.01em;color:var(--ink)}
+p{color:var(--ink-mid)}
 a{color:inherit;text-decoration:none}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,245,242,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--rule)}
-.nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav-logo{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink)}
+img{display:block;max-width:100%}
+ul{list-style:none}
+::selection{background:var(--ink);color:var(--paper)}
+
+.label{font:600 var(--t-label)/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mid)}
+.link{position:relative;color:var(--ink);white-space:nowrap}
+.link::after{content:"";position:absolute;left:0;bottom:-3px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.link:hover::after{transform:scaleX(1)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(247,245,242,.84);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:transform .45s ease,border-color .3s}
+.nav.is-hidden{transform:translateY(-100%)}
+.nav.is-scrolled{border-color:var(--rule)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo{font-family:var(--serif);font-size:19px}
 .nav-logo span{color:var(--gold)}
-.nav-back{font-size:13px;color:var(--ink-light)}
-.nav-cta{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
-.hero{padding-top:56px;background:var(--ink)}
-.hero-inner{max-width:600px;margin:0 auto;padding:40px 24px 36px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
-.hero-photo{width:130px;height:130px;border-radius:50%;overflow:hidden;border:3px solid var(--gold);background:#2a2724;flex-shrink:0}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
-.verified{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.15);border:1px solid rgba(200,169,110,0.3);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
-.hero-name{font-family:var(--serif);font-size:clamp(22px,5vw,36px);font-weight:400;color:var(--bg);letter-spacing:-.02em;line-height:1.1}
-.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:4px}
-.btn-dark{background:rgba(247,245,242,0.1);color:rgba(247,245,242,0.85);border:1px solid rgba(247,245,242,0.2);border-radius:4px;padding:10px 20px;font-size:13px;font-weight:500;display:inline-block;text-align:center}
-.btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:10px 20px;font-size:13px;font-weight:600;display:inline-block;text-align:center}
-.stats-bar{background:#111;border-top:1px solid rgba(247,245,242,0.06)}
-.stats-bar-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
-.sbar-item{padding:16px 0;text-align:center;border-right:1px solid rgba(247,245,242,0.06)}
-.sbar-item:last-child{border-right:none}
-.sbar-num{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--gold);line-height:1;margin-bottom:3px}
-.sbar-label{font-size:10px;color:rgba(247,245,242,0.35);line-height:1.4}
-.page{max-width:1120px;margin:0 auto;padding:0 24px}
-.page-inner{display:grid;grid-template-columns:1fr 280px;gap:40px;padding:44px 0 64px;align-items:start}
-.main{display:flex;flex-direction:column;gap:0}
-.block{padding:32px 0;border-top:1px solid var(--rule)}
-.block:first-child{border-top:none;padding-top:0}
-.block-title{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink);margin-bottom:16px}
-.block p{font-size:14px;color:var(--ink-mid);line-height:1.8;margin-bottom:10px}
-.block p:last-child{margin-bottom:0}
-.section-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light);padding:10px 0 6px;grid-column:1/-1;border-bottom:1px solid var(--rule);margin-bottom:2px}
-.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.check-card{display:flex;gap:10px;padding:12px 14px;background:var(--white);border:1px solid var(--rule);border-radius:8px;align-items:flex-start}
-.check-card-gold{color:var(--gold);font-weight:700;flex-shrink:0;font-size:13px}
-.check-card-text{font-size:13px;color:var(--ink-mid);line-height:1.4}
-.edu-list{display:flex;flex-direction:column;gap:8px}
-.edu-card{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px}
-.edu-icon{font-size:18px;flex-shrink:0;margin-top:2px}
-.edu-name{font-size:13px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:2px}
-.edu-sub{font-size:12px;color:var(--ink-light);line-height:1.4}
-.steps{display:flex;flex-direction:column;gap:14px}
-.step{display:flex;gap:14px;align-items:flex-start}
-.step-num{width:34px;height:34px;min-width:34px;border-radius:50%;border:2px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.step-body h4{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px}
-.step-body p{font-size:13px;color:var(--ink-mid);line-height:1.6;margin:0}
-.price-table{border:1px solid var(--rule);border-radius:10px;overflow:hidden}
-.price-section{padding:8px 16px 4px;background:var(--bg-alt);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light)}
-.price-row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;padding:11px 16px;border-bottom:1px solid var(--rule);background:var(--white)}
-.price-row:last-child{border-bottom:none}
-.price-name{font-size:13px;font-weight:600;color:var(--ink)}
-.price-desc{font-size:12px;color:var(--ink-light);margin-top:2px}
-.price-val{font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap;text-align:right}
-.price-val.free{color:#16a34a}
-.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.trust-item{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--white);border:1px solid var(--rule);border-radius:8px}
-.trust-icon{font-size:16px;flex-shrink:0}
-.trust-text{font-size:13px;color:var(--ink-mid);line-height:1.4}
+.nav-back{font-size:.82rem;color:var(--ink-soft)}
+.nav-cta{background:var(--gold);color:#fff;border:0;border-radius:999px;padding:11px 22px;font:600 .78rem/1 var(--sans);letter-spacing:.02em;cursor:pointer;white-space:nowrap;transition:background .3s}
+.nav-cta:hover{background:var(--ink)}
+
+/* HERO */
+.hero{background:var(--paper);padding:calc(64px + clamp(36px,7vh,80px)) 0 clamp(48px,8vh,88px)}
+.hero-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,6vw,90px);align-items:center}
+.hero-badge{display:block;margin-bottom:24px}
+.hero-name{font-size:var(--t-h1);font-weight:500;line-height:.96;letter-spacing:-.035em}
+.hero-role{margin-top:20px;font:400 var(--t-lead)/1.5 var(--sans);color:var(--ink);max-width:30ch}
+.hero-links{margin-top:34px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-size:.94rem}
+.ico{width:17px;height:17px;flex:none}
+.msg-wa,.msg-tg{display:inline-flex;align-items:center;gap:7px}
+.msg-wa{color:#25D366}
+.msg-tg{color:#0088cc}
+.msg-wa.link::after,.msg-tg.link::after,.msg-site.link::after{background:currentColor}
+.msg-site{color:var(--gold)}
+.hero-facts{margin-top:40px;background:var(--ink);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:repeat(2,1fr)}
+.hero-fact{padding:22px 26px;border-right:1px solid rgba(255,255,255,.09);border-bottom:1px solid rgba(255,255,255,.09)}
+.hero-fact:nth-child(2n){border-right:0}
+.hero-fact:nth-child(3),.hero-fact:nth-child(4){border-bottom:0}
+.hero-fact b{font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1;display:block;margin-bottom:6px;color:var(--gold-light)}
+.hero-fact span{font-size:.8rem;font-weight:500;color:rgba(247,245,242,.72)}
+.hero-photo{aspect-ratio:4/5;background:var(--panel);overflow:hidden;border-radius:20px}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 14%;filter:grayscale(.1) contrast(1.03)}
+
+/* LAYOUT */
+.grid{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(32px,5vw,72px);align-items:start}
+.grid-pad{padding-top:clamp(16px,3vh,32px);padding-bottom:clamp(48px,8vh,80px)}
+.col-main{min-width:0}
+
+/* BLOCK */
+.block{padding:clamp(40px,5vw,60px) 0;border-top:1px solid var(--rule)}
+.block:first-child{border-top:0;padding-top:0}
+.block-head{display:flex;gap:16px;align-items:baseline;margin-bottom:clamp(22px,2.6vw,32px)}
+.block-title{font-size:var(--t-h2);max-width:22ch}
+.prose p{font-size:var(--t-body);line-height:1.85;margin-bottom:1.1em;max-width:66ch}
+.prose p:last-child{margin-bottom:0}
+
+/* CAPABILITY LISTS */
+.caps + .caps{margin-top:40px}
+.caps-head{font:700 .95rem/1.3 var(--sans);color:var(--ink);padding-bottom:10px;border-bottom:2px solid var(--gold)}
+.caps-list{display:grid;grid-template-columns:1fr 1fr;column-gap:44px;margin-top:6px}
+.caps-list li{padding:10px 0;font-size:1rem;color:var(--ink-mid);display:flex;gap:12px;line-height:1.5;min-width:0}
+.caps-list li::before{content:"\2713";flex:none;color:var(--gold);font-weight:700;font-size:1rem;line-height:1.5}
+
+/* RATE CARD */
+.rate + .rate{margin-top:44px}
+.rate-head{font:700 .95rem/1.3 var(--sans);color:var(--ink);padding-bottom:10px;border-bottom:2px solid var(--gold)}
+.rate-row{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:var(--gold-weak);border-radius:12px;padding:18px 22px;transition:background .25s ease}
+.rate-row + .rate-row{margin-top:6px}
+.rate-row:hover{background:rgba(200,169,110,.22)}
+.rate-name{font-size:var(--t-body);color:var(--ink)}
+.rate-desc{font-size:.9rem;color:var(--ink-soft);line-height:1.6;margin-top:5px;max-width:64ch}
+.rate-price{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--gold);white-space:nowrap}
+.rate-price.is-free{color:var(--ink-soft);font-weight:400;font-style:normal;font-size:1rem}
+.rate-also{font-size:.92rem;color:var(--ink-soft);line-height:1.75;padding-top:16px}
+
+/* EXPERIENCE ROWS */
+.rows-line{display:flex;flex-direction:column}
+.rline{display:grid;grid-template-columns:minmax(110px,160px) 1fr;gap:28px;padding:14px 0}
+.rline-k{font-size:.85rem;color:var(--gold);font-weight:700;line-height:1.5}
+.rline-v strong{display:block;font-weight:600;font-size:1rem;color:var(--ink);margin-bottom:4px}
+.rline-v span{font-size:.92rem;color:var(--ink-soft);line-height:1.6}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column}
+.step{display:grid;grid-template-columns:auto 1fr;gap:26px;padding:18px 0}
+.step-n{font-family:var(--serif);font-size:1.85rem;font-weight:500;color:var(--gold);line-height:1}
+.step h3{font-family:var(--sans);font-weight:600;font-size:1.02rem;margin-bottom:6px;letter-spacing:0;line-height:1.35}
+.step p{font-size:.96rem;color:var(--ink-mid);line-height:1.75;max-width:64ch}
+
+/* WHY */
+.why{display:grid;grid-template-columns:1fr 1fr;column-gap:46px}
+.why li{display:flex;gap:14px;padding:11px 0;font-size:.98rem;color:var(--ink-mid);line-height:1.6;align-items:center}
+.why li .ic{flex:none;width:36px;height:36px;border-radius:50%;background:var(--gold-weak);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--panel);border:1px solid var(--rule-strong);border-radius:999px;padding:8px 16px;font-size:.88rem;color:var(--ink-mid)}
+
+/* FAQ */
 .faq-item{border-top:1px solid var(--rule)}
 .faq-item:last-child{border-bottom:1px solid var(--rule)}
-.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;background:transparent;border:none;color:var(--ink);text-align:left;cursor:pointer;font-family:var(--sans)}
-.faq-question{font-size:14px;font-weight:500;color:var(--ink);line-height:1.3;flex:1}
-.faq-icon{width:22px;height:22px;border:1px solid var(--rule-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--ink-mid);flex-shrink:0;transition:all .25s}
-.faq-item.open .faq-icon{background:var(--ink);border-color:var(--ink);color:var(--bg);transform:rotate(45deg)}
-.faq-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
-.faq-item.open .faq-body{max-height:300px}
-.faq-bi p{font-size:13px;color:var(--ink-mid);line-height:1.75;padding-bottom:12px}
-.form-field{margin-bottom:10px}
-.form-field label{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light);font-weight:600;margin-bottom:4px}
-.form-field input,.form-field textarea{width:100%;background:var(--bg);border:1px solid var(--rule-mid);border-radius:4px;padding:9px 12px;color:var(--ink);font-size:13px;font-family:var(--sans);outline:none;transition:border-color .2s}
-.form-field input:focus,.form-field textarea:focus{border-color:var(--gold)}
-.form-field textarea{resize:vertical;min-height:72px}
-.form-submit{width:100%;background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:11px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans)}
-.sbar{display:flex;flex-direction:column;gap:12px;position:sticky;top:68px}
-.widget{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:18px}
-.widget-dark{background:var(--ink);border-radius:12px;padding:18px}
-.widget-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.widget-checks{display:flex;flex-direction:column;gap:7px}
-.widget-check{display:flex;gap:8px;font-size:12px;color:rgba(247,245,242,0.7);line-height:1.4}
-.widget-check span:first-child{color:var(--gold);flex-shrink:0}
-.contact-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-light);margin-bottom:12px}
-.contact-links{display:flex;flex-direction:column;gap:7px}
-.contact-link{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink);padding:9px 12px;background:var(--bg-alt);border-radius:8px;line-height:1.3}
-.other-specs{display:flex;flex-direction:column}
-.spec-link{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink);padding:9px 0;border-bottom:1px solid var(--rule)}
-.spec-link:last-child{border-bottom:none}
-.callout{background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:14px 16px;font-size:13px;color:var(--ink-mid);line-height:1.7;margin-top:16px}
-.footer{border-top:1px solid var(--rule);background:var(--bg-alt);padding:18px 0}
-.footer-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.footer-logo{font-family:var(--serif);font-size:16px;color:var(--ink)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:22px;padding:20px 10px;margin:0 -10px;border-radius:10px;background:0;border:0;cursor:pointer;text-align:left;font-family:var(--sans);transition:background .2s}
+.faq-q:hover{background:var(--panel)}
+.faq-question{font-size:1.02rem;font-weight:500;color:var(--ink);line-height:1.45}
+.faq-icon{flex:none;width:14px;height:14px;position:relative;margin-top:6px;transition:transform .35s ease}
+.faq-icon::before,.faq-icon::after{content:"";position:absolute;background:var(--ink);inset:0;margin:auto;transition:background .2s}
+.faq-icon::before{width:14px;height:1px}
+.faq-icon::after{width:1px;height:14px}
+.faq-item.open .faq-icon{transform:rotate(135deg)}
+.faq-item.open .faq-icon::before,.faq-item.open .faq-icon::after{background:var(--gold)}
+.faq-item.open .faq-question{color:var(--gold)}
+.faq-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.faq-item.open .faq-body{grid-template-rows:1fr}
+.faq-bi{overflow:hidden}
+.faq-bi p{font-size:.96rem;color:var(--ink-mid);line-height:1.8;padding:0 10px 22px;max-width:64ch}
+
+/* FORM / BOOKING */
+#booking{background:var(--panel);border-top:0;border-radius:20px;margin-top:clamp(24px,3vw,36px);padding:clamp(30px,4vw,48px)}
+.booking-lead{font-size:var(--t-body);color:var(--ink-mid);line-height:1.7;margin-bottom:24px;max-width:56ch}
+.form-field{margin-bottom:16px}
+.form-field label{display:block;font:600 .8rem/1 var(--sans);color:var(--ink-mid);margin-bottom:8px}
+.form-field input,.form-field textarea{width:100%;background:var(--paper);border:1px solid var(--rule-strong);border-radius:10px;padding:12px 14px;font:400 1rem/1.5 var(--sans);color:var(--ink);transition:border-color .2s}
+.form-field input:focus,.form-field textarea:focus{outline:0;border-color:var(--gold)}
+.form-field textarea{resize:vertical;min-height:64px}
+.form-field input::placeholder,.form-field textarea::placeholder{color:var(--ink-soft)}
+.form-submit{width:100%;background:var(--gold);color:#fff;border:0;border-radius:10px;padding:16px;font:600 .82rem/1 var(--sans);letter-spacing:.02em;cursor:pointer;margin-top:10px;transition:background .3s}
+.form-submit:hover{background:var(--ink)}
+.form-ok{display:none;margin-top:14px;padding:14px 16px;border-radius:10px;border-left:3px solid var(--gold);font-size:.92rem;color:var(--ink-mid);background:var(--paper)}
+
+/* SIDEBAR */
+.side{background:var(--panel);border-radius:18px;padding:clamp(24px,3vw,30px);display:flex;flex-direction:column;gap:32px;position:sticky;top:88px}
+.side-block .label{display:block;padding-bottom:12px;border-bottom:2px solid var(--gold);margin-bottom:14px;color:var(--ink);font-weight:700}
+.side-facts{display:flex;flex-direction:column;gap:2px}
+.side-facts li{font-size:.9rem;color:var(--ink-mid);line-height:1.5;padding:6px 0}
+.side-facts li:first-child{color:var(--ink);font-weight:600}
+.side-link{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.92rem;color:var(--ink);padding:10px 10px;margin:0 -10px;border-radius:8px;transition:background .2s ease,color .2s}
+.side-link:hover{background:var(--paper);color:var(--gold)}
+.side-link .arr{color:var(--gold)}
+.side-link-label{display:inline-flex;align-items:center;gap:8px;min-width:0}
+.side-link.msg-wa{color:#25D366}
+.side-link.msg-wa:hover{color:#25D366}
+.side-link.msg-wa .arr{color:#25D366}
+.side-link.msg-tg{color:#0088cc}
+.side-link.msg-tg:hover{color:#0088cc}
+.side-link.msg-tg .arr{color:#0088cc}
+.side-link.msg-site{color:var(--gold)}
+.side-link.msg-site:hover{color:var(--gold)}
+.side-link.msg-site .arr{color:var(--gold)}
+
+/* DISCLAIMER + FOOTER */
+.disclaimer{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad) 52px}
+.disclaimer p{font-size:.82rem;color:var(--ink-soft);line-height:1.75;max-width:72ch}
+.footer{border-top:1px solid var(--rule);padding:30px 0}
+.footer-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.footer-logo{font-family:var(--serif);font-size:16px}
 .footer-logo span{color:var(--gold)}
-.footer-copy{font-size:11px;color:var(--ink-light)}
-@media(max-width:900px){.page-inner{grid-template-columns:1fr}.sbar{position:static}}
-@media(max-width:600px){.check-grid{grid-template-columns:1fr}.stats-bar-inner{grid-template-columns:repeat(2,1fr)}.sbar-item:nth-child(2){border-right:none}.hero-actions{flex-direction:column;width:100%}.btn-dark,.btn-gold{width:100%;text-align:center}.trust-grid{grid-template-columns:1fr}}
+.footer-copy{font-size:.76rem;color:var(--ink-soft)}
+
+/* REVEAL */
+@media(prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.is-in{opacity:1;transform:none}
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .hero-inner{grid-template-columns:1fr;gap:36px}
+  .hero-photo{aspect-ratio:16/10;order:1}
+  .hero-photo img{object-position:50% 20%}
+  .grid{grid-template-columns:1fr;gap:0}
+  .side{position:static;margin-top:44px;padding:clamp(28px,6vw,34px)}
+}
+@media(max-width:640px){
+  .caps-list,.why{grid-template-columns:1fr}
+  .nav-cta{padding:9px 16px;font-size:.74rem}
+  .nav-back{display:none}
+  .rline{grid-template-columns:1fr;gap:4px}
+  .step{grid-template-columns:1fr;gap:10px}
+}
+
+/* ================================================================
+   ТЕЛЕФОН (≤640px) — визуальный стиль версии до редизайна:
+   мягкий тёмный hero с круглым фото, панель статистики 2×2,
+   карточки услуг с рамками и галочками, табличный прайс-лист.
+   Разметка и контент общие с десктопом — здесь только внешний вид.
+   Порядок в hero (текст → CTA → статистика → фото) не меняется.
+   ================================================================ */
+@media(max-width:640px){
+  /* hero: мягкий тёмный фон, компактнее по высоте, фото круглое по центру */
+  .hero{background:var(--ink);padding:calc(64px + 22px) 0 40px}
+  .hero-inner{grid-template-columns:1fr;gap:24px;text-align:center;justify-items:center}
+  .hero-badge{color:var(--gold-light);background:rgba(200,169,110,.12);border:1px solid rgba(200,169,110,.3);border-radius:100px;padding:4px 14px;margin-bottom:16px}
+  .hero-name{color:var(--paper)}
+  .hero-role{color:rgba(247,245,242,.72);margin-top:14px;margin-inline:auto}
+  .hero-links{justify-content:center;margin-top:20px;gap:16px}
+  .hero-photo{width:120px;height:120px;aspect-ratio:1/1;border-radius:50%;border:3px solid var(--gold-light);margin:0 auto}
+  .hero-photo img{object-position:50% 20%}
+
+  /* панель статистики: 2×2, компактная, мягкий тёмный тон */
+  .hero-facts{grid-template-columns:repeat(2,1fr);border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);margin-top:22px}
+  .hero-fact{padding:14px 14px}
+  .hero-fact b{font-size:1.45rem}
+
+  /* «Чем могу помочь»: карточки с рамкой и золотой галочкой */
+  .caps-list li{background:var(--paper);border:1px solid var(--rule-strong);border-radius:8px;padding:12px 14px;margin-bottom:8px}
+  .caps-list li::before{color:var(--gold)}
+
+  /* «Услуги и цены»: табличный прайс-лист в общей рамке */
+  .rate{border:1px solid var(--rule-strong);border-radius:10px;padding:2px 16px}
+  .rate-head{padding:14px 0 10px}
+  .rate-row{grid-template-columns:1fr auto;gap:4px 14px;align-items:start;background:none;border-radius:0;border-bottom:1px solid var(--rule);padding:14px 0;margin-top:0}
+  .rate-row + .rate-row{margin-top:0}
+  .rate-row:hover{background:none}
+  .rate-row:last-child{border-bottom:0}
+  .rate-name{font-weight:600}
+  .rate-desc{max-width:none}
+  .rate-price{justify-self:end;text-align:right}
+  .rate-also{padding:14px 0 4px}
+}
 </style>
 </head>
 <body>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
-<nav class="nav">
+<nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Experty<span>.</span>es</a>
     <a href="finansoviy-konsultant.html" class="nav-back">← Финансовые консультанты</a>
@@ -142,213 +284,216 @@ a{color:inherit;text-decoration:none}
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-photo">
-      <img src="foto-maksim-gusev.jpg" alt="Максим Гусев — финансовый консультант в Испании" loading="eager" onerror="this.parentNode.style.display='none'">
+    <div class="reveal">
+      <span class="label hero-badge">Топ платформы Experty.es</span>
+      <h1 class="hero-name">Максим Гусев</h1>
+      <p class="hero-role">Финансовый консультант в Испании — налоги, autónomo и инвестиции для тех, кто переехал.</p>
+      <div class="hero-links">
+          <a href="https://wa.me/34656557670?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" rel="noopener" class="link msg-wa"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.892.526 3.66 1.44 5.166L2 22l4.966-1.304A9.943 9.943 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12.001 2zm0 18.083a8.055 8.055 0 01-4.106-1.121l-.294-.175-3.044.799.812-2.968-.192-.304a8.03 8.03 0 01-1.267-4.314c0-4.44 3.612-8.052 8.052-8.052 4.44 0 8.051 3.612 8.051 8.052 0 4.44-3.611 8.052-8.052 8.052zm4.412-6.032c-.242-.121-1.434-.708-1.656-.788-.222-.081-.384-.121-.546.121-.161.242-.626.788-.767.949-.141.161-.283.181-.525.06-.242-.121-1.022-.377-1.947-1.202-.72-.642-1.206-1.435-1.347-1.677-.141-.242-.015-.373.106-.494.109-.108.242-.283.363-.424.121-.141.161-.242.242-.404.081-.161.04-.303-.02-.424-.06-.121-.546-1.314-.748-1.8-.197-.473-.397-.409-.546-.416-.141-.007-.303-.008-.465-.008a.893.893 0 00-.646.303c-.222.242-.848.828-.848 2.021 0 1.192.868 2.345.988 2.507.121.161 1.708 2.608 4.14 3.658.579.25 1.03.399 1.382.51.581.185 1.11.159 1.528.096.466-.07 1.434-.586 1.636-1.153.202-.566.202-1.051.141-1.153-.06-.101-.222-.161-.464-.283z"/></svg>WhatsApp</a>
+          <a href="https://t.me/maxim_spain" target="_blank" rel="noopener" class="link msg-tg"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.29c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.87 4.326-2.96-.924c-.643-.204-.658-.643.136-.953l11.57-4.458c.538-.196 1.006.128.83.958z"/></svg>Telegram</a>
+          <a href="https://maxim-gusev.pro" target="_blank" rel="noopener" class="link msg-site"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Сайт</a>
+      </div>
+      <div class="hero-facts">
+        <div class="hero-fact"><b>10+</b><span>лет в финансах, с 2015</span></div>
+        <div class="hero-fact"><b>180+</b><span>клиентов в Испании</span></div>
+        <div class="hero-fact"><b>&euro;0</b><span>первичная консультация</span></div>
+        <div class="hero-fact"><b>Барселона</b><span>онлайн и очно</span></div>
+      </div>
     </div>
-    <div class="verified">⭐ Топ платформы</div>
-    <h1 class="hero-name">Максим Гусев — финансовый консультант в Испании</h1>
-    <div class="hero-actions">
-      <a href="https://wa.me/34656557670?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" class="btn-gold">💬 WhatsApp</a>
-      <a href="https://t.me/maxim_spain" target="_blank" class="btn-dark">✈️ Telegram</a>
-      <a href="https://maxim-gusev.pro" target="_blank" class="btn-dark">🌐 Сайт</a>
+    <div class="hero-photo reveal">
+      <img src="foto-maksim-gusev.jpg" alt="Максим Гусев — финансовый консультант в Испании" loading="eager" onerror="this.parentNode.style.display='none'">
     </div>
   </div>
 </section>
 
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div class="sbar-item"><div class="sbar-num">10+</div><div class="sbar-label">лет в финансах<br>с 2015 года</div></div>
-    <div class="sbar-item"><div class="sbar-num">180+</div><div class="sbar-label">клиентов<br>в Испании</div></div>
-    <div class="sbar-item"><div class="sbar-num">€0</div><div class="sbar-label">первичная<br>консультация</div></div>
-    <div class="sbar-item"><div class="sbar-num">🇪🇸</div><div class="sbar-label">Барселона<br>онлайн и очно</div></div>
-  </div>
-</div>
+<div class="grid grid-pad">
+  <div class="col-main">
 
-<div class="page">
-  <div class="page-inner">
-    <div class="main">
-
-      <!-- ЧЕМ МОГУ ПОМОЧЬ -->
-      <div class="block">
-        <h2 class="block-title">Чем могу помочь</h2>
-        <div class="check-grid">
-          <div class="section-label">Финансы и инвестиции</div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Личный финансовый план</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Анализ и подбор инвестиций</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Покупка недвижимости в Испании</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Пенсионное планирование</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Финансовый аудит и оптимизация</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Страхование жизни и капитала</span></div>
-          <div class="section-label">Налоги и бухгалтерия</div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Регистрация autónomo</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Квартальные декларации (Modelo 130, 303)</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Годовая декларация IRPF (Renta)</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Modelo 720 — зарубежные активы</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Закон Бэкхема — анализ и подача</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Бухгалтерия autónomo под ключ</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Двойное налогообложение РФ-Испания</span></div>
-          <div class="check-card"><span class="check-card-gold">✓</span><span class="check-card-text">Налог на доходы от аренды</span></div>
-        </div>
+    <!-- 01 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">Чем могу помочь</h2></div>
+      <div class="caps">
+        <div class="caps-head">Финансы и инвестиции</div>
+        <ul class="caps-list">
+          <li>Личный финансовый план</li>
+          <li>Анализ и подбор инвестиций</li>
+          <li>Покупка недвижимости в Испании</li>
+          <li>Пенсионное планирование</li>
+          <li>Финансовый аудит и оптимизация</li>
+          <li>Страхование жизни и капитала</li>
+        </ul>
       </div>
+      <div class="caps">
+        <div class="caps-head">Налоги и бухгалтерия</div>
+        <ul class="caps-list">
+          <li>Регистрация autónomo</li>
+          <li>Квартальные декларации (Modelo 130, 303)</li>
+          <li>Годовая декларация IRPF (Renta)</li>
+          <li>Modelo 720 — зарубежные активы</li>
+          <li>Закон Бэкхема — анализ и подача</li>
+          <li>Бухгалтерия autónomo под ключ</li>
+          <li>Двойное налогообложение РФ&ndash;Испания</li>
+          <li>Налог на доходы от аренды</li>
+        </ul>
+      </div>
+    </section>
 
-      <!-- О СПЕЦИАЛИСТЕ -->
-      <div class="block">
-        <h2 class="block-title">О специалисте</h2>
+    <!-- 02 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">О специалисте</h2></div>
+      <div class="prose">
         <p>Если вы переехали в Испанию и не понимаете как здесь работают налоги, куда вкладывать деньги и как не переплатить — я помогу разобраться. Работаю на русском языке, объясняю без жаргона.</p>
         <p>В финансах с 2015 года: начинал финансовым аналитиком в инвестиционной компании, затем — управление личными финансами клиентов. В 2023 году переехал в Барселону и обнаружил, что большинство русскоязычных в Испании теряют деньги просто потому, что не знают местных правил.</p>
         <p>Испанская система существенно отличается от российской: другие налоги на капитал, другие пенсионные инструменты, другие брокеры. Плюс специфика экспатов — Modelo 720, закон Бэкхема, вопросы двойного налогообложения. Во всём этом я помогаю.</p>
-        <p>Работаю онлайн по всей Испании и очно в Барселоне. Клиенты из Барселоны, Мадрида, Валенсии, Малаги и других городов. Подробнее на <a href="https://maxim-gusev.pro" target="_blank" style="color:var(--gold)">maxim-gusev.pro</a>.</p>
+        <p>Работаю онлайн по всей Испании и очно в Барселоне. Клиенты из Барселоны, Мадрида, Валенсии, Малаги и других городов. Подробнее на <a href="https://maxim-gusev.pro" target="_blank" rel="noopener" class="link">maxim-gusev.pro</a>.</p>
       </div>
+    </section>
 
-      <!-- ОБРАЗОВАНИЕ И ОПЫТ -->
-      <div class="block">
-        <h2 class="block-title">Образование и опыт</h2>
-        <div class="edu-list">
-          <div class="edu-card"><span class="edu-icon">🎓</span><div><div class="edu-name">Высшее финансово-экономическое образование</div><div class="edu-sub">Специализация — финансы и инвестиции</div></div></div>
-          <div class="edu-card"><span class="edu-icon">📈</span><div><div class="edu-name">2015-2021 · Финансовый аналитик</div><div class="edu-sub">Инвестиционная компания, управление портфелями клиентов</div></div></div>
-          <div class="edu-card"><span class="edu-icon">🇪🇸</span><div><div class="edu-name">2023 — наст. вр. · Барселона</div><div class="edu-sub">Частная практика — финансовое консультирование для русскоязычных экспатов в Испании</div></div></div>
-          <div class="edu-card"><span class="edu-icon">📊</span><div><div class="edu-name">180+ клиентов в Испании</div><div class="edu-sub">Инвестиции, налоговое планирование, autónomo, недвижимость</div></div></div>
-        </div>
+    <!-- 03 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">Образование и опыт</h2></div>
+      <div class="rows-line">
+        <div class="rline"><div class="rline-k">Образование</div><div class="rline-v"><strong>Высшее финансово-экономическое образование</strong><span>Специализация — финансы и инвестиции</span></div></div>
+        <div class="rline"><div class="rline-k">2015&ndash;2021</div><div class="rline-v"><strong>Финансовый аналитик</strong><span>Инвестиционная компания, управление портфелями клиентов</span></div></div>
+        <div class="rline"><div class="rline-k">2023 &mdash; сейчас</div><div class="rline-v"><strong>Барселона · частная практика</strong><span>Финансовое консультирование для русскоязычных экспатов в Испании</span></div></div>
+        <div class="rline"><div class="rline-k">Практика</div><div class="rline-v"><strong>180+ клиентов в Испании</strong><span>Инвестиции, налоговое планирование, autónomo, недвижимость</span></div></div>
       </div>
+    </section>
 
-      <!-- УСЛУГИ И ЦЕНЫ -->
-      <div class="block">
-        <h2 class="block-title">Услуги и цены</h2>
-        <div class="price-table">
-          <div class="price-section">Финансовое консультирование</div>
-          <div class="price-row"><div><div class="price-name">Первичная консультация</div><div class="price-desc">60 минут — знакомство, анализ ситуации, рекомендации</div></div><div class="price-val free">Бесплатно</div></div>
-          <div class="price-row"><div><div class="price-name">Личный финансовый план</div><div class="price-desc">Анализ текущего положения + стратегия на 3-5 лет</div></div><div class="price-val">€150</div></div>
-          <div class="price-row"><div><div class="price-name">Инвестиционная стратегия</div><div class="price-desc">Подбор инструментов под ваш профиль и цели</div></div><div class="price-val">€120</div></div>
-          <div class="price-row"><div><div class="price-name">Консультация по недвижимости</div><div class="price-desc">Финансовый анализ сделки, ипотека, налоги</div></div><div class="price-val">€100</div></div>
-          <div class="price-row"><div><div class="price-name">Сопровождение — 3 месяца</div><div class="price-desc">Ежемесячные встречи + поддержка в чате</div></div><div class="price-val">€250/мес</div></div>
-          <div class="price-section">Налоги и бухгалтерия</div>
-          <div class="price-row"><div><div class="price-name">Регистрация autónomo</div><div class="price-desc">Регистрация в AEAT и Seguridad Social, выбор эпиграфа</div></div><div class="price-val">€120</div></div>
-          <div class="price-row"><div><div class="price-name">Квартальные декларации</div><div class="price-desc">Modelo 130 (IRPF) + Modelo 303 (IVA) за квартал</div></div><div class="price-val">€80/квартал</div></div>
-          <div class="price-row"><div><div class="price-name">Годовая Renta (IRPF)</div><div class="price-desc">Подготовка и сопровождение годовой декларации</div></div><div class="price-val">€150</div></div>
-          <div class="price-row"><div><div class="price-name">Modelo 720</div><div class="price-desc">Декларация зарубежных активов — счета, недвижимость, ценные бумаги</div></div><div class="price-val">от €200</div></div>
-          <div class="price-row"><div><div class="price-name">Закон Бэкхема</div><div class="price-desc">Анализ применимости, документы, подача Modelo 149</div></div><div class="price-val">€300</div></div>
-          <div class="price-row"><div><div class="price-name">Бухгалтерия autónomo — абонемент</div><div class="price-desc">Ежемесячный учёт, квартальные декларации, поддержка</div></div><div class="price-val">€120/мес</div></div>
-        </div>
+    <!-- 04 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">Услуги и цены</h2></div>
+      <div class="rate">
+        <div class="rate-head">Финансовое консультирование</div>
+        <div class="rate-row"><div><div class="rate-name">Первичная консультация</div><div class="rate-desc">60 минут — знакомство, анализ ситуации, рекомендации</div></div><div class="rate-price is-free">Бесплатно</div></div>
+        <div class="rate-row"><div><div class="rate-name">Личный финансовый план</div><div class="rate-desc">Анализ текущего положения + стратегия на 3&ndash;5 лет</div></div><div class="rate-price">&euro;150</div></div>
+        <div class="rate-row"><div><div class="rate-name">Инвестиционная стратегия</div><div class="rate-desc">Подбор инструментов под ваш профиль и цели</div></div><div class="rate-price">&euro;120</div></div>
+        <div class="rate-row"><div><div class="rate-name">Консультация по недвижимости</div><div class="rate-desc">Финансовый анализ сделки, ипотека, налоги</div></div><div class="rate-price">&euro;100</div></div>
+        <div class="rate-row"><div><div class="rate-name">Сопровождение — 3 месяца</div><div class="rate-desc">Ежемесячные встречи + поддержка в чате</div></div><div class="rate-price">&euro;250/мес</div></div>
+        <p class="rate-also">Также: пенсионное планирование, финансовый аудит и оптимизация, страхование жизни и капитала.</p>
       </div>
-
-      <!-- КАК ПРОХОДИТ РАБОТА -->
-      <div class="block">
-        <h2 class="block-title">Как проходит работа</h2>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Бесплатная консультация</h4><p>Пишете в WhatsApp или Telegram. Созваниваемся онлайн или встречаемся очно в Барселоне — разбираем вашу ситуацию, определяем с чего начать. Без обязательств.</p></div></div>
-          <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Анализ и стратегия</h4><p>Изучаю вашу ситуацию — доходы, цели, горизонт, активы. Подбираю оптимальный план с учётом испанской системы и вашего статуса.</p></div></div>
-          <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Конкретные рекомендации</h4><p>Получаете чёткий план который можно сразу применять — по инвестициям, налогам, бухгалтерии или недвижимости.</p></div></div>
-          <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Сопровождение</h4><p>При необходимости — долгосрочное сопровождение: ежемесячные встречи, ответы на вопросы, помощь при изменениях в ситуации.</p></div></div>
-        </div>
+      <div class="rate">
+        <div class="rate-head">Налоги и бухгалтерия</div>
+        <div class="rate-row"><div><div class="rate-name">Регистрация autónomo</div><div class="rate-desc">Регистрация в AEAT и Seguridad Social, выбор эпиграфа</div></div><div class="rate-price">&euro;120</div></div>
+        <div class="rate-row"><div><div class="rate-name">Квартальные декларации</div><div class="rate-desc">Modelo 130 (IRPF) + Modelo 303 (IVA) за квартал</div></div><div class="rate-price">&euro;80/квартал</div></div>
+        <div class="rate-row"><div><div class="rate-name">Годовая Renta (IRPF)</div><div class="rate-desc">Подготовка и сопровождение годовой декларации</div></div><div class="rate-price">&euro;150</div></div>
+        <div class="rate-row"><div><div class="rate-name">Modelo 720</div><div class="rate-desc">Декларация зарубежных активов — счета, недвижимость, ценные бумаги</div></div><div class="rate-price">от &euro;200</div></div>
+        <div class="rate-row"><div><div class="rate-name">Закон Бэкхема</div><div class="rate-desc">Анализ применимости, документы, подача Modelo 149</div></div><div class="rate-price">&euro;300</div></div>
+        <div class="rate-row"><div><div class="rate-name">Бухгалтерия autónomo — абонемент</div><div class="rate-desc">Ежемесячный учёт, квартальные декларации, поддержка</div></div><div class="rate-price">&euro;120/мес</div></div>
+        <p class="rate-also">Также: двойное налогообложение РФ&ndash;Испания, налог на доходы от аренды.</p>
       </div>
+    </section>
 
-      <!-- ПОЧЕМУ ДОВЕРЯЮТ -->
-      <div class="block">
-        <h2 class="block-title">Почему выбирают Максима</h2>
-        <div class="trust-grid">
-          <div class="trust-item"><span class="trust-icon">🗣️</span><span class="trust-text">Консультации полностью на русском языке</span></div>
-          <div class="trust-item"><span class="trust-icon">📍</span><span class="trust-text">Сам эмигрант — знает испанскую систему изнутри</span></div>
-          <div class="trust-item"><span class="trust-icon">📊</span><span class="trust-text">10 лет в финансах, 180+ клиентов в Испании</span></div>
-          <div class="trust-item"><span class="trust-icon">💻</span><span class="trust-text">Онлайн по всей Испании — не нужно никуда ехать</span></div>
-          <div class="trust-item"><span class="trust-icon">🔍</span><span class="trust-text">Разбирается и в финансах, и в налогах — не нужно искать двух специалистов</span></div>
-          <div class="trust-item"><span class="trust-icon">✅</span><span class="trust-text">Первая консультация бесплатно — без обязательств</span></div>
-        </div>
+    <!-- 05 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">Как проходит работа</h2></div>
+      <div class="steps">
+        <div class="step"><div class="step-n">01</div><div><h3>Бесплатная консультация</h3><p>Пишете в WhatsApp или Telegram. Созваниваемся онлайн или встречаемся очно в Барселоне — разбираем вашу ситуацию, определяем с чего начать. Без обязательств.</p></div></div>
+        <div class="step"><div class="step-n">02</div><div><h3>Анализ и стратегия</h3><p>Изучаю вашу ситуацию — доходы, цели, горизонт, активы. Подбираю оптимальный план с учётом испанской системы и вашего статуса.</p></div></div>
+        <div class="step"><div class="step-n">03</div><div><h3>Конкретные рекомендации</h3><p>Получаете чёткий план который можно сразу применять — по инвестициям, налогам, бухгалтерии или недвижимости.</p></div></div>
+        <div class="step"><div class="step-n">04</div><div><h3>Сопровождение</h3><p>При необходимости — долгосрочное сопровождение: ежемесячные встречи, ответы на вопросы, помощь при изменениях в ситуации.</p></div></div>
       </div>
+    </section>
 
-      <!-- С КЕМ РАБОТАЮ -->
-      <div class="block">
-        <h2 class="block-title">С кем работаю</h2>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">💼 Предприниматели и autónomos</span>
-          <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">👨‍👩‍👧 Семьи</span>
-          <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🆕 Новые резиденты Испании</span>
-          <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">💻 Digital Nomads</span>
-          <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">📈 Инвесторы</span>
-          <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🏠 Покупатели недвижимости</span>
-          <span style="background:var(--white);border:1px solid var(--rule-mid);border-radius:100px;padding:6px 14px;font-size:13px;color:var(--ink-mid)">🌍 Экспаты с активами за рубежом</span>
-        </div>
+    <!-- 06 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">Почему выбирают Максима</h2></div>
+      <ul class="why">
+        <li><span class="ic">🗣️</span><span>Консультации полностью на русском языке</span></li>
+        <li><span class="ic">📍</span><span>Сам эмигрант — знает испанскую систему изнутри</span></li>
+        <li><span class="ic">📊</span><span>10 лет в финансах, 180+ клиентов в Испании</span></li>
+        <li><span class="ic">💻</span><span>Онлайн по всей Испании — не нужно никуда ехать</span></li>
+        <li><span class="ic">🔍</span><span>Разбирается и в финансах, и в налогах — не нужно искать двух специалистов</span></li>
+        <li><span class="ic">✅</span><span>Первая консультация бесплатно — без обязательств</span></li>
+      </ul>
+    </section>
+
+    <!-- 07 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">С кем работаю</h2></div>
+      <div class="chips">
+        <span class="chip">Предприниматели и autónomos</span>
+        <span class="chip">Семьи</span>
+        <span class="chip">Новые резиденты Испании</span>
+        <span class="chip">Digital Nomads</span>
+        <span class="chip">Инвесторы</span>
+        <span class="chip">Покупатели недвижимости</span>
+        <span class="chip">Экспаты с активами за рубежом</span>
       </div>
+    </section>
 
-      <!-- FAQ -->
-      <div class="block">
-        <h2 class="block-title">Частые вопросы</h2>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Что такое закон Бэкхема и кому он подходит?</span><span class="faq-icon">+</span></button>
-          <div class="faq-body"><div class="faq-bi"><p>Специальный налоговый режим для иностранцев, переехавших работать в Испанию. Позволяет платить фиксированные 24% вместо прогрессивной ставки IRPF до 47%. Подать заявку нужно в течение 6 месяцев с получения резидентства — после этого срока возможность теряется.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Зачем нужен Modelo 720?</span><span class="faq-icon">+</span></button>
-          <div class="faq-body"><div class="faq-bi"><p>Обязательная декларация зарубежных активов для налоговых резидентов Испании. Подаётся раз в год до 31 марта. Обязательна если суммарные активы за рубежом превышают 50 000 евро. Штрафы за непредоставление существенные.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Как зарегистрироваться как autónomo в Испании?</span><span class="faq-icon">+</span></button>
-          <div class="faq-body"><div class="faq-bi"><p>Нужно зарегистрироваться в AEAT и Seguridad Social, выбрать эпиграф деятельности, определиться с системой налогообложения. Максим помогает пройти весь процесс — от выбора эпиграфа до настройки квартальной отчётности.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Сколько стоит первичная консультация?</span><span class="faq-icon">+</span></button>
-          <div class="faq-body"><div class="faq-bi"><p>Бесплатно. 60 минут — разбираем вашу ситуацию, определяем задачи. Никаких обязательств после.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Работаете ли вы по всей Испании?</span><span class="faq-icon">+</span></button>
-          <div class="faq-body"><div class="faq-bi"><p>Онлайн — по всей Испании и за её пределами. Очно — в Барселоне. Клиенты из Барселоны, Мадрида, Валенсии, Малаги, Аликанте и других городов.</p></div></div>
-        </div>
+    <!-- 08 -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">Частые вопросы</h2></div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Что такое закон Бэкхема и кому он подходит?</span><span class="faq-icon"></span></button>
+        <div class="faq-body"><div class="faq-bi"><p>Специальный налоговый режим для иностранцев, переехавших работать в Испанию. Позволяет платить фиксированные 24% вместо прогрессивной ставки IRPF до 47%. Подать заявку нужно в течение 6 месяцев с получения резидентства — после этого срока возможность теряется.</p></div></div>
       </div>
-
-      <!-- ФОРМА ЗАПИСИ -->
-      <div class="block" id="booking">
-        <h2 class="block-title">Записаться на консультацию</h2>
-        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:16px">Первая консультация — 60 минут, бесплатно. Разберём вашу ситуацию и определим с чего начать.</p>
-        <form id="booking-form" action="https://formspree.io/f/mbdvdyjw" method="POST">
-          <input type="hidden" name="specialist" value="Максим Гусев — финансовый консультант">
-          <input type="hidden" name="type" value="booking-maksim-gusev">
-          <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя" required></div>
-          <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
-          <div class="form-field"><label>Что хотите обсудить?</label><textarea name="message" placeholder="Инвестиции, autónomo, Modelo 720, финансовый план..."></textarea></div>
-          <button type="submit" class="form-submit" id="booking-submit">Записаться бесплатно →</button>
-          <div id="booking-success" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Отлично! Максим свяжется в течение дня.</div>
-        </form>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Зачем нужен Modelo 720?</span><span class="faq-icon"></span></button>
+        <div class="faq-body"><div class="faq-bi"><p>Обязательная декларация зарубежных активов для налоговых резидентов Испании. Подаётся раз в год до 31 марта. Обязательна если суммарные активы за рубежом превышают 50 000 евро. Штрафы за непредоставление существенные.</p></div></div>
       </div>
-
-    </div>
-
-    <!-- SIDEBAR -->
-    <div class="sbar">
-      <div class="widget-dark">
-        <div class="widget-label">Профиль Experty.es</div>
-        <div class="widget-checks">
-          <div class="widget-check"><span>⭐</span><span>Топ платформы</span></div>
-          <div class="widget-check"><span>✓</span><span>Контактные данные подтверждены</span></div>
-          <div class="widget-check"><span>✓</span><span>180+ клиентов в Испании</span></div>
-          <div class="widget-check"><span>📅</span><span>На платформе с 2024 года</span></div>
-        </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Как зарегистрироваться как autónomo в Испании?</span><span class="faq-icon"></span></button>
+        <div class="faq-body"><div class="faq-bi"><p>Нужно зарегистрироваться в AEAT и Seguridad Social, выбрать эпиграф деятельности, определиться с системой налогообложения. Максим помогает пройти весь процесс — от выбора эпиграфа до настройки квартальной отчётности.</p></div></div>
       </div>
-
-      <div class="widget">
-        <div class="contact-title">Связаться с Максимом</div>
-        <div class="contact-links">
-          <a href="https://wa.me/34656557670?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" class="contact-link">💬 WhatsApp</a>
-          <a href="https://t.me/maxim_spain" target="_blank" class="contact-link">✈️ Telegram @maxim_spain</a>
-          <a href="https://maxim-gusev.pro" target="_blank" class="contact-link">🌐 maxim-gusev.pro</a>
-        </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Сколько стоит первичная консультация?</span><span class="faq-icon"></span></button>
+        <div class="faq-body"><div class="faq-bi"><p>Бесплатно. 60 минут — разбираем вашу ситуацию, определяем задачи. Никаких обязательств после.</p></div></div>
       </div>
-
-      <div class="widget">
-        <div class="contact-title">Другие специалисты</div>
-        <div class="other-specs">
-          <a href="psiholog.html" class="spec-link">🧠 Психолог</a>
-          <a href="flacorus-sergey.html" class="spec-link">📚 Репетитор по испанскому</a>
-          <a href="avto.html" class="spec-link">🚗 Помощь с автомобилем</a>
-          <a href="nedvizhimost.html" class="spec-link">🏠 Недвижимость</a>
-          <a href="index.html" class="spec-link">🇪🇸 Все специалисты</a>
-        </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Работаете ли вы по всей Испании?</span><span class="faq-icon"></span></button>
+        <div class="faq-body"><div class="faq-bi"><p>Онлайн — по всей Испании и за её пределами. Очно — в Барселоне. Клиенты из Барселоны, Мадрида, Валенсии, Малаги, Аликанте и других городов.</p></div></div>
       </div>
-    </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="block reveal" id="booking">
+      <div class="block-head"><h2 class="block-title">Записаться на консультацию</h2></div>
+      <p class="booking-lead">Первая консультация — 60 минут, бесплатно. Разберём вашу ситуацию и определим с чего начать.</p>
+      <form id="booking-form" action="https://formspree.io/f/mbdvdyjw" method="POST">
+        <input type="hidden" name="specialist" value="Максим Гусев — финансовый консультант">
+        <input type="hidden" name="type" value="booking-maksim-gusev">
+        <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя" required></div>
+        <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
+        <div class="form-field"><label>Что хотите обсудить?</label><textarea name="message" placeholder="Инвестиции, autónomo, Modelo 720, финансовый план…"></textarea></div>
+        <button type="submit" class="form-submit" id="booking-submit">Записаться бесплатно →</button>
+        <div class="form-ok" id="booking-success">✓ Отлично! Максим свяжется в течение дня.</div>
+      </form>
+    </section>
 
   </div>
+
+  <!-- SIDEBAR -->
+  <aside class="side reveal">
+    <div class="side-block">
+      <span class="label">Профиль Experty.es</span>
+      <ul class="side-facts">
+        <li>Топ платформы</li>
+        <li>Контактные данные подтверждены</li>
+        <li>180+ клиентов в Испании</li>
+        <li>На платформе с 2024 года</li>
+      </ul>
+    </div>
+    <div class="side-block">
+      <span class="label">Связаться с Максимом</span>
+      <a href="https://wa.me/34656557670?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" rel="noopener" class="side-link msg-wa"><span class="side-link-label"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.892.526 3.66 1.44 5.166L2 22l4.966-1.304A9.943 9.943 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12.001 2zm0 18.083a8.055 8.055 0 01-4.106-1.121l-.294-.175-3.044.799.812-2.968-.192-.304a8.03 8.03 0 01-1.267-4.314c0-4.44 3.612-8.052 8.052-8.052 4.44 0 8.051 3.612 8.051 8.052 0 4.44-3.611 8.052-8.052 8.052zm4.412-6.032c-.242-.121-1.434-.708-1.656-.788-.222-.081-.384-.121-.546.121-.161.242-.626.788-.767.949-.141.161-.283.181-.525.06-.242-.121-1.022-.377-1.947-1.202-.72-.642-1.206-1.435-1.347-1.677-.141-.242-.015-.373.106-.494.109-.108.242-.283.363-.424.121-.141.161-.242.242-.404.081-.161.04-.303-.02-.424-.06-.121-.546-1.314-.748-1.8-.197-.473-.397-.409-.546-.416-.141-.007-.303-.008-.465-.008a.893.893 0 00-.646.303c-.222.242-.848.828-.848 2.021 0 1.192.868 2.345.988 2.507.121.161 1.708 2.608 4.14 3.658.579.25 1.03.399 1.382.51.581.185 1.11.159 1.528.096.466-.07 1.434-.586 1.636-1.153.202-.566.202-1.051.141-1.153-.06-.101-.222-.161-.464-.283z"/></svg>WhatsApp</span><span class="arr">→</span></a>
+      <a href="https://t.me/maxim_spain" target="_blank" rel="noopener" class="side-link msg-tg"><span class="side-link-label"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.29c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.87 4.326-2.96-.924c-.643-.204-.658-.643.136-.953l11.57-4.458c.538-.196 1.006.128.83.958z"/></svg>Telegram @maxim_spain</span><span class="arr">→</span></a>
+      <a href="https://maxim-gusev.pro" target="_blank" rel="noopener" class="side-link msg-site"><span class="side-link-label"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>maxim-gusev.pro</span><span class="arr">→</span></a>
+    </div>
+    <div class="side-block">
+      <span class="label">Другие специалисты</span>
+      <a href="psiholog.html" class="side-link">Психолог <span class="arr">→</span></a>
+      <a href="flacorus-sergey.html" class="side-link">Репетитор по испанскому <span class="arr">→</span></a>
+      <a href="avto.html" class="side-link">Помощь с автомобилем <span class="arr">→</span></a>
+      <a href="rieltor.html" class="side-link">Недвижимость <span class="arr">→</span></a>
+      <a href="index.html" class="side-link">Все специалисты <span class="arr">→</span></a>
+    </div>
+  </aside>
 </div>
 
-<div style="max-width:1100px;margin:0 auto;padding:12px 24px;text-align:center">
-  <p style="font-size:11px;color:var(--ink-light);line-height:1.6">Максим Гусев оказывает услуги финансового и налогового консультирования. Для официального представительства перед Agencia Tributaria может потребоваться лицензированный gestor administrativo.</p>
+<div class="disclaimer">
+  <p>Максим Гусев оказывает услуги финансового и налогового консультирования. Для официального представительства перед Agencia Tributaria может потребоваться лицензированный gestor administrativo.</p>
 </div>
 
 <footer class="footer">
@@ -365,12 +510,13 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
   if(!open)item.classList.add('open');
 }
+
 const bookingForm=document.getElementById('booking-form');
 if(bookingForm){
   bookingForm.addEventListener('submit',async e=>{
     e.preventDefault();
     const sb=document.getElementById('booking-submit');
-    sb.textContent='Отправляем...';sb.disabled=true;
+    sb.textContent='Отправляем…';sb.disabled=true;
     try{
       const r=await fetch(bookingForm.action,{method:'POST',body:new FormData(bookingForm),headers:{'Accept':'application/json'}});
       if(r.ok){document.getElementById('booking-success').style.display='block';bookingForm.reset();sb.textContent='Отправлено ✓';}
@@ -378,6 +524,28 @@ if(bookingForm){
     }catch{sb.textContent='Записаться бесплатно →';sb.disabled=false;}
   });
 }
+
+/* сдержанное появление при скролле */
+(function(){
+  const els=[].slice.call(document.querySelectorAll('.reveal'));
+  const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce||!('IntersectionObserver'in window)){els.forEach(el=>el.classList.add('is-in'));return;}
+  const io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -8%'});
+  els.forEach(function(el){io.observe(el);});
+})();
+
+/* нав прячется при скролле вниз */
+(function(){
+  const nav=document.getElementById('nav');let last=0;
+  addEventListener('scroll',function(){
+    const y=window.pageYOffset;
+    nav.classList.toggle('is-scrolled',y>40);
+    if(y>last&&y>240)nav.classList.add('is-hidden');else nav.classList.remove('is-hidden');
+    last=y;
+  },{passive:true});
+})();
 </script>
 </body>
 </html>
