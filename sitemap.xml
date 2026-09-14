@@ -431,4 +431,51 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/realestate/regions/costa-del-sol/"/>
   </url>
 
+  <!-- Ранее отсутствовали в sitemap — добавлены сентябрь 2026 -->
+
+  <url>
+    <loc>https://experty.es/nyanya</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/nyanya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/nyanya"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/klining</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/klining"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/klining"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/trener</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/trener"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/trener"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/fotograf</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/fotograf"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/fotograf"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/dizayner</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/dizayner"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/dizayner"/>
+  </url>
+
 </urlset>
