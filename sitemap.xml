@@ -496,4 +496,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/kak-kupit-avto-v-germanii"/>
   </url>
 
+  <url>
+    <loc>https://experty.es/psiholog-na-russkom-v-ispanii</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/psiholog-na-russkom-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/psiholog-na-russkom-v-ispanii"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/logoped-na-russkom-v-ispanii</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/logoped-na-russkom-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/logoped-na-russkom-v-ispanii"/>
+  </url>
+
 </urlset>
