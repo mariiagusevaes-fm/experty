@@ -74,6 +74,10 @@ a:hover{text-decoration:underline}
 .callout strong{color:var(--ink);display:block;margin-bottom:4px}
 .warning{background:#FEF9F0;border:1px solid rgba(245,158,11,0.3);border-left:3px solid #F59E0B;border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0;font-size:14px;color:var(--ink-mid);line-height:1.7}
 .warning strong{color:#92400E;display:block;margin-bottom:4px}
+.compare-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+.compare-table th{background:var(--ink);color:var(--bg);padding:10px 14px;text-align:left;font-weight:600;font-size:12px}
+.compare-table td{padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink-mid);line-height:1.5}
+.compare-table tr:nth-child(even) td{background:var(--white)}
 .step-block{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
 .step-num-big{width:40px;height:40px;min-width:40px;border-radius:50%;border:2px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .step-content h3{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px}
@@ -133,7 +137,7 @@ a:hover{text-decoration:underline}
     <p class="article-lead">Германия — один из лучших авторынков Европы: большой выбор, прозрачная история, конкурентные цены. Но без знания языка и местных правил легко попасть впросак. Объясняем весь процесс от А до Я на русском языке.</p>
     <div class="article-meta">
       <span>📅 Август 2026</span>
-      <span>⏱ 15 минут чтения</span>
+      <span>⏱ 16 минут чтения</span>
       <span>✍️ Experty.es</span>
     </div>
   </div>
@@ -356,6 +360,18 @@ a:hover{text-decoration:underline}
         Техосмотр для перерегистрации дороже обычного планового ITV — порядка 100 евро. Точная сумма зависит от конкретного центра.
       </div>
 
+      <h3>На что обратить внимание перед ITV</h3>
+      <p>Несколько практических моментов, которые часто выясняются уже на месте — лучше знать о них заранее.</p>
+      <p><strong>Тонировка стёкол.</strong> Тонировка передних стёкол — лобового, у водителя и переднего пассажира — в Испании запрещена полностью: ни заводская тонировка, ни плёнка. Задние стёкла тонировать можно, но плёнка должна быть сертифицированной (гомологированной) — мастерская обязана выдать сертификат с характеристиками плёнки, а на самом стекле должна быть маркировка о гомологации. Без сертификата на ITV возможны проблемы.</p>
+
+      <div class="callout">
+        <strong>Дальше — из практики, не из закона</strong>
+        Два следующих момента не прописаны в официальных требованиях к ITV напрямую — это то, что реально встречается на практике при прохождении техосмотра. Стоит о них знать, но не считать нормой закона.
+      </div>
+
+      <p><strong>Комплектность салона.</strong> Если сиденья снимались — например, для перевозки груза при транспортировке автомобиля — и не установлены обратно на штатные места, ITV может отказать в прохождении техосмотра: салон должен соответствовать заводской комплектности, указанной в документах на автомобиль.</p>
+      <p><strong>Если показатель CO2 выглядит завышенным.</strong> На практике встречаются случаи, когда на ITV некорректно рассчитывают показатель CO2 автомобиля — завышенный показатель напрямую увеличивает налог на регистрацию (ставки — в разделе «Какие суммы и за что платить» ниже), иногда в несколько раз. Если цифры выбросов, полученные на ITV, заметно выше официальных данных производителя — стоит обратиться к производителю автомобиля за официальным подтверждением реальных показателей CO2 и оспорить расчёт.</p>
+
       <h2 id="strahovka-ispaniya">Страховка — когда оформлять</h2>
       <p>Зарегистрировать автомобиль в Испании без действующего испанского полиса ОСАГО (seguro de responsabilidad civil) невозможно — это первое, что потребуют на дальнейших шагах.</p>
       <p>Страховку нужно оформить до записи на ITV, и самое позднее — до визита в DGT. То есть это не последний шаг, а один из первых.</p>
@@ -372,6 +388,35 @@ a:hover{text-decoration:underline}
         <li><strong>ITV для перерегистрации</strong> — около 100 евро.</li>
         <li><strong>Дополнительно, по ситуации</strong> — перевод документов на испанский, техническая доработка при несоответствиях ITV, изготовление номерных знаков, услуги гестора или консультанта, если оформление ведётся не самостоятельно.</li>
       </ul>
+
+      <h3>Ставка налога на регистрацию по выбросам CO2</h3>
+      <table class="compare-table">
+        <tr>
+          <th>Выбросы CO2</th>
+          <th>Ставка налога</th>
+        </tr>
+        <tr>
+          <td>до 120 г/км</td>
+          <td>0% (освобождён)</td>
+        </tr>
+        <tr>
+          <td>120–160 г/км</td>
+          <td>4,75%</td>
+        </tr>
+        <tr>
+          <td>160–200 г/км</td>
+          <td>9,75%</td>
+        </tr>
+        <tr>
+          <td>от 200 г/км</td>
+          <td>14,75%</td>
+        </tr>
+        <tr>
+          <td>Электромобили (BEV/REEV)</td>
+          <td>Полностью освобождены</td>
+        </tr>
+      </table>
+      <p>Ставка считается от стоимости автомобиля без НДС (base imponible) — не от полной цены с учётом налогов.</p>
 
       <h2 id="oshibki">Частые ошибки при покупке</h2>
       <ul>
