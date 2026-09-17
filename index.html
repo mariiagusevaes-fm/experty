@@ -105,12 +105,6 @@ button{font-family:var(--sans);cursor:pointer}
 .hero-stat-num{font-family:var(--serif);font-size:42px;font-weight:400;color:var(--gold);line-height:1;margin-bottom:6px}
 .hero-stat-label{font-size:13px;color:rgba(247,245,242,0.5);line-height:1.4}
 
-/* TRUST BAR */
-.trust-bar{background:var(--bg-alt);border-bottom:1px solid var(--rule);padding:16px 0}
-.trust-bar-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-mid);font-weight:500}
-.trust-icon{font-size:18px}
-
 /* SECTIONS */
 .sec{padding:80px 0}
 .sec-alt{background:var(--bg-alt)}
@@ -201,7 +195,7 @@ button{font-family:var(--sans);cursor:pointer}
 }
 @media(max-width:1024px){
   .hero-inner{grid-template-columns:1fr;gap:40px}
-  .hero-stats{max-width:360px}
+  .hero-stats{max-width:360px;margin:0 auto}
   .how-grid{grid-template-columns:1fr}
   .how-item{border-right:none;border-bottom:1px solid var(--rule)}
   .how-item:last-child{border-bottom:none}
@@ -214,7 +208,6 @@ button{font-family:var(--sans);cursor:pointer}
   .nav-cta{padding:8px 16px;font-size:12px}
   .hero-inner{padding:32px 20px 48px}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
-  .trust-bar-inner{gap:20px;padding:0 20px}
   .sec{padding:56px 0}
   .sec-inner{padding:0 20px}
   .sec-sub{margin-bottom:32px}
@@ -286,16 +279,6 @@ button{font-family:var(--sans);cursor:pointer}
     </div>
   </div>
 </section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <div class="trust-item"><span class="trust-icon">💬</span> Общение на русском</div>
-    <div class="trust-item"><span class="trust-icon">📍</span> Барселона · Мадрид · Вся Испания</div>
-    <div class="trust-item"><span class="trust-icon">⚡</span> Ответ в течение дня</div>
-    <div class="trust-item"><span class="trust-icon">🔒</span> Проверенные специалисты</div>
-  </div>
-</div>
 
 <!-- CATEGORIES -->
 <section class="sec" id="categories">
