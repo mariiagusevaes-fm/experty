@@ -514,4 +514,40 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/logoped-na-russkom-v-ispanii"/>
   </url>
 
+  <url>
+    <loc>https://experty.es/buhgalter</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/buhgalter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/buhgalter"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/golden-key-nikita</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/golden-key-nikita"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/golden-key-nikita"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/kuznetsova-svetlana</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/kuznetsova-svetlana"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/kuznetsova-svetlana"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/strahovoy-agent-na-russkom-v-ispanii</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/strahovoy-agent-na-russkom-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/strahovoy-agent-na-russkom-v-ispanii"/>
+  </url>
+
 </urlset>
