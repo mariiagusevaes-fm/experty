@@ -151,20 +151,7 @@ button{font-family:var(--sans);cursor:pointer}
 .faq-item p{font-size:14px;color:var(--ink-mid);line-height:1.75;padding:0 0 20px}
 
 /* FOR SPECIALISTS */
-.spec-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
-.spec-step{background:var(--white);border:1px solid var(--rule);border-radius:14px;padding:28px}
-.spec-step-num{width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;font-weight:400;margin-bottom:16px;flex-shrink:0}
-.spec-step h3{font-family:var(--serif);font-size:18px;font-weight:500;margin-bottom:8px}
-.spec-step p{font-size:13px;color:var(--ink-mid);line-height:1.65}
-.spec-cta{background:var(--white);border:1px solid var(--rule);border-radius:14px;padding:32px}
-.spec-cta-top{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-bottom:24px}
-.spec-cta-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-light);font-weight:600;margin-bottom:12px}
-.spec-cta-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.spec-cta-tag{background:var(--bg-alt);border:1px solid var(--rule-mid);border-radius:100px;padding:5px 14px;font-size:12px;color:var(--ink-mid)}
-.spec-cta-note{font-size:13px;color:var(--ink-mid);line-height:1.6}
 .spec-cta-btn{background:var(--gold);color:var(--ink);border:none;border-radius:8px;padding:16px 28px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0}
-.spec-more-link{font-size:14px;color:var(--ink-mid);border-bottom:1px solid var(--rule-mid);padding-bottom:2px;transition:color .2s}
-.spec-more-link:hover{color:var(--gold)}
 
 /* CTA BANNER */
 .cta-banner{background:var(--ink);padding:80px 48px;text-align:center;position:relative;overflow:hidden}
@@ -218,8 +205,6 @@ button{font-family:var(--sans);cursor:pointer}
   .how-item{border-right:none;border-bottom:1px solid var(--rule)}
   .how-item:last-child{border-bottom:none}
   .sg-grid{grid-template-columns:repeat(2,1fr)}
-  .spec-steps{grid-template-columns:1fr}
-  .spec-cta-top{grid-template-columns:1fr}
   .spec-cta-btn{width:100%;text-align:center}
 }
 @media(max-width:768px){
@@ -503,7 +488,52 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<!-- ARTICLES -->
+<section class="sec" id="articles">
+  <div class="sec-inner">
+    <div class="sec-label">Гид по Испании</div>
+    <h2 class="sec-title">Статьи, которые<br><em>реально помогают</em></h2>
+    <p class="sec-sub">Разбираем частые вопросы русскоязычных в Испании — подробно и с проверенными фактами.</p>
+    <div class="articles-grid">
+      <a href="grudnoe-vskarmlivanie-v-ispanii.html" class="article-card">
+        <span class="article-card-icon">👶</span>
+        <h3 class="article-card-title">Ребёнок родился в Испании</h3>
+        <p class="article-card-desc">Документы, резиденция, выплаты, врачи — что оформить в первые месяцы</p>
+      </a>
+      <a href="psiholog-na-russkom-v-ispanii.html" class="article-card">
+        <span class="article-card-icon">🧠</span>
+        <h3 class="article-card-title">Психологическая помощь для русскоязычных</h3>
+        <p class="article-card-desc">Насколько тяжело на самом деле даётся переезд и когда пора к психологу</p>
+      </a>
+      <a href="logoped-na-russkom-v-ispanii.html" class="article-card">
+        <span class="article-card-icon">🗣️</span>
+        <h3 class="article-card-title">Логопедическая помощь для русскоязычных</h3>
+        <p class="article-card-desc">Двуязычие у детей: что нормально, а что — повод обратиться к специалисту</p>
+      </a>
+      <a href="kak-kupit-avto-v-germanii.html" class="article-card">
+        <span class="article-card-icon">🚗</span>
+        <h3 class="article-card-title">Как купить авто в Германии</h3>
+        <p class="article-card-desc">От поиска и проверки истории до регистрации на испанские номера</p>
+      </a>
+      <a href="modelo-720-ispaniya.html" class="article-card">
+        <span class="article-card-icon">📊</span>
+        <h3 class="article-card-title">Modelo 720 в Испании</h3>
+        <p class="article-card-desc">Декларация зарубежных активов — кто обязан подавать, сроки и штрафы</p>
+      </a>
+    </div>
+  </div>
+</section>
 
+<style>
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.article-card{display:flex;flex-direction:column;gap:6px;padding:22px 20px;background:var(--white);border:1px solid var(--rule);border-radius:12px;text-decoration:none;transition:all .2s}
+.article-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.article-card-icon{font-size:26px;margin-bottom:2px}
+.article-card-title{font-family:var(--serif);font-size:16px;font-weight:500;color:var(--ink);line-height:1.3}
+.article-card-desc{font-size:12.5px;color:var(--ink-light);line-height:1.55}
+@media(max-width:1024px){.articles-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.articles-grid{grid-template-columns:1fr;gap:10px}.article-card{padding:18px 16px}}
+</style>
 
 <!-- SPECIALISTS BLOCK -->
 <section id="spec-showcase-section" style="padding:64px 0;background:var(--bg-alt)">
@@ -749,114 +779,20 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </section>
 
-<!-- FOR SPECIALISTS -->
+<!-- FOR SPECIALISTS (compact) -->
 <section class="sec sec-alt" id="for-specialists">
   <div class="sec-inner">
-    <div class="sec-label">Для специалистов</div>
-    <h2 class="sec-title">Получите профессиональную страницу,<br><em>которая работает на вашу репутацию</em></h2>
-    <p class="sec-sub">Не просто размещение в каталоге. Мы создаём полноценную профессиональную страницу, которую можно отправлять клиентам, добавить в Instagram, WhatsApp, Google Business, разместить на визитках или использовать в QR-коде.</p>
-
-    <!-- ГЛАВНЫЙ БЛОК -->
-    <div style="background:var(--ink);border-radius:20px;padding:48px;margin-bottom:32px">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
-        <div>
-          <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px">Ваша страница на Experty.es</div>
-          <div style="font-family:var(--serif);font-size:32px;font-weight:400;color:var(--bg);line-height:1.1;margin-bottom:8px">experty.es/<em style="font-style:italic;color:var(--gold)">ваше-имя</em></div>
-          <p style="font-size:13px;color:rgba(247,245,242,0.4);margin-bottom:24px">Ваша собственная ссылка, которую легко отправить любому клиенту.</p>
-
-          <!-- ГЛАВНЫЙ ОФФЕР -->
-          <div style="background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.25);border-radius:12px;padding:20px;margin-bottom:24px">
-            <div style="font-family:var(--serif);font-size:18px;font-weight:400;color:var(--bg);margin-bottom:8px"><em style="font-style:italic;color:var(--gold)">Одна ссылка</em> — вся информация о вас.</div>
-            <p style="font-size:13px;color:rgba(247,245,242,0.55);line-height:1.7">Клиенту не нужно искать ваш Instagram, Telegram, отзывы и контакты в разных местах. Достаточно открыть одну страницу.</p>
-          </div>
-
-          <!-- ВЫГОДЫ -->
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(247,245,242,0.75)"><span style="color:var(--gold);flex-shrink:0;margin-top:1px">✓</span><span>Расскажите о себе и вызовите доверие</span></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(247,245,242,0.75)"><span style="color:var(--gold);flex-shrink:0;margin-top:1px">✓</span><span>Опишите услуги и цены — без лишних вопросов</span></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(247,245,242,0.75)"><span style="color:var(--gold);flex-shrink:0;margin-top:1px">✓</span><span>Покажите свои лучшие работы</span></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(247,245,242,0.75)"><span style="color:var(--gold);flex-shrink:0;margin-top:1px">✓</span><span>Отзывы, которые помогают новым клиентам принять решение</span></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(247,245,242,0.75)"><span style="color:var(--gold);flex-shrink:0;margin-top:1px">✓</span><span>WhatsApp, Telegram, Instagram — всё в одном месте</span></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:rgba(247,245,242,0.75)"><span style="color:var(--gold);flex-shrink:0;margin-top:1px">✓</span><span>Страница появится в Google по запросу «ваша профессия + город + русский»</span></div>
-          </div>
-        </div>
-
-        <div style="display:flex;flex-direction:column;gap:16px">
-          <!-- КЛИЕНТ ВИДИТ -->
-          <div style="background:rgba(247,245,242,0.05);border:1px solid rgba(247,245,242,0.1);border-radius:14px;padding:22px">
-            <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,242,0.35);font-weight:600;margin-bottom:14px">Клиент получает всю информацию за одну минуту</div>
-            <div style="display:flex;flex-direction:column;gap:8px">
-              <div style="display:flex;gap:8px;font-size:13px;color:rgba(247,245,242,0.65)"><span style="color:var(--gold)">✔</span> Кто вы и чем занимаетесь</div>
-              <div style="display:flex;gap:8px;font-size:13px;color:rgba(247,245,242,0.65)"><span style="color:var(--gold)">✔</span> Какие услуги оказываете</div>
-              <div style="display:flex;gap:8px;font-size:13px;color:rgba(247,245,242,0.65)"><span style="color:var(--gold)">✔</span> Где работаете</div>
-              <div style="display:flex;gap:8px;font-size:13px;color:rgba(247,245,242,0.65)"><span style="color:var(--gold)">✔</span> Как с вами связаться</div>
-              <div style="display:flex;gap:8px;font-size:13px;color:rgba(247,245,242,0.65)"><span style="color:var(--gold)">✔</span> Что о вас говорят клиенты</div>
-            </div>
-          </div>
-
-          <!-- ИСПОЛЬЗУЙТЕ ВЕЗДЕ -->
-          <div style="background:rgba(247,245,242,0.05);border:1px solid rgba(247,245,242,0.1);border-radius:14px;padding:22px">
-            <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,245,242,0.35);font-weight:600;margin-bottom:14px">Одна страница для всех ваших клиентов</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>💬</span> WhatsApp</div>
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>✈️</span> Telegram</div>
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>📸</span> Instagram</div>
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>🔍</span> Google Business</div>
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>🔲</span> QR-код</div>
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>🪪</span> Визитки</div>
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>🪟</span> Наклейка на авто</div>
-              <div style="display:flex;gap:8px;align-items:center;font-size:12px;color:rgba(247,245,242,0.6)"><span>📌</span> Объявления</div>
-            </div>
-          </div>
-
-          <!-- ПРОФИЛЬ РАСТЁТ -->
-          <div style="background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.2);border-radius:14px;padding:22px">
-            <div style="font-size:13px;color:rgba(247,245,242,0.85);line-height:1.7">Ваш профиль будет <strong style="color:var(--gold)">расти вместе с вашей репутацией</strong> — новые отзывы, работы и информация собираются в одном месте. Со временем страница становится вашим главным профессиональным активом.</div>
-          </div>
-        </div>
+    <div style="background:var(--ink);border-radius:20px;padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <div style="max-width:560px">
+        <div class="sec-label" style="margin-bottom:10px">Для специалистов</div>
+        <h2 style="font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);font-weight:400;color:var(--bg);margin-bottom:10px;line-height:1.25;letter-spacing:-.01em">Вы специалист? Получите страницу, которая работает на вашу репутацию</h2>
+        <p style="font-size:14px;color:rgba(247,245,242,0.55);line-height:1.7">Одна ссылка вида experty.es/ваше-имя — услуги, цены, отзывы, все контакты. Страница появляется в Google по запросам «профессия + город + русский». Размещение — €100, разово.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;min-width:200px">
+        <button class="spec-cta-btn" onclick="openModal('specialist')">Разместить профиль →</button>
+        <a href="dlya-spetsialistov.html" style="text-align:center;font-size:13px;color:rgba(247,245,242,0.5)">Подробнее →</a>
       </div>
     </div>
-
-    <!-- 3 ШАГА -->
-    <div class="spec-steps">
-      <div class="spec-step">
-        <div class="spec-step-num">1</div>
-        <h3>Подаёте заявку</h3>
-        <p>Имя, специализация, город, контакты. Отвечаем в Telegram или WhatsApp в течение 24 часов.</p>
-      </div>
-      <div class="spec-step">
-        <div class="spec-step-num">2</div>
-        <h3>Мы создаём страницу</h3>
-        <p>Оформляем ваш профиль — фото, услуги, опыт, контакты, отзывы. Страница появится в Google по запросам «ваша профессия + город + русский».</p>
-      </div>
-      <div class="spec-step">
-        <div class="spec-step-num">3</div>
-        <h3>Используете везде</h3>
-        <p>Одна ссылка в WhatsApp, Instagram, визитках, QR. Все отзывы и портфолио в одном месте — клиент видит всё сразу и принимает решение быстрее.</p>
-      </div>
-    </div>
-    <!-- CTA НИЖНИЙ -->
-    <div class="spec-cta">
-      <div class="spec-cta-top">
-        <div>
-          <div class="spec-cta-label">Ваша страница появится в Google по запросам</div>
-          <div class="spec-cta-tags">
-            <span class="spec-cta-tag">русский бухгалтер Барселона</span>
-            <span class="spec-cta-tag">логопед Аликанте русский</span>
-            <span class="spec-cta-tag">маникюр Валенсия русский</span>
-            <span class="spec-cta-tag">психолог Мадрид русский</span>
-            <span class="spec-cta-tag">массаж Малага русский</span>
-            <span class="spec-cta-tag">репетитор Барселона русский</span>
-          </div>
-          <p class="spec-cta-note">Личная страница, продвижение в Google, форма отзывов. <strong>Размещение — €100.</strong></p>
-          <p style="font-size:12px;color:var(--ink-mid);margin-top:8px">💸 Пригласите коллегу — коллега платит €90, вы получаете €30 на карту</p>
-        </div>
-        <button class="spec-cta-btn" onclick="openModal('specialist')">Разместить профиль — €100 →</button>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:28px"><a href="dlya-spetsialistov.html" class="spec-more-link">Подробнее о размещении на платформе →</a></div>
-
   </div>
 </section>
 
