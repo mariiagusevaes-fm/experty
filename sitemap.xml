@@ -192,15 +192,6 @@
   </url>
 
   <url>
-    <loc>https://experty.es/nikita-golden-key</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/nikita-golden-key"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/nikita-golden-key"/>
-  </url>
-
-  <url>
     <loc>https://experty.es/flacorus-sergey</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -656,6 +647,33 @@
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/nasledstvo-v-ispanii"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/nasledstvo-v-ispanii"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/aviso-legal.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/aviso-legal.html"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/privacidad.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/privacidad.html"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/cookies.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/cookies.html"/>
   </url>
 
 </urlset>
