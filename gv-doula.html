@@ -591,7 +591,7 @@ button{font-family:var(--sans);cursor:pointer}
     <p class="modal-sub">Расскажите о ситуации — подберём специалиста</p>
     <form id="mf" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="page" value="gv-doula-category">
-      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div>
+      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
       <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
       <div class="form-field"><label>Что нужно?</label>
         <select name="type">
@@ -624,7 +624,7 @@ button{font-family:var(--sans);cursor:pointer}
     <p class="modal-sub">Консультант по ГВ · Доула · Личная страница</p>
     <form id="mf-spec" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="page" value="gv-doula-specialist">
-      <div class="form-field"><label>Имя и специализация</label><input type="text" name="name" placeholder="Анна Иванова, консультант по ГВ" required></div>
+      <div class="form-field"><label>Имя и специализация</label><input type="text" name="name" placeholder="Анна Иванова, консультант по ГВ" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
       <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
       <div class="form-field"><label>О себе</label><textarea name="message" placeholder="Специализация, сертификация, опыт, город, формат работы..."></textarea></div>
       <button type="submit" class="form-submit" style="background:var(--ink);color:var(--bg)" id="mfsub-spec">Подать заявку →</button>

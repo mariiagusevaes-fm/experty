@@ -751,7 +751,7 @@ button{font-family:var(--sans);cursor:pointer}
     <p class="modal-sub">Расскажите, что нужно — подберём специалиста</p>
     <form id="mf" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="page" value="massazh-category">
-      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div>
+      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
       <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
       <div class="form-field"><label>Вид массажа</label>
         <select name="type">
@@ -789,7 +789,7 @@ button{font-family:var(--sans);cursor:pointer}
     <p class="modal-sub">Массажист · Получите личную страницу</p>
     <form id="mf-spec" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="page" value="massazh-specialist">
-      <div class="form-field"><label>Имя и специализация</label><input type="text" name="name" placeholder="Анна Иванова, массажист" required></div>
+      <div class="form-field"><label>Имя и специализация</label><input type="text" name="name" placeholder="Анна Иванова, массажист" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
       <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
       <div class="form-field"><label>О себе</label><textarea name="message" placeholder="Специализация, опыт, формат работы (выезд/кабинет), город..."></textarea></div>
       <button type="submit" class="form-submit" style="background:var(--ink);color:var(--bg)" id="mfsub-spec">Подать заявку →</button>
