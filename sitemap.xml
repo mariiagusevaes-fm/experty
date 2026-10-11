@@ -640,4 +640,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/autonomo-v-ispanii"/>
   </url>
 
+  <url>
+    <loc>https://experty.es/priznanie-diploma-v-ispanii</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/priznanie-diploma-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/priznanie-diploma-v-ispanii"/>
+  </url>
+
 </urlset>
