@@ -92,6 +92,12 @@ button{font-family:var(--sans);cursor:pointer}
 .edu-icon{font-size:18px;flex-shrink:0;margin-top:2px}
 .edu-name{font-size:13px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:2px}
 .edu-sub{font-size:12px;color:var(--ink-light);line-height:1.4}
+.reviews-grid{display:flex;flex-direction:column;gap:16px}
+.review-card{background:var(--white);border:1px solid var(--rule);border-radius:12px;padding:22px}
+.review-stars{color:#F59E0B;font-size:18px;margin-bottom:10px;letter-spacing:2px}
+.review-text{font-size:14px;color:var(--ink);line-height:1.8;font-style:italic;margin-bottom:14px}
+.review-author{font-size:14px;font-weight:600;color:var(--ink)}
+.review-date{font-size:12px;color:var(--ink-light)}
 .faq-list{display:flex;flex-direction:column}
 .faq-item{border-top:1px solid var(--rule)}
 .faq-item:last-child{border-bottom:1px solid var(--rule)}
@@ -293,6 +299,30 @@ button{font-family:var(--sans);cursor:pointer}
         </div>
       </div>
 
+      <!-- ОТЗЫВЫ -->
+      <div class="content-block">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <h2 class="block-title" style="margin-bottom:0">Отзывы клиентов</h2>
+          <div style="display:inline-flex;align-items:center;gap:8px;background:var(--bg-alt);border:1px solid var(--rule);border-radius:100px;padding:5px 14px">
+            <span style="color:#F59E0B;font-size:13px;letter-spacing:1px">★★★★★</span>
+            <span style="font-weight:600;font-size:13px">5.0</span>
+            <span style="font-size:12px;color:var(--ink-light)">· 1 отзыв</span>
+          </div>
+        </div>
+        <div class="reviews-grid">
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Наталья, спасибо безграничное за вашу работу! Спустя некоторое время после экстренной и быстрой терапии я понимаю, насколько виртуозно и быстро вы выстраиваете разговор в правильном русле. Я обратилась к вам в таком раздрае, что даже не понимала, с чего начать — зато знали вы. И каким-то волшебным образом что-то во мне включилось, а что-то выключилось. Совершенно неожиданно для меня я вдруг ощутила землю под ногами — уверенность в себе. И уже после, когда у меня возникали пограничные моменты, я сразу применяла все ваши рекомендации — и это работает: я быстрее стала приходить в себя, отвечать на выпады коротко и сдержанно.<br><br>Я очень отчётливо поняла, насколько важна такая индивидуальная работа. Вы показываете уникальные для меня выходы, а воспользоваться ли ими — полностью моя ответственность. И как только я начинала обманывать себя отговорками, сразу возвращалась в тяжёлое состояние.<br><br>Сейчас я очень аккуратно и заботливо отношусь к себе, как вы и советовали, — берегу свою спокойную уверенность. Ещё раз благодарю вас за чёткую работу и за восхитительные посты с глубокими идеями и уникальными формулировками, которые западают в душу!</p>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="review-author">Наталья</span>
+              <span class="review-date">📍 Барселона</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <!-- ФОРМА ОТЗЫВА -->
       <div class="content-block" id="review-form">
         <h2 class="block-title">Оставить отзыв</h2>
@@ -313,6 +343,7 @@ button{font-family:var(--sans);cursor:pointer}
           <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Валенсия, Барселона..."></div>
           <button type="submit" class="form-submit" id="rsub">Отправить отзыв →</button>
           <div id="rsuc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
+          <div id="rerr" style="display:none;margin-top:10px;padding:12px;background:#fef2f2;border:1px solid #fecaca;border-radius:6px;font-size:13px;color:#991b1b">Не получилось отправить отзыв. Попробуйте ещё раз или напишите его нам напрямую в WhatsApp/Telegram — разместим вручную.</div>
         </form>
       </div>
 
@@ -372,7 +403,7 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const open=item.clas
 function setStars(n){for(let i=1;i<=5;i++)document.getElementById('s'+i).style.opacity=i<=n?'1':'0.3';document.getElementById('rval').value=n;}
 setStars(5);
 const rf=document.getElementById('rform');
-rf.addEventListener('submit',async e=>{e.preventDefault();const sb=document.getElementById('rsub');sb.textContent='Отправляем...';sb.disabled=true;try{const r=await fetch(rf.action,{method:'POST',body:new FormData(rf),headers:{'Accept':'application/json'}});if(r.ok){document.getElementById('rsuc').style.display='block';rf.reset();setStars(5);sb.textContent='Отправлено ✓';}else throw new Error();}catch{sb.textContent='Отправить отзыв →';sb.disabled=false;}});
+rf.addEventListener('submit',async e=>{e.preventDefault();const sb=document.getElementById('rsub');document.getElementById('rerr').style.display='none';sb.textContent='Отправляем...';sb.disabled=true;try{const r=await fetch(rf.action,{method:'POST',body:new FormData(rf),headers:{'Accept':'application/json'}});if(r.ok){document.getElementById('rsuc').style.display='block';rf.reset();setStars(5);sb.textContent='Отправлено ✓';}else throw new Error();}catch{document.getElementById('rerr').style.display='block';sb.textContent='Отправить отзыв →';sb.disabled=false;}});
 </script>
 </body>
 </html>
