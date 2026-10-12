@@ -658,4 +658,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/grazhdanstvo-v-ispanii"/>
   </url>
 
+  <url>
+    <loc>https://experty.es/birukova-anna</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/birukova-anna"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/birukova-anna"/>
+  </url>
+
 </urlset>
