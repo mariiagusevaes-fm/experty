@@ -313,6 +313,28 @@ button{font-family:var(--sans);cursor:pointer}
         <p style="font-size:14px;color:var(--ink-mid);line-height:1.8">Образование: Universidad Carlos III de Madrid · IES Violant de Casalduch.</p>
       </div>
 
+      <!-- ФОРМА ОТЗЫВА -->
+      <div class="section" id="review-form">
+        <h2 class="section-title">Оставить отзыв</h2>
+        <form id="rform" action="https://formspree.io/f/mbdvdyjw" method="POST">
+          <input type="hidden" name="type" value="review-diana-vilkova">
+          <input type="hidden" name="specialist" value="Диана Вилкова — страховой агент Generali">
+          <div style="display:flex;gap:6px;margin-bottom:12px">
+            <span onclick="setStars(1)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
+            <span onclick="setStars(2)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
+            <span onclick="setStars(3)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
+            <span onclick="setStars(4)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
+            <span onclick="setStars(5)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
+          </div>
+          <input type="hidden" name="rating" id="rval" value="5">
+          <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Расскажите об опыте..." required></textarea></div>
+          <div class="form-field"><label>Откуда</label><input type="text" name="city" placeholder="Кастельон, Барселона..."></div>
+          <button type="submit" class="form-submit" id="rsub">Отправить →</button>
+          <div id="rsuc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
+        </form>
+      </div>
+
       <!-- FAQ -->
       <div class="section">
         <h2 class="section-title">Частые вопросы</h2>
@@ -340,27 +362,7 @@ button{font-family:var(--sans);cursor:pointer}
         </div>
       </div>
 
-      <!-- ФОРМА ОТЗЫВА -->
-      <div class="section" id="review-form">
-        <h2 class="section-title">Оставить отзыв</h2>
-        <form id="rform" action="https://formspree.io/f/mbdvdyjw" method="POST">
-          <input type="hidden" name="type" value="review-diana-vilkova">
-          <input type="hidden" name="specialist" value="Диана Вилкова — страховой агент Generali">
-          <div style="display:flex;gap:6px;margin-bottom:12px">
-            <span onclick="setStars(1)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
-            <span onclick="setStars(2)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
-            <span onclick="setStars(3)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
-            <span onclick="setStars(4)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
-            <span onclick="setStars(5)" style="font-size:24px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
-          </div>
-          <input type="hidden" name="rating" id="rval" value="5">
-          <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
-          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Расскажите об опыте..." required></textarea></div>
-          <div class="form-field"><label>Откуда</label><input type="text" name="city" placeholder="Кастельон, Барселона..."></div>
-          <button type="submit" class="form-submit" id="rsub">Отправить →</button>
-          <div id="rsuc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
-        </form>
-      </div>
+
 
     </div>
 
