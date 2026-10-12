@@ -203,17 +203,6 @@ a{color:inherit;text-decoration:none}
         <p>Ждёте ребёнка или уже родили в Испании - прочитайте статью <a href="grudnoe-vskarmlivanie-v-ispanii.html" style="color:var(--gold);text-decoration:underline">«Ребёнок родился в Испании: документы, резиденция, врачи, выплаты»</a> - какие документы понадобятся и чем местная система отличается от привычной.</p>
       </div>
 
-      <!-- ОБРАЗОВАНИЕ -->
-      <div class="block">
-        <h2 class="block-title">Образование и опыт</h2>
-        <div class="edu-list">
-          <div class="edu-card"><span class="edu-icon">🎓</span><div><div class="edu-name">ПМГМУ им. И.М. Сеченова</div><div class="edu-sub">Высшее медицинское образование</div></div></div>
-          <div class="edu-card"><span class="edu-icon">🤱</span><div><div class="edu-name">Специализация - грудное вскармливание</div><div class="edu-sub">Профессиональная подготовка консультанта по ГВ</div></div></div>
-          <div class="edu-card"><span class="edu-icon">🏥</span><div><div class="edu-name">2009 - наст. вр. · Частная практика</div><div class="edu-sub">Более 8 000 консультаций, выезды на дом</div></div></div>
-          <div class="edu-card"><span class="edu-icon">👩‍💼</span><div><div class="edu-name">Центр «Кормилица»</div><div class="edu-sub">Руководитель центра поддержки кормящих мам · kormybaby.ru</div></div></div>
-        </div>
-      </div>
-
       <!-- КАК ПРОХОДИТ РАБОТА -->
       <div class="block">
         <h2 class="block-title">Как проходит консультация</h2>
@@ -222,6 +211,17 @@ a{color:inherit;text-decoration:none}
           <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Договариваемся о времени</h4><p>Сообщите адрес, согласовываем удобное время для визита</p></div></div>
           <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Консультация и помощь</h4><p>Приезжаю, осматриваю, расцеживаю при необходимости - аккуратно и без боли. Объясняю причину и что делать дальше</p></div></div>
           <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Остаюсь на связи</h4><p>После консультации можно писать с вопросами - поддержу и отвечу</p></div></div>
+        </div>
+      </div>
+
+      <!-- ОБРАЗОВАНИЕ -->
+      <div class="block">
+        <h2 class="block-title">Образование и опыт</h2>
+        <div class="edu-list">
+          <div class="edu-card"><span class="edu-icon">🎓</span><div><div class="edu-name">ПМГМУ им. И.М. Сеченова</div><div class="edu-sub">Высшее медицинское образование</div></div></div>
+          <div class="edu-card"><span class="edu-icon">🤱</span><div><div class="edu-name">Специализация - грудное вскармливание</div><div class="edu-sub">Профессиональная подготовка консультанта по ГВ</div></div></div>
+          <div class="edu-card"><span class="edu-icon">🏥</span><div><div class="edu-name">2009 - наст. вр. · Частная практика</div><div class="edu-sub">Более 8 000 консультаций, выезды на дом</div></div></div>
+          <div class="edu-card"><span class="edu-icon">👩‍💼</span><div><div class="edu-name">Центр «Кормилица»</div><div class="edu-sub">Руководитель центра поддержки кормящих мам · kormybaby.ru</div></div></div>
         </div>
       </div>
 
@@ -278,6 +278,29 @@ a{color:inherit;text-decoration:none}
         <p style="font-size:12px;color:var(--ink-light);margin-top:14px">Больше отзывов на <a href="https://kormybaby.ru" target="_blank" style="color:var(--gold)">kormybaby.ru</a></p>
       </div>
 
+      <!-- ФОРМА -->
+      <div class="block" id="review-form">
+        <h2 class="block-title">Оставить отзыв</h2>
+        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:16px">Работали с Марией? Поделитесь впечатлением - это поможет другим мамам.</p>
+        <form id="rform" action="https://formspree.io/f/mbdvdyjw" method="POST">
+          <input type="hidden" name="type" value="review-maria-guseva">
+          <input type="hidden" name="specialist" value="Мария Гусева - специалист по ГВ">
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <span onclick="setStars(1)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
+            <span onclick="setStars(2)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
+            <span onclick="setStars(3)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
+            <span onclick="setStars(4)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
+            <span onclick="setStars(5)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
+          </div>
+          <input type="hidden" name="rating" id="rval" value="5">
+          <div class="form-field"><label>Ваше имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Расскажите о вашем опыте..." required></textarea></div>
+          <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Барселона, Жирона..."></div>
+          <button type="submit" class="form-submit" id="rsub">Отправить отзыв →</button>
+          <div id="rsuc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
+        </form>
+      </div>
+
       <!-- FAQ -->
       <div class="block">
         <h2 class="block-title">Частые вопросы</h2>
@@ -301,29 +324,6 @@ a{color:inherit;text-decoration:none}
           <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-question">Помогаете ли вы при лактостазе с температурой?</span><span class="faq-icon">+</span></button>
           <div class="faq-body"><div class="faq-bi"><p>Да. За 15 лет практики помогала в самых сложных ситуациях. Если есть сомнения - напишите, расскажу, что делать до приезда.</p></div></div>
         </div>
-      </div>
-
-      <!-- ФОРМА -->
-      <div class="block" id="review-form">
-        <h2 class="block-title">Оставить отзыв</h2>
-        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:16px">Работали с Марией? Поделитесь впечатлением - это поможет другим мамам.</p>
-        <form id="rform" action="https://formspree.io/f/mbdvdyjw" method="POST">
-          <input type="hidden" name="type" value="review-maria-guseva">
-          <input type="hidden" name="specialist" value="Мария Гусева - специалист по ГВ">
-          <div style="display:flex;gap:6px;margin-bottom:10px">
-            <span onclick="setStars(1)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
-            <span onclick="setStars(2)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
-            <span onclick="setStars(3)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
-            <span onclick="setStars(4)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
-            <span onclick="setStars(5)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
-          </div>
-          <input type="hidden" name="rating" id="rval" value="5">
-          <div class="form-field"><label>Ваше имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
-          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Расскажите о вашем опыте..." required></textarea></div>
-          <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Барселона, Жирона..."></div>
-          <button type="submit" class="form-submit" id="rsub">Отправить отзыв →</button>
-          <div id="rsuc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
-        </form>
       </div>
 
     </div>
