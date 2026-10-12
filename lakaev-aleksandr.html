@@ -263,6 +263,29 @@ button{font-family:var(--sans);cursor:pointer}
         </div>
       </div>
 
+      <!-- ФОРМА ОТЗЫВА -->
+      <div class="content-block" id="review-form">
+        <h2 class="block-title">Оставить отзыв</h2>
+        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:20px">Работали с Александром? Поделитесь впечатлением — это поможет другим клиентам.</p>
+        <form id="review-form-el" action="https://formspree.io/f/mbdvdyjw" method="POST">
+          <input type="hidden" name="type" value="review-lakaev-aleksandr">
+          <input type="hidden" name="specialist" value="Александр Лакаев — мастер на дом, Аликанте">
+          <div style="display:flex;gap:6px;margin-bottom:14px">
+            <span onclick="setStars(1)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
+            <span onclick="setStars(2)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
+            <span onclick="setStars(3)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
+            <span onclick="setStars(4)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
+            <span onclick="setStars(5)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
+          </div>
+          <input type="hidden" name="rating" id="rating-val" value="5">
+          <div class="form-field"><label>Ваше имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Что делал, как всё прошло..." required></textarea></div>
+          <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Аликанте, Бенидорм..."></div>
+          <button type="submit" class="form-submit" id="review-sub">Отправить отзыв →</button>
+          <div id="review-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
+        </form>
+      </div>
+
       <!-- FAQ -->
       <div class="content-block">
         <h2 class="block-title">Частые вопросы</h2>
@@ -290,28 +313,7 @@ button{font-family:var(--sans);cursor:pointer}
         </div>
       </div>
 
-      <!-- ФОРМА ОТЗЫВА -->
-      <div class="content-block" id="review-form">
-        <h2 class="block-title">Оставить отзыв</h2>
-        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:20px">Работали с Александром? Поделитесь впечатлением — это поможет другим клиентам.</p>
-        <form id="review-form-el" action="https://formspree.io/f/mbdvdyjw" method="POST">
-          <input type="hidden" name="type" value="review-lakaev-aleksandr">
-          <input type="hidden" name="specialist" value="Александр Лакаев — мастер на дом, Аликанте">
-          <div style="display:flex;gap:6px;margin-bottom:14px">
-            <span onclick="setStars(1)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
-            <span onclick="setStars(2)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
-            <span onclick="setStars(3)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
-            <span onclick="setStars(4)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
-            <span onclick="setStars(5)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
-          </div>
-          <input type="hidden" name="rating" id="rating-val" value="5">
-          <div class="form-field"><label>Ваше имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
-          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Что делал, как всё прошло..." required></textarea></div>
-          <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Аликанте, Бенидорм..."></div>
-          <button type="submit" class="form-submit" id="review-sub">Отправить отзыв →</button>
-          <div id="review-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
-        </form>
-      </div>
+
 
     </div>
 
