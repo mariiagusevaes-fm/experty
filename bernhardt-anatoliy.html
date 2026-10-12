@@ -222,6 +222,29 @@ a{color:inherit;text-decoration:none}
         </div>
       </div>
 
+      <!-- ФОРМА ОТЗЫВА -->
+      <div class="block" id="review-form">
+        <h2 class="block-title">Оставить отзыв</h2>
+        <p style="font-size:14px;color:var(--ink-mid);margin-bottom:16px">Работали с Анатолием? Поделитесь впечатлением — это поможет другим клиентам.</p>
+        <form id="review-form-el" action="https://formspree.io/f/mbdvdyjw" method="POST">
+          <input type="hidden" name="type" value="review-anatoliy-bernhardt">
+          <input type="hidden" name="specialist" value="Анатолий Бернхардт — покупка авто в Германии">
+          <div style="display:flex;gap:6px;margin-bottom:10px">
+            <span onclick="setStars(1)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
+            <span onclick="setStars(2)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s2">★</span>
+            <span onclick="setStars(3)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s3">★</span>
+            <span onclick="setStars(4)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s4">★</span>
+            <span onclick="setStars(5)" style="font-size:22px;cursor:pointer;color:#F59E0B;opacity:.3" id="s5">★</span>
+          </div>
+          <input type="hidden" name="rating" id="rating-val" value="5">
+          <div class="form-field"><label>Ваше имя</label><input type="text" name="name" placeholder="Имя и начальная буква фамилии" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+          <div class="form-field"><label>Отзыв</label><textarea name="review" placeholder="Расскажите о вашем опыте..." required></textarea></div>
+          <div class="form-field"><label>Город</label><input type="text" name="city" placeholder="Баден-Баден..."></div>
+          <button type="submit" class="form-submit" id="review-sub">Отправить отзыв →</button>
+          <div id="review-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Спасибо! Отзыв появится после проверки.</div>
+        </form>
+      </div>
+
       <!-- FAQ -->
       <div class="block">
         <h2 class="block-title">Частые вопросы</h2>
@@ -327,6 +350,18 @@ if(bookingForm){
     }catch{sb.textContent='Отправить запрос →';sb.disabled=false;}
   });
 }
+function setStars(n){for(let i=1;i<=5;i++)document.getElementById('s'+i).style.opacity=i<=n?'1':'.3';document.getElementById('rating-val').value=n;}
+const rf=document.getElementById('review-form-el');
+rf.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const sb=document.getElementById('review-sub');
+  sb.textContent='Отправляем...';sb.disabled=true;
+  try{
+    const r=await fetch(rf.action,{method:'POST',body:new FormData(rf),headers:{'Accept':'application/json'}});
+    if(r.ok){document.getElementById('review-suc').style.display='block';rf.reset();setStars(5);sb.textContent='Отправлено ✓';}
+    else throw new Error();
+  }catch{sb.textContent='Отправить отзыв →';sb.disabled=false;}
+});
 </script>
 </body>
 </html>
