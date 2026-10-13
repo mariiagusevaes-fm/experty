@@ -135,7 +135,7 @@ button{font-family:var(--sans);cursor:pointer}
 .sg-card:hover{background:var(--bg-alt)}
 .sg-ava{width:36px;height:36px;border-radius:50%;background:rgba(200,169,110,0.15);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 .sg-body{min-width:0}
-.sg-name{font-family:var(--serif);font-size:13.5px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sg-name{font-family:var(--serif);font-size:13.5px;font-weight:500;color:var(--ink);line-height:1.3}
 .sg-role{font-size:10.5px;color:var(--gold);font-weight:600;letter-spacing:.03em;margin:1px 0}
 .sg-loc{font-size:10.5px;color:var(--ink-light)}
 .sg-arrow{margin-left:auto;color:var(--gold);font-size:16px;flex-shrink:0}
@@ -304,7 +304,7 @@ button{font-family:var(--sans);cursor:pointer}
     </div>
 
     <!-- СЕТКА СПЕЦИАЛЬНОСТЕЙ -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start" id="cats-grid">
+    <div style="display:grid;gap:14px;align-items:start" id="cats-grid">
 
       <div class="cat-group" data-cats="docs kids">
         <a href="yurist" class="cat-card">
@@ -612,9 +612,9 @@ button{font-family:var(--sans);cursor:pointer}
 .cat-group-specialists .sg-card{border-top:1px solid var(--rule)}
 .cat-group-specialists .sg-card:first-child{border-top:none}
 .cat-card-hidden{display:none!important}
-@media(max-width:1024px){#cats-grid{grid-template-columns:repeat(3,1fr)}}
+#cats-grid{grid-template-columns:repeat(3,1fr)}
 @media(max-width:768px){
-  #cats-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  #cats-grid{grid-template-columns:1fr;gap:10px}
   #cat-filters{gap:6px}
   .cat-btn{padding:7px 14px;font-size:12px}
   .cat-card{padding:16px 14px}
