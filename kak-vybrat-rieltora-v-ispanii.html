@@ -77,7 +77,10 @@ a{color:inherit;text-decoration:none}
 .callout strong{color:var(--ink)}
 .warning{background:#fefce8;border:1px solid #fde047;border-radius:8px;padding:18px 22px;margin:24px 0}
 .warning p{margin:0;font-size:14px;color:#713f12;line-height:1.75}
-.term-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}
+.term-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:20px 0;font-size:14px}
+.term-table th:nth-child(1),.term-table td:nth-child(1){width:20%}
+.term-table th:nth-child(2),.term-table td:nth-child(2){width:30%}
+.term-table td{word-wrap:break-word;overflow-wrap:break-word}
 .term-table th{background:var(--ink);color:var(--bg);padding:12px 16px;text-align:left;font-weight:600;font-size:12px;letter-spacing:.06em}
 .term-table td{padding:12px 16px;border-bottom:1px solid var(--rule);color:var(--ink-mid);vertical-align:top}
 .term-table tr:last-child td{border-bottom:none}
@@ -141,8 +144,7 @@ a{color:inherit;text-decoration:none}
 
     <h2>В части регионов регистрация всё-таки обязательна</h2>
     <p>Несколько автономных сообществ ввели <strong>собственные обязательные региональные реестры</strong> агентов недвижимости — независимо от того, лицензируется ли профессия на уровне страны. Это прямо касается основных регионов, где живут русскоязычные:</p>
-    <div style="overflow-x:auto;margin:20px 0;-webkit-overflow-scrolling:touch">
-    <table class="term-table" style="margin:0;min-width:480px">
+    <table class="term-table">
       <thead>
         <tr><th>Регион</th><th>Реестр</th><th>Статус</th></tr>
       </thead>
@@ -155,7 +157,6 @@ a{color:inherit;text-decoration:none}
         <tr><td>Остальные регионы</td><td>Обычно нет отдельного реестра</td><td>—</td></tr>
       </tbody>
     </table>
-    </div>
     <div class="callout">
       <p><strong>Почему это важно именно для вас.</strong> Барселона и Каталония в целом, а также Коста Бланка — одни из самых популярных направлений у русскоязычных покупателей, и в обоих регионах регистрация обязательна и легко проверяется. Это значит, что отсутствие агента в реестре там, где регистрация требуется, — конкретный и понятный сигнал, а не вопрос вкуса.</p>
     </div>
