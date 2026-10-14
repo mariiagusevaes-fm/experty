@@ -307,94 +307,119 @@ button{font-family:var(--sans);cursor:pointer}
     <div style="display:grid;gap:14px;align-items:start" id="cats-grid">
 
       <div class="cat-group" data-cats="docs kids">
-        <a href="yurist" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">⚖️</span>
           <span class="cat-card-name">Юрист</span>
           <span class="cat-card-sub">ВНЖ · НИЕ · документы</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="nevzorov-anton.html" class="sg-card">
             <span class="sg-ava">⚖️</span>
             <div class="sg-body"><h3 class="sg-name">Антон Невзоров</h3><div class="sg-role">ВНЖ Испании</div><div class="sg-loc">🌍 Онлайн по всей Испании</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="yurist" class="cat-group-viewall">Все юристы →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="docs">
-        <a href="buhgalter.html" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">📊</span>
           <span class="cat-card-name">Бухгалтер</span>
           <span class="cat-card-sub">Autónomo · налоги</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="gusev-maksim.html" class="sg-card">
             <span class="sg-ava">📊</span>
             <div class="sg-body"><h3 class="sg-name">Максим Гусев</h3><div class="sg-role">Бухгалтер · Финансовый консультант</div><div class="sg-loc">📍 Барселона</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="buhgalter.html" class="cat-group-viewall">Все бухгалтеры →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="docs">
-        <a href="finansoviy-konsultant.html" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">💰</span>
           <span class="cat-card-name">Финансовый консультант</span>
           <span class="cat-card-sub">Инвестиции · планирование</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
+        <div class="cat-group-specialists">
+          <a href="gusev-maksim.html" class="sg-card">
+            <span class="sg-ava">💰</span>
+            <div class="sg-body"><h3 class="sg-name">Максим Гусев</h3><div class="sg-role">Финансовый консультант · Бухгалтер</div><div class="sg-loc">📍 Барселона</div></div>
+            <span class="sg-arrow">→</span>
+          </a>
+          <a href="finansoviy-konsultant.html" class="cat-group-viewall">Все финансовые консультанты →</a>
+        </div>
       </div>
 
       <div class="cat-group" data-cats="docs home">
-        <a href="strahovoy-agent.html" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🛡️</span>
           <span class="cat-card-name">Страховой агент</span>
           <span class="cat-card-sub">Медицина · авто · ВНЖ</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="vilkova-diana" class="sg-card">
             <span class="sg-ava">🛡️</span>
             <div class="sg-body"><h3 class="sg-name">Диана Вилкова</h3><div class="sg-role">Страховой агент · Generali</div><div class="sg-loc">📍 Кастельон · онлайн</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="gafiatullina-darya.html" class="sg-card">
+            <span class="sg-ava">🛡️</span>
+            <div class="sg-body"><h3 class="sg-name">Дарья Гафиатуллина</h3><div class="sg-role">Страховой брокер</div><div class="sg-loc">🌍 Онлайн по всей Испании</div></div>
+            <span class="sg-arrow">→</span>
+          </a>
+          <a href="strahovoy-agent.html" class="cat-group-viewall">Все страховые агенты →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="home">
-        <a href="rieltor" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🏠</span>
           <span class="cat-card-name">Риелтор</span>
           <span class="cat-card-sub">Покупка · аренда</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="golden-key-nikita.html" class="sg-card">
             <span class="sg-ava">🏠</span>
             <div class="sg-body"><h3 class="sg-name">Никита · Golden Key</h3><div class="sg-role">Риелтор</div><div class="sg-loc">📍 Costa Blanca</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="rieltor" class="cat-group-viewall">Все риелторы →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="home">
-        <a href="master-na-dom.html" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🔧</span>
           <span class="cat-card-name">Мастер на дом</span>
           <span class="cat-card-sub">Ремонт · электрика · сантехника</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="lakaev-aleksandr" class="sg-card">
             <span class="sg-ava">🔧</span>
             <div class="sg-body"><h3 class="sg-name">Александр Лакаев</h3><div class="sg-role">Мастер на дом</div><div class="sg-loc">📍 Аликанте · Бенидорм</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="master-na-dom.html" class="cat-group-viewall">Все мастера на дом →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="home docs">
-        <a href="avto" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🚗</span>
           <span class="cat-card-name">Помощь с авто</span>
           <span class="cat-card-sub">Права · растаможка</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="baryshev-mikhail.html" class="sg-card">
             <span class="sg-ava">🚗</span>
@@ -406,61 +431,75 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="sg-body"><h3 class="sg-name">Анатолий Бернхардт</h3><div class="sg-role">Покупка авто в Германии</div><div class="sg-loc">🌍 Германия · ЕС</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="avto" class="cat-group-viewall">Все специалисты по авто →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="home">
-        <a href="klining" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🧹</span>
           <span class="cat-card-name">Клининг</span>
           <span class="cat-card-sub">Уборка дома и офиса</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
+        <div class="cat-group-specialists">
+          <div class="cat-group-empty">Пока нет специалистов на платформе. <a href="klining">Смотреть категорию →</a></div>
+        </div>
       </div>
 
       <div class="cat-group" data-cats="kids health">
-        <a href="logoped" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🗣️</span>
           <span class="cat-card-name">Логопед</span>
           <span class="cat-card-sub">Дети и взрослые</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="ryabova-lyudmila" class="sg-card">
             <span class="sg-ava">🗣️</span>
             <div class="sg-body"><h3 class="sg-name">Людмила Рябова</h3><div class="sg-role">Логопед</div><div class="sg-loc">📍 Барселона · Онлайн</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="logoped" class="cat-group-viewall">Все логопеды →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="kids">
-        <a href="nyanya" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">👶</span>
           <span class="cat-card-name">Няня</span>
           <span class="cat-card-sub">Уход и развитие</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
+        <div class="cat-group-specialists">
+          <div class="cat-group-empty">Пока нет специалистов на платформе. <a href="nyanya">Смотреть категорию →</a></div>
+        </div>
       </div>
 
       <div class="cat-group" data-cats="kids health">
-        <a href="gv-doula" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🤱</span>
           <span class="cat-card-name">Консультант по ГВ</span>
           <span class="cat-card-sub">Грудное вскармливание</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="guseva-maria.html" class="sg-card">
             <span class="sg-ava">🤱</span>
             <div class="sg-body"><h3 class="sg-name">Мария Гусева</h3><div class="sg-role">Специалист по ГВ · 8000+ консультаций</div><div class="sg-loc">📍 Каталония</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="gv-doula" class="cat-group-viewall">Все консультанты по ГВ →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="health kids">
-        <a href="psiholog" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🧠</span>
           <span class="cat-card-name">Психолог</span>
           <span class="cat-card-sub">Онлайн и очно</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="patrenina-marina" class="sg-card">
             <span class="sg-ava">🧠</span>
@@ -477,15 +516,17 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="sg-body"><h3 class="sg-name">Наталья Кресова</h3><div class="sg-role">Психолог · Экзистенциальный подход</div><div class="sg-loc">🌍 Онлайн из Валенсии</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="psiholog" class="cat-group-viewall">Все психологи →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="health beauty">
-        <a href="massazh" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">💆</span>
           <span class="cat-card-name">Массажист</span>
           <span class="cat-card-sub">Лечебный · релакс · коррекция</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="sergeev-sergey.html" class="sg-card">
             <span class="sg-ava">💆</span>
@@ -497,38 +538,46 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="sg-body"><h3 class="sg-name">Лейсан Гиззатова</h3><div class="sg-role">Массажист · Izumi Studio</div><div class="sg-loc">📍 Барселона</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="massazh" class="cat-group-viewall">Все массажисты →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="health">
-        <a href="trener" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🏋️</span>
           <span class="cat-card-name">Тренер</span>
           <span class="cat-card-sub">Фитнес · йога · спорт</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
+        <div class="cat-group-specialists">
+          <div class="cat-group-empty">Пока нет специалистов на платформе. <a href="trener">Смотреть категорию →</a></div>
+        </div>
       </div>
 
       <div class="cat-group" data-cats="health">
-        <a href="vrach.html" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">🏥</span>
           <span class="cat-card-name">Врач</span>
           <span class="cat-card-sub">Стоматолог · педиатр · терапевт</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="bindyuk-olga.html" class="sg-card">
             <span class="sg-ava">🦷</span>
             <div class="sg-body"><h3 class="sg-name">Ольга Биндюк</h3><div class="sg-role">Стоматолог · Diente Sano</div><div class="sg-loc">📍 Барселона</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="vrach.html" class="cat-group-viewall">Все врачи →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="beauty">
-        <a href="master-krasoty" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">💅</span>
           <span class="cat-card-name">Мастер красоты</span>
           <span class="cat-card-sub">Ногти · брови · ресницы</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="gribovich-zlata" class="sg-card">
             <span class="sg-ava">✏️</span>
@@ -545,23 +594,29 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="sg-body"><h3 class="sg-name">Марина Ступкина</h3><div class="sg-role">Перманентный макияж</div><div class="sg-loc">📍 Сант-Кугат</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="master-krasoty" class="cat-group-viewall">Все мастера красоты →</a>
         </div>
       </div>
 
       <div class="cat-group" data-cats="beauty kids">
-        <a href="fotograf" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">📷</span>
           <span class="cat-card-name">Фотограф</span>
           <span class="cat-card-sub">Семья · дети · события</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
+        <div class="cat-group-specialists">
+          <div class="cat-group-empty">Пока нет специалистов на платформе. <a href="fotograf">Смотреть категорию →</a></div>
+        </div>
       </div>
 
       <div class="cat-group" data-cats="edu kids">
-        <a href="repetitor" class="cat-card">
+        <button class="cat-card" onclick="toggleCatGroup(this)">
           <span class="cat-card-icon">📚</span>
           <span class="cat-card-name">Репетитор</span>
           <span class="cat-card-sub">Испанский · английский · предметы</span>
-        </a>
+          <span class="cat-card-chevron">▾</span>
+        </button>
         <div class="cat-group-specialists">
           <a href="flacorus-sergey" class="sg-card">
             <span class="sg-ava">🇪🇸</span>
@@ -573,6 +628,7 @@ button{font-family:var(--sans);cursor:pointer}
             <div class="sg-body"><h3 class="sg-name">Анна Ардани</h3><div class="sg-role">Репетитор английского</div><div class="sg-loc">🌍 Онлайн</div></div>
             <span class="sg-arrow">→</span>
           </a>
+          <a href="repetitor" class="cat-group-viewall">Все репетиторы →</a>
         </div>
       </div>
 
@@ -604,13 +660,19 @@ button{font-family:var(--sans);cursor:pointer}
 .cat-btn-active{background:var(--ink);border-color:var(--ink);color:var(--bg)!important}
 .cat-group{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:12px;overflow:hidden;transition:border-color .2s}
 .cat-group:hover{border-color:var(--gold)}
-.cat-card{display:flex;flex-direction:column;gap:4px;padding:18px 16px;text-decoration:none}
+.cat-card{display:flex;flex-direction:column;gap:4px;padding:18px 16px;text-decoration:none;width:100%;background:none;border:none;text-align:left;font-family:var(--sans);color:inherit;cursor:pointer;position:relative}
 .cat-card-icon{font-size:26px;margin-bottom:4px}
 .cat-card-name{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--ink);line-height:1.3}
 .cat-card-sub{font-size:12px;color:var(--ink-light);line-height:1.4}
-.cat-group-specialists{display:flex;flex-direction:column;border-top:1px solid var(--rule)}
+.cat-card-chevron{position:absolute;top:20px;right:16px;font-size:11px;color:var(--ink-light);transition:transform .25s}
+.cat-group.open .cat-card-chevron{transform:rotate(180deg);color:var(--gold)}
+.cat-group-specialists{display:flex;flex-direction:column;max-height:0;overflow:hidden;transition:max-height .3s ease}
+.cat-group.open .cat-group-specialists{max-height:900px;border-top:1px solid var(--rule)}
 .cat-group-specialists .sg-card{border-top:1px solid var(--rule)}
 .cat-group-specialists .sg-card:first-child{border-top:none}
+.cat-group-viewall{display:block;padding:11px 16px;font-size:12px;color:var(--gold);font-weight:600;border-top:1px solid var(--rule);text-decoration:none}
+.cat-group-empty{padding:13px 16px;font-size:12px;color:var(--ink-light);line-height:1.5}
+.cat-group-empty a{color:var(--gold);font-weight:600}
 .cat-card-hidden{display:none!important}
 #cats-grid{grid-template-columns:repeat(3,1fr)}
 @media(max-width:768px){
@@ -625,6 +687,10 @@ button{font-family:var(--sans);cursor:pointer}
 </style>
 
 <script>
+function toggleCatGroup(btn) {
+  btn.closest('.cat-group').classList.toggle('open');
+}
+
 function filterCats(cat) {
   // Обновляем кнопки
   document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('cat-btn-active'));
