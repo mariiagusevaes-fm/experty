@@ -534,11 +534,20 @@
 
   <url>
     <loc>https://experty.es/stomatologiya-v-ispanii</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/stomatologiya-v-ispanii"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/stomatologiya-v-ispanii"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/ochki-oftalmolog-v-ispanii</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/ochki-oftalmolog-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/ochki-oftalmolog-v-ispanii"/>
   </url>
 
   <url>
