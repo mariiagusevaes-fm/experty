@@ -184,7 +184,7 @@
 
   <url>
     <loc>https://experty.es/gusev-maksim</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/gusev-maksim"/>
@@ -498,11 +498,20 @@
 
   <url>
     <loc>https://experty.es/modelo-720-ispaniya</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/modelo-720-ispaniya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/modelo-720-ispaniya"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/modelo-721-kriptovalyuta-ispaniya</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/modelo-721-kriptovalyuta-ispaniya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/modelo-721-kriptovalyuta-ispaniya"/>
   </url>
 
   <url>
@@ -624,7 +633,7 @@
 
   <url>
     <loc>https://experty.es/perevod-deneg-v-ispaniyu</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/perevod-deneg-v-ispaniyu"/>
