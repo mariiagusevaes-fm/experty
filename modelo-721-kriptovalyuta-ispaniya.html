@@ -22,7 +22,7 @@
 <meta property="article:published_time" content="2026-10-16">
 <meta property="article:modified_time" content="2026-10-16">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Modelo 721: как декларировать криптовалюту в Испании","description":"Крипта на иностранной бирже свыше 50 000 € требует отдельной декларации Modelo 721. Разбираем порог, свои кошельки (не в счёт), сроки и реальные штрафы.","author":{"@type":"Organization","name":"Experty.es"},"publisher":{"@type":"Organization","name":"Experty.es","url":"https://experty.es"},"datePublished":"2026-10-16","dateModified":"2026-10-16","inLanguage":"ru","wordCount":1422,"image":"https://experty.es/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://experty.es/modelo-721-kriptovalyuta-ispaniya"},"url":"https://experty.es/modelo-721-kriptovalyuta-ispaniya"}
+{"@context":"https://schema.org","@type":"Article","headline":"Modelo 721: как декларировать криптовалюту в Испании","description":"Крипта на иностранной бирже свыше 50 000 € требует отдельной декларации Modelo 721. Разбираем порог, свои кошельки (не в счёт), сроки и реальные штрафы.","author":{"@type":"Organization","name":"Experty.es"},"reviewedBy":{"@type":"Person","name":"Максим Гусев","jobTitle":"Финансовый консультант","url":"https://experty.es/gusev-maksim"},"publisher":{"@type":"Organization","name":"Experty.es","url":"https://experty.es"},"datePublished":"2026-10-16","dateModified":"2026-10-16","inLanguage":"ru","wordCount":1517,"image":"https://experty.es/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://experty.es/modelo-721-kriptovalyuta-ispaniya"},"url":"https://experty.es/modelo-721-kriptovalyuta-ispaniya"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Experty.es","item":"https://experty.es/"},{"@type":"ListItem","position":2,"name":"Финансовые консультанты","item":"https://experty.es/finansoviy-konsultant"},{"@type":"ListItem","position":3,"name":"Modelo 721","item":"https://experty.es/modelo-721-kriptovalyuta-ispaniya"}]}
@@ -107,7 +107,16 @@ a{color:inherit;text-decoration:none}
 .footer-logo{font-family:var(--serif);font-size:16px;color:var(--ink)}
 .footer-logo span{color:var(--gold)}
 .footer-copy{font-size:12px;color:var(--ink-light)}
-@media(max-width:768px){.nav-inner,.article-hero-inner,.article-content,.footer-inner,.tag-bar{padding-left:20px;padding-right:20px}.article-hero-inner{padding-top:36px;padding-bottom:36px}.article-content{padding-top:36px;padding-bottom:48px}.specialist-card{flex-direction:column;gap:16px}.term-table{font-size:13px}}
+.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.decision-card{border-radius:12px;padding:20px;text-align:center}
+.decision-yes{background:var(--bg-alt);border:2px solid var(--gold)}
+.decision-no{background:var(--bg-alt);border:2px solid var(--rule-mid)}
+.decision-icon{font-size:30px;margin-bottom:10px}
+.decision-title{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.3}
+.decision-result{font-size:13px;font-weight:600}
+.decision-yes .decision-result{color:#92400e}
+.decision-no .decision-result{color:#2D6A4F}
+@media(max-width:768px){.nav-inner,.article-hero-inner,.article-content,.footer-inner,.tag-bar{padding-left:20px;padding-right:20px}.article-hero-inner{padding-top:36px;padding-bottom:36px}.article-content{padding-top:36px;padding-bottom:48px}.specialist-card{flex-direction:column;gap:16px}.term-table{font-size:13px}.decision-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -139,6 +148,7 @@ a{color:inherit;text-decoration:none}
 
     <h2>Что это и с какого года действует</h2>
     <p><strong>Modelo 721</strong> — это ежегодная информационная декларация о криптовалюте, которую налоговый резидент Испании держит за рубежом и которую хранит третья сторона — иностранная биржа или платформа. Форму ввели отдельно от общей декларации зарубежных активов Modelo 720: первый отчётный год — 2023-й, первая реальная подача — в начале 2024 года. К 2026 году это уже не новая, но всё ещё часто путаемая с Modelo 720 обязанность.</p>
+    <p>Юридическое основание — <strong>Ley 11/2021</strong> о мерах против налогового мошенничества, которая ввела саму обязанность декларировать криптовалюту за рубежом, и <strong>Orden HFP/886/2023</strong> от 26 июля 2023 года, которая утвердила конкретную форму и порядок подачи. Цель, заявленная при введении формы, — не позволить криптоактивам на зарубежных биржах оставаться невидимыми для испанской налоговой, аналогично тому, как Modelo 720 уже работает для банковских счетов и ценных бумаг.</p>
     <div class="callout">
       <p><strong>Modelo 721 — это не налог.</strong> Сама форма не предполагает уплату какой-либо суммы — это чисто информационная декларация, которая сообщает налоговой остаток на зарубежных платформах на конец года. Hacienda использует эти данные, чтобы сверить их с вашей годовой декларацией IRPF и, при наличии, с налогом на богатство (Impuesto sobre el Patrimonio).</p>
     </div>
@@ -149,6 +159,18 @@ a{color:inherit;text-decoration:none}
 
     <h2>Собственный кошелёк — это не Modelo 721</h2>
     <p>Самый частый источник путаницы: форма касается только криптовалюты, которую <strong>хранит третья сторона</strong>. Если вы сами держите приватные ключи — аппаратный кошелёк (Ledger, Trezor) или программный (MetaMask и подобные) — такая крипта в эту декларацию не входит, независимо от суммы. Юридически здесь просто нет «хранителя», о котором нужно отчитываться: вы и есть единственный, кто имеет доступ к активу.</p>
+    <div class="decision-grid">
+      <div class="decision-card decision-yes">
+        <div class="decision-icon">🏦</div>
+        <div class="decision-title">Биржа или платформа хранит актив за вас</div>
+        <div class="decision-result">→ Нужна Modelo 721, если сумма &gt;50 000 €</div>
+      </div>
+      <div class="decision-card decision-no">
+        <div class="decision-icon">🔑</div>
+        <div class="decision-title">Вы сами держите приватные ключи</div>
+        <div class="decision-result">→ Modelo 721 не нужна, независимо от суммы</div>
+      </div>
+    </div>
     <table class="term-table">
       <thead>
         <tr><th>Где хранится</th><th>Нужна ли Modelo 721</th></tr>
