@@ -587,6 +587,15 @@
   </url>
 
   <url>
+    <loc>https://experty.es/ii-v-ispanii</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/ii-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/ii-v-ispanii"/>
+  </url>
+
+  <url>
     <loc>https://experty.es/voditelskie-prava-v-ispanii</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
