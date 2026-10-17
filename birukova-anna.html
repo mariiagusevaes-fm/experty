@@ -88,6 +88,7 @@ button{font-family:var(--sans);cursor:pointer}
 .profile-content-inner{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start;padding:48px 0 64px}
 .profile-main{display:flex;flex-direction:column}
 .content-block{padding:36px 0;border-top:1px solid var(--rule)}
+.reviews-list{display:flex;flex-direction:column;gap:12px}.review-card{background:var(--white);border:1px solid var(--rule);border-radius:10px;padding:16px}.review-stars{color:#F59E0B;font-size:14px;letter-spacing:1px;margin-bottom:6px}.review-text{font-size:13px;color:var(--ink-mid);line-height:1.75;margin-bottom:10px}.review-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px}.review-author{font-size:12px;font-weight:600;color:var(--ink)}.review-date{font-size:11px;color:var(--ink-light)}
 .content-block:first-child{border-top:none;padding-top:0}
 .block-title{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:20px;color:var(--ink)}
 .services-list{display:flex;flex-direction:column}
@@ -241,6 +242,17 @@ button{font-family:var(--sans);cursor:pointer}
           <span style="background:var(--ink);color:var(--bg);border-radius:100px;padding:8px 18px;font-size:13px">🏠 Покупатели недвижимости</span>
           <span style="background:var(--ink);color:var(--bg);border-radius:100px;padding:8px 18px;font-size:13px">💼 Владельцы бизнеса и лицензий</span>
           <span style="background:var(--ink);color:var(--bg);border-radius:100px;padding:8px 18px;font-size:13px">🚗 Автовладельцы — вопросы DGT</span>
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2 class="block-title">Отзывы</h2>
+        <div class="reviews-list">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Muy profesional, correcta y honorarios moderados.</p>
+            <div class="review-meta"><span class="review-author">Manuel</span><span class="review-date">Торревьеха, 2026</span></div>
+          </div>
         </div>
       </div>
 
