@@ -784,4 +784,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/birukova-anna"/>
   </url>
 
+  <url>
+    <loc>https://experty.es/nazarova-aleksandra</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/nazarova-aleksandra"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/nazarova-aleksandra"/>
+  </url>
+
 </urlset>
