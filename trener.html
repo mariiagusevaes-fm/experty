@@ -595,8 +595,8 @@ button{font-family:var(--sans);cursor:pointer}
     <div class="modal-sub">Расскажите о ситуации — подберём тренера</div>
     <form id="modal-form" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="type" value="help-trener">
-      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
-      <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
+      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
+      <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <div class="form-field"><label>Ситуация</label><textarea name="message" placeholder="Расскажите коротко..."></textarea></div>
       <button type="submit" class="form-submit" id="modal-sub">Отправить →</button>
       <div id="modal-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Отлично! Свяжемся в ближайшее время.</div>
@@ -618,9 +618,9 @@ button{font-family:var(--sans);cursor:pointer}
     <div class="modal-sub">€100 · страница за 3 рабочих дня</div>
     <form id="spec-form" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="type" value="specialist-trener">
-      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
       <div class="form-field"><label>Специализация</label><input type="text" name="spec" placeholder="Тренеры" required></div>
-      <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
+      <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <button type="submit" class="form-submit" id="spec-sub">Отправить заявку →</button>
       <div id="spec-suc" style="display:none;margin-top:10px;padding:12px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;font-size:13px;color:#166534">✓ Заявка принята! Свяжемся в течение дня.</div>
     </form>

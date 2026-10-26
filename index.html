@@ -1077,8 +1077,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="modal-sub" id="modal-sub">Оставьте контакт — подберём подходящего специалиста</p>
     <form id="contact-form" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" id="form-type" name="type" value="client">
-      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
-      <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
+      <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
+      <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <div class="form-field" id="category-field">
         <label>Нужен специалист</label>
         <select name="category" required>

@@ -798,10 +798,10 @@ button{font-family:var(--sans);cursor:pointer}
     <p class="modal-sub">Расскажите о себе — мы создадим вашу профессиональную страницу и свяжемся с вами в течение 24 часов.</p>
     <form id="mf" action="https://formspree.io/f/mbdvdyjw" method="POST">
       <input type="hidden" name="type" value="specialist">
-      <div class="form-field"><label>Имя и фамилия</label><input type="text" name="name" placeholder="Иван Петров" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+      <div class="form-field"><label>Имя и фамилия</label><input type="text" name="name" placeholder="Иван Петров" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
       <div class="form-field"><label>Специализация</label><input type="text" name="spec" placeholder="Бухгалтер / Gestor, Психолог, Мастер маникюра..." required></div>
       <div class="form-field"><label>Город работы в Испании</label><input type="text" name="city" placeholder="Барселона, Мадрид, Валенсия..."></div>
-      <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
+      <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <div class="form-field"><label>Коротко о себе</label><textarea name="message" placeholder="Опыт, что умеете, для кого работаете..."></textarea></div>
       <div class="form-field">
         <label>Кто вас пригласил? <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label>
