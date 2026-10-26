@@ -551,6 +551,15 @@
   </url>
 
   <url>
+    <loc>https://experty.es/sl-v-ispanii</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/sl-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/sl-v-ispanii"/>
+  </url>
+
+  <url>
     <loc>https://experty.es/kak-kupit-avto-v-germanii</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -777,7 +786,7 @@
 
   <url>
     <loc>https://experty.es/autonomo-v-ispanii</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/autonomo-v-ispanii"/>
