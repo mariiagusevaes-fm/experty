@@ -154,6 +154,15 @@ ul{list-style:none}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{background:var(--panel);border:1px solid var(--rule-strong);border-radius:999px;padding:8px 16px;font-size:.88rem;color:var(--ink-mid)}
 
+/* REVIEWS */
+.reviews-list{display:flex;flex-direction:column;gap:12px}
+.review-card{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:18px 20px}
+.review-stars{color:#F59E0B;font-size:14px;letter-spacing:1px;margin-bottom:8px}
+.review-text{font-size:.92rem;color:var(--ink-mid);line-height:1.7;margin-bottom:10px}
+.review-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px}
+.review-author{font-size:.82rem;font-weight:700;color:var(--ink)}
+.review-date{font-size:.78rem;color:var(--ink-soft)}
+
 /* FAQ */
 .faq-item{border-top:1px solid var(--rule)}
 .faq-item:last-child{border-bottom:1px solid var(--rule)}
@@ -427,6 +436,18 @@ ul{list-style:none}
         <span class="chip">Инвесторы</span>
         <span class="chip">Покупатели недвижимости</span>
         <span class="chip">Экспаты с активами за рубежом</span>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="block reveal">
+      <div class="block-head"><h2 class="block-title">Отзывы клиентов</h2></div>
+      <div class="reviews-list">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Спасибо за работу. Все по делу. Очень благодарен, продолжаем сотрудничать.</p>
+          <div class="review-meta"><span class="review-author">Evgeny</span><span class="review-date">Барселона, 2026</span></div>
+        </div>
       </div>
     </section>
 
