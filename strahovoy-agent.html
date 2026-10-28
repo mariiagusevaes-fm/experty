@@ -660,7 +660,7 @@ button{font-family:var(--sans);cursor:pointer}
     <h2 class="modal-title">Подобрать страховку</h2>
     <p class="modal-sub">Бесплатно · Ответим в течение дня</p>
     <form id="mf" action="https://formspree.io/f/mbdvdyjw" method="POST">
-      <input type="hidden" name="page" value="strahovoy-agent-category">
+      <input type="hidden" name="page" value="strahovoy-agent-category"><input type="hidden" name="_subject" value="Заявка с сайта: хочет подобрать страховку">
       <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
       <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <div class="form-field"><label>Какая страховка нужна?</label>
@@ -695,7 +695,7 @@ button{font-family:var(--sans);cursor:pointer}
     <h2 class="modal-title">Разместиться на Experty.es</h2>
     <p class="modal-sub">Страховой агент · Получите личную страницу</p>
     <form id="mf-spec" action="https://formspree.io/f/mbdvdyjw" method="POST">
-      <input type="hidden" name="page" value="strahovoy-agent-specialist">
+      <input type="hidden" name="page" value="strahovoy-agent-specialist"><input type="hidden" name="_subject" value="Заявка с сайта: хочет разместиться (Страховой агент)">
       <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Мария Иванова, страховой агент" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
       <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <div class="form-field"><label>Специализация и опыт</label><textarea name="message" placeholder="С какими страховыми компаниями работаете, специализация, опыт..."></textarea></div>

@@ -607,7 +607,7 @@ button{font-family:var(--sans);cursor:pointer}
     <h2 class="modal-title">Связаться со специалистом</h2>
     <p class="modal-sub">Расскажите о ситуации — подберём специалиста</p>
     <form id="mf" action="https://formspree.io/f/mbdvdyjw" method="POST">
-      <input type="hidden" name="page" value="gv-doula-category">
+      <input type="hidden" name="page" value="gv-doula-category"><input type="hidden" name="_subject" value="Заявка с сайта: ищут специалиста по ГВ / доулу">
       <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Александра" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
       <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <div class="form-field"><label>Что нужно?</label>
@@ -640,7 +640,7 @@ button{font-family:var(--sans);cursor:pointer}
     <h2 class="modal-title">Разместиться на Experty.es</h2>
     <p class="modal-sub">Консультант по ГВ · Доула · Личная страница</p>
     <form id="mf-spec" action="https://formspree.io/f/mbdvdyjw" method="POST">
-      <input type="hidden" name="page" value="gv-doula-specialist">
+      <input type="hidden" name="page" value="gv-doula-specialist"><input type="hidden" name="_subject" value="Заявка с сайта: хочет разместиться (ГВ / Доула)">
       <div class="form-field"><label>Имя и специализация</label><input type="text" name="name" placeholder="Анна Иванова, консультант по ГВ" required></div><div class="form-field"><label>Email <span style="font-weight:400;font-style:italic;color:var(--ink-light)">(необязательно)</span></label><input type="email" name="email" placeholder="you@email.com"></div>
       <div class="form-field"><label>Номер телефона (WhatsApp)</label><input type="tel" name="contact" inputmode="tel" placeholder="+34 600 000 000" pattern="[0-9+\s\-()]{7,20}" title="Введите номер телефона, например +34 600 000 000" required></div>
       <div class="form-field"><label>О себе</label><textarea name="message" placeholder="Специализация, сертификация, опыт, город, формат работы..."></textarea></div>
