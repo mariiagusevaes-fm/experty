@@ -435,7 +435,7 @@ ul{list-style:none}
       <div class="block-head"><h2 class="block-title">Оставить отзыв</h2></div>
       <p class="booking-lead">Работали с Максимом? Поделитесь впечатлением — это поможет другим клиентам.</p>
       <form id="review-form-el" action="https://formspree.io/f/mbdvdyjw" method="POST">
-        <input type="hidden" name="type" value="review-maksim-gusev">
+        <input type="hidden" name="type" value="review-maksim-gusev"><input type="hidden" name="_subject" value="Новый отзыв на сайте: Максим Гусев">
         <input type="hidden" name="specialist" value="Максим Гусев — финансовый консультант">
         <div style="display:flex;gap:6px;margin-bottom:14px">
           <span onclick="setStars(1)" style="font-size:26px;cursor:pointer;color:#F59E0B;opacity:.3" id="s1">★</span>
@@ -488,7 +488,7 @@ ul{list-style:none}
       <p class="booking-lead">Первая консультация — 60 минут, бесплатно. Разберём вашу ситуацию и определим с чего начать.</p>
       <form id="booking-form" action="https://formspree.io/f/mbdvdyjw" method="POST">
         <input type="hidden" name="specialist" value="Максим Гусев — финансовый консультант">
-        <input type="hidden" name="type" value="booking-maksim-gusev">
+        <input type="hidden" name="type" value="booking-maksim-gusev"><input type="hidden" name="_subject" value="Прямое обращение к специалисту: Максим Гусев">
         <div class="form-field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя" required></div><div class="form-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
         <div class="form-field"><label>Telegram или WhatsApp</label><input type="text" name="contact" placeholder="+34 / @username" required></div>
         <div class="form-field"><label>Что хотите обсудить?</label><textarea name="message" placeholder="Инвестиции, autónomo, Modelo 720, финансовый план…"></textarea></div>
