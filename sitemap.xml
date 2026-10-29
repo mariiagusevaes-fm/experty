@@ -668,6 +668,15 @@
   </url>
 
   <url>
+    <loc>https://experty.es/shkola-v-ispanii</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/shkola-v-ispanii"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/shkola-v-ispanii"/>
+  </url>
+
+  <url>
     <loc>https://experty.es/zarabotok-na-ii-v-ispanii</loc>
     <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
