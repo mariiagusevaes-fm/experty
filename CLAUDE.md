@@ -76,7 +76,8 @@ Platform contacts: WhatsApp `wa.me/34685093534`, Telegram `t.me/infoaccount1`,
     `psiholog`, `massazh`, `klining`, `trener`, `fotograf`, `logoped`, `repetitor`,
     `master-krasoty`, `gv-doula`, `yurist`, `dizayner`, `ryabova-lyudmila`,
     `cheremisina-svetlana`, `patrenina-marina`, `gribovich-zlata`, `vilkova-diana`,
-    `ardani-anna`, `lakaev-aleksandr`, `flacorus-sergey`.
+    `ardani-anna`, `lakaev-aleksandr`, `flacorus-sergey`, `gusev-maksim`,
+    `modelo-720-ispaniya`, `zarabotok-na-ii-v-ispanii`.
   - **`.html`** (still current — no redirect configured yet) — every other specialist/category
     page. These already declare a bare `<link rel="canonical">` too, but until their Cloudflare
     redirect exists, linking to the bare URL would just be linking to the unredirected duplicate,
