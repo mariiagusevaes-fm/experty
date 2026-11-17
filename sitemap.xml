@@ -184,9 +184,20 @@
 
   <url>
     <loc>https://experty.es/gusev-maksim</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/gusev-maksim"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://experty.es/gusev-maksim-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/gusev-maksim"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/gusev-maksim-es</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://experty.es/gusev-maksim-es"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/gusev-maksim"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/gusev-maksim"/>
   </url>
@@ -348,9 +359,20 @@
 
   <url>
     <loc>https://experty.es/guseva-maria</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/guseva-maria"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://experty.es/guseva-maria-es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/guseva-maria"/>
+  </url>
+
+  <url>
+    <loc>https://experty.es/guseva-maria-es</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://experty.es/guseva-maria-es"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://experty.es/guseva-maria"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://experty.es/guseva-maria"/>
   </url>
