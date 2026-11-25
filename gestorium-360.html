@@ -68,7 +68,8 @@ a{color:inherit;text-decoration:none}
 .hero-inner{max-width:640px;margin:0 auto;padding:40px 24px 36px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
 .breadcrumb{font-size:12px;color:rgba(247,245,242,0.6)}
 .breadcrumb a{color:rgba(200,169,110,0.9)}
-.hero-icon{width:84px;height:84px;border-radius:20px;background:var(--bg-alt);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:36px}
+.hero-icon{width:84px;height:84px;border-radius:20px;background:var(--bg-alt);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:36px;overflow:hidden}
+.hero-icon img{width:100%;height:100%;object-fit:cover}
 .verified{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.15);border:1px solid rgba(200,169,110,0.3);border-radius:100px;padding:4px 14px;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
 .hero-name{font-family:var(--serif);font-size:clamp(22px,5vw,36px);font-weight:400;color:var(--bg);letter-spacing:-.02em;line-height:1.1}
 .hero-role{font-size:14px;color:rgba(247,245,242,0.6);max-width:50ch;line-height:1.6}
@@ -77,6 +78,8 @@ a{color:inherit;text-decoration:none}
 .btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:10px 20px;font-size:13px;font-weight:600;display:inline-block;text-align:center}
 
 .stats-bar{background:#111;border-top:1px solid rgba(247,245,242,0.06)}
+.screen1{display:flex;flex-direction:column}
+@media(max-width:600px){.screen1{min-height:100vh;min-height:100dvh}.hero{flex:1 1 auto;display:flex;align-items:center}.stats-bar{flex:0 0 auto}}
 .stats-bar-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
 .sbar-item{padding:16px 0;text-align:center;border-right:1px solid rgba(247,245,242,0.06)}
 .sbar-item:last-child{border-right:none}
@@ -167,16 +170,17 @@ a{color:inherit;text-decoration:none}
   </div>
 </nav>
 
+<div class="screen1">
 <section class="hero">
   <div class="hero-inner">
     <p class="breadcrumb"><a href="/">Experty.es</a> › <a href="buhgalter">Бухгалтеры</a> › Gestorium 360</p>
-    <div class="hero-icon">🗂️</div>
+    <div class="hero-icon"><img src="foto-gestorium-360.jpg" width="84" height="84" alt="Gestorium 360" onerror="this.style.display='none'"></div>
     <div class="verified">⭐ Профиль подтверждён</div>
     <h1 class="hero-name">Gestorium 360</h1>
     <p class="hero-role">Русскоязычная лицензированная gestoría с коллегиальным статусом в Барселоне. Налоги и отчётность, сделки с недвижимостью, признание дипломов, визы в третьи страны, авто — команда ведёт дело до результата, онлайн по всей Испании.</p>
     <div class="hero-actions">
       <a href="https://wa.me/34695426958?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" class="btn-gold">💬 WhatsApp</a>
-      <a href="https://t.me/Gestorium360" target="_blank" class="btn-dark">✈️ Telegram</a>
+      <a href="https://gestorium360.com" target="_blank" class="btn-dark">🌐 gestorium360.com</a>
     </div>
   </div>
 </section>
@@ -188,6 +192,7 @@ a{color:inherit;text-decoration:none}
     <div class="sbar-item"><div class="sbar-num">№ 4211</div><div class="sbar-label">коллегиальный номер<br>основателя</div></div>
     <div class="sbar-item"><div class="sbar-num">BCN</div><div class="sbar-label">Барселона<br>и онлайн по Испании</div></div>
   </div>
+</div>
 </div>
 
 <div class="page">
@@ -316,7 +321,7 @@ a{color:inherit;text-decoration:none}
         <div class="contact-title">Связаться с Gestorium 360</div>
         <div class="contact-links">
           <a href="https://wa.me/34695426958?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" class="contact-link">💬 WhatsApp</a>
-          <a href="https://t.me/Gestorium360" target="_blank" class="contact-link">✈️ Telegram @Gestorium360</a>
+          <a href="https://gestorium360.com" target="_blank" class="contact-link">🌐 gestorium360.com</a>
           <a href="mailto:hola@gestorium360.com" class="contact-link">✉️ hola@gestorium360.com</a>
         </div>
         <p class="platform-note">Этот профиль размещён на Experty.es: сервисе для поиска русскоязычных специалистов в Испании.</p>

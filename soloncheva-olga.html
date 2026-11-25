@@ -78,6 +78,8 @@ a{color:inherit;text-decoration:none}
 .btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:10px 20px;font-size:13px;font-weight:600;display:inline-block;text-align:center}
 
 .stats-bar{background:#111;border-top:1px solid rgba(247,245,242,0.06)}
+.screen1{display:flex;flex-direction:column}
+@media(max-width:600px){.screen1{min-height:100vh;min-height:100dvh}.hero{flex:1 1 auto;display:flex;align-items:center}.stats-bar{flex:0 0 auto}}
 .stats-bar-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
 .sbar-item{padding:16px 0;text-align:center;border-right:1px solid rgba(247,245,242,0.06)}
 .sbar-item:last-child{border-right:none}
@@ -171,6 +173,7 @@ a{color:inherit;text-decoration:none}
   </div>
 </nav>
 
+<div class="screen1">
 <section class="hero">
   <div class="hero-inner">
     <p class="breadcrumb"><a href="/">Experty.es</a> › <a href="yurist">Юристы</a> › Ольга Солончева</p>
@@ -179,10 +182,10 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="verified">⭐ Профиль подтверждён</div>
     <h1 class="hero-name">Ольга Солончева</h1>
-    <p class="hero-role">Gestora Administrativa Colegiada · C.O.G.A.C. № 4211. Личное сопровождение ВНЖ: Digital Nomad, No Lucrativa, студенческая виза, смена статуса, Pareja de Hecho. Барселона, онлайн по всей Испании.</p>
+    <p class="hero-role">Личное сопровождение ВНЖ: Digital Nomad, No Lucrativa, студенческая виза, смена статуса, Pareja de Hecho.</p>
     <div class="hero-actions">
       <a href="https://wa.me/34695426958?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" class="btn-gold">💬 WhatsApp</a>
-      <a href="https://t.me/Gestorium360" target="_blank" class="btn-dark">✈️ Telegram</a>
+      <a href="https://gestorium360.com" target="_blank" class="btn-dark">🌐 gestorium360.com</a>
     </div>
   </div>
 </section>
@@ -194,6 +197,7 @@ a{color:inherit;text-decoration:none}
     <div class="sbar-item"><div class="sbar-num">3</div><div class="sbar-label">языка:<br>рус · esp · eng</div></div>
     <div class="sbar-item"><div class="sbar-num">BCN</div><div class="sbar-label">Барселона<br>и онлайн по Испании</div></div>
   </div>
+</div>
 </div>
 
 <div class="page">
@@ -220,7 +224,7 @@ a{color:inherit;text-decoration:none}
 
       <div class="block">
         <h2 class="block-title">О специалисте</h2>
-        <p>Лицензированный gestor administrativo (Gestora Administrativa Colegiada, C.O.G.A.C. № 4211) с практикой в Испании более 5 лет. Ключевые административные и миграционные процедуры веду лично и под персональную ответственность перед профессиональной коллегией: ВНЖ и смену статусов, Pareja de Hecho, документы для членов семьи.</p>
+        <p>Ключевые административные и миграционные процедуры веду лично и под персональную ответственность перед профессиональной коллегией: ВНЖ и смену статусов, Pareja de Hecho, документы для членов семьи.</p>
         <p>Степень магистра административного права позволяет оценивать дело комплексно — не просто как подачу документов, а с учётом правовых нюансов и рисков. Лично утверждаю готовые пакеты перед отправкой в ведомства.</p>
         <p>Если задача шире личного ВНЖ-сопровождения — налоги и отчётность, сделки с недвижимостью, омологация диплома — подключаю профильных специалистов команды <a href="gestorium-360" style="color:var(--gold);font-weight:600">Gestorium 360</a>, которая координирует весь процесс и остаётся единственной точкой входа.</p>
       </div>
@@ -315,7 +319,7 @@ a{color:inherit;text-decoration:none}
       <div class="widget-dark">
         <div class="widget-label">Профиль Experty.es</div>
         <div class="widget-checks">
-          <div class="widget-check"><span>✓</span><span>Gestora Administrativa Colegiada · № 4211</span></div>
+          <div class="widget-check"><span>✓</span><span>Членство в коллегии подтверждено</span></div>
           <div class="widget-check"><span>✓</span><span>5+ лет практики в Испании</span></div>
           <div class="widget-check"><span>📅</span><span>На платформе с 2026 года</span></div>
         </div>
@@ -325,7 +329,7 @@ a{color:inherit;text-decoration:none}
         <div class="contact-title">Связаться с Ольгой</div>
         <div class="contact-links">
           <a href="https://wa.me/34695426958?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" target="_blank" class="contact-link">💬 WhatsApp</a>
-          <a href="https://t.me/Gestorium360" target="_blank" class="contact-link">✈️ Telegram @Gestorium360</a>
+          <a href="https://gestorium360.com" target="_blank" class="contact-link">🌐 gestorium360.com</a>
           <a href="mailto:hola@gestorium360.com" class="contact-link">✉️ hola@gestorium360.com</a>
         </div>
         <p class="platform-note">Этот профиль размещён на Experty.es: сервисе для поиска русскоязычных специалистов в Испании.</p>

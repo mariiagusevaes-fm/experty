@@ -77,6 +77,8 @@ a{color:inherit;text-decoration:none}
 .btn-gold{background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:10px 20px;font-size:13px;font-weight:600;display:inline-block;text-align:center}
 
 .stats-bar{background:#111;border-top:1px solid rgba(247,245,242,0.06)}
+.screen1{display:flex;flex-direction:column}
+@media(max-width:600px){.screen1{min-height:100vh;min-height:100dvh}.hero{flex:1 1 auto;display:flex;align-items:center}.stats-bar{flex:0 0 auto}}
 .stats-bar-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
 .sbar-item{padding:16px 0;text-align:center;border-right:1px solid rgba(247,245,242,0.06)}
 .sbar-item:last-child{border-right:none}
@@ -172,6 +174,7 @@ a{color:inherit;text-decoration:none}
   </div>
 </nav>
 
+<div class="screen1">
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-photo">
@@ -194,6 +197,7 @@ a{color:inherit;text-decoration:none}
     <div class="sbar-item"><div class="sbar-num">€0</div><div class="sbar-label">первичная<br>консультация</div></div>
     <div class="sbar-item"><div class="sbar-num">BCN</div><div class="sbar-label">Барселона<br>и онлайн</div></div>
   </div>
+</div>
 </div>
 
 <div class="page">
