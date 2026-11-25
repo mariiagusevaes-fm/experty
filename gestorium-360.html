@@ -118,6 +118,10 @@ a{color:inherit;text-decoration:none}
 .price-group-label{font-size:11px;font-weight:700;color:var(--ink-light);text-transform:uppercase;letter-spacing:.08em;margin:20px 0 10px}
 .price-group-label:first-child{margin-top:0}
 
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photo-slot{aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--bg-alt);border:1px solid var(--rule)}
+.photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
+
 .faq-item{border-top:1px solid var(--rule)}
 .faq-item:last-child{border-bottom:1px solid var(--rule)}
 .faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;background:transparent;border:none;color:var(--ink);text-align:left;cursor:pointer;font-family:var(--sans)}
@@ -238,6 +242,14 @@ a{color:inherit;text-decoration:none}
         <p>Работаем онлайн с клиентами по всей Испании: видеоконсультации в Google Meet, WhatsApp, Telegram или Яндекс Телемосте, документы передаются в электронном виде. Знаем, как работают ведомства Каталонии и общеиспанские электронные платформы: какие документы запрашивают, сколько длятся процедуры и где чаще возникают дозапросы.</p>
       </div>
 
+      <div class="block" id="photo-block">
+        <h2 class="block-title">Фотографии</h2>
+        <div class="photo-grid">
+          <div class="photo-slot"><img src="foto-gestorium-360-2.jpg" width="640" height="426" alt="Офис Gestorium 360 в Барселоне" loading="lazy" onerror="this.parentNode.style.display='none';checkPhotos()"></div>
+          <div class="photo-slot"><img src="foto-gestorium-360-3.jpg" width="640" height="426" alt="Барселона — команда работает онлайн по всей Испании" loading="lazy" onerror="this.parentNode.style.display='none';checkPhotos()"></div>
+        </div>
+      </div>
+
       <div class="block">
         <h2 class="block-title">Статус и аккредитация</h2>
         <p>Gestor administrativo colegiado отвечает за поданные документы в рамках профессиональных норм коллегии, в отличие от посредника без статуса. Работа застрахована, договор и счета оформляются официально по испанскому законодательству, а подача идёт через официальные каналы: Red SARA, Mercurio, AEAT и DGT.</p>
@@ -350,6 +362,8 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script>
+function checkPhotos(){const slots=document.querySelectorAll('#photo-block .photo-slot');let hidden=0;slots.forEach(s=>{if(s.style.display==='none')hidden++;});if(hidden===slots.length)document.getElementById('photo-block').style.display='none';}
+window.addEventListener('load',checkPhotos);
 function toggleFaq(btn){const item=btn.closest('.faq-item');const open=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!open)item.classList.add('open');}
 function setStars(n){for(let i=1;i<=5;i++)document.getElementById('s'+i).style.opacity=i<=n?'1':'0.3';document.getElementById('rval').value=n;}
 setStars(5);
