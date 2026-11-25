@@ -44,6 +44,10 @@ ym(110939247,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBo
   gtag('config', 'G-YRS2ZLK92J');
 </script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G0GYE2Q6Q7');</script>
+<script>
+document.addEventListener('submit',function(e){var f=e.target;if(f&&f.tagName==='FORM'){var ti=f.querySelector('input[name="type"]');if(window.gtag)gtag('event','form_submit',{form_type:ti?ti.value:'unknown'});}});
+document.addEventListener('click',function(e){var a=e.target.closest('a[href]');if(!a)return;var href=a.getAttribute('href')||'';var type=null;if(href.indexOf('wa.me')>-1)type='whatsapp_click';else if(href.indexOf('t.me')>-1)type='telegram_click';else if(href.indexOf('tel:')===0)type='phone_click';else if(href.indexOf('mailto:')===0)type='email_click';if(type&&window.gtag)gtag('event',type,{page_path:location.pathname,link_url:href});});
+</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
