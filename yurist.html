@@ -412,7 +412,7 @@ button{font-family:var(--sans);cursor:pointer}
     <a href="/" class="nav-logo"><span class="nav-logo-text">Experty</span><span class="nav-logo-dot">.</span><span class="nav-logo-es">es</span></a>
     <a href="/" class="nav-back">← Все специалисты</a>
     <a href="/realestate/" style="font-size:13px;color:var(--ink-light);white-space:nowrap">Недвижимость</a>
-    <button class="nav-cta" onclick="openModal()">Найти юриста</button>
+    <button class="nav-cta" onclick="document.getElementById('specialists').scrollIntoView({behavior:'smooth'})">Найти юриста</button>
   </div>
 </nav>
 
@@ -536,38 +536,38 @@ button{font-family:var(--sans);cursor:pointer}
     <h2 class="sec-title">Юристы<br><em>на Experty.es</em></h2>
     <p class="sec-sub">Выберите специалиста и запишитесь напрямую. Все юристы работают как autónomo — вы платите им напрямую, без посредников.</p>
     <div class="specialists-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px">
-      <div onclick="location.href='golden-key-nikita'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
+      <div onclick="location.href='soloncheva-olga'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
         <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative;background:var(--bg-alt)">
-          <img src="foto-nikita-golden-key.jpg" width="522" height="500" alt="Никита — Golden Key" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'">
+          <img src="foto-olga-soloncheva.jpg" width="400" height="400" alt="Ольга Солончева — gestora administrativa, оформление ВНЖ в Испании" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'" loading="lazy">
           <span style="position:absolute;top:10px;left:10px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700">⭐ На платформе</span>
         </div>
         <div style="padding:18px;display:flex;flex-direction:column;flex:1">
-          <a href="golden-key-nikita" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Никита · Golden Key</a>
-          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Юрист · НИЕ, ТИЕ, документы · Costa Blanca</div>
+          <a href="soloncheva-olga" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Ольга Солончева</a>
+          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Gestora administrativa colegiada · № 4211 · Барселона</div>
           <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
-            <span>📍 Costa Blanca</span>
+            <span>📍 Барселона · онлайн</span>
           </div>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">НИЕ / ТИЕ</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Прописка</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Эл. подпись</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Digital Nomad</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">No Lucrativa</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Pareja de hecho</span></div>
           <div style="display:flex;gap:8px;margin-top:auto">
-            <a href="tel:+34641034430" onclick="event.stopPropagation()" style="flex:1;background:var(--ink);color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">📞 Позвонить</a>
-            <a href="https://wa.me/34641034430?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
+            <a href="https://wa.me/34695426958?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
           </div>
         </div>
       </div>
-      <div onclick="location.href='nevzorov-anton'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
+      <div onclick="location.href='bespalov-aleksandr'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
         <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative;background:var(--bg-alt)">
-          <img src="foto-anton-nevzorov.jpg" width="400" height="500" alt="Антон Невзоров — оформление ВНЖ Испании" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'" loading="lazy">
+          <img src="foto-aleksandr-bespalov.jpg" width="627" height="627" alt="Александр Беспалов — гражданство и ВНЖ за рубежом" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'" loading="lazy">
           <span style="position:absolute;top:10px;left:10px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700">⭐ На платформе</span>
         </div>
         <div style="padding:18px;display:flex;flex-direction:column;flex:1">
-          <a href="nevzorov-anton" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Антон Невзоров</a>
-          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Миграционный консультант · ВНЖ</div>
+          <a href="bespalov-aleksandr" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Александр Беспалов</a>
+          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Гражданство и ВНЖ за рубежом</div>
           <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
-            <span>🌍 Онлайн по всей Испании</span>
+            <span>🌍 Онлайн по всему миру</span>
           </div>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">ВНЖ под ситуацию</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Digital Nomad Visa</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Поэтапная оплата</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Гражданство</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">ВНЖ за рубежом</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Бизнес/talent-визы</span></div>
           <div style="display:flex;gap:8px;margin-top:auto">
-            <a href="https://wa.me/79260731092?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
+            <a href="https://wa.me/79214200995?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
+            <a href="https://t.me/AleksandrBespalov" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#0088cc;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">✈️ Telegram</a>
           </div>
         </div>
       </div>
@@ -588,35 +588,38 @@ button{font-family:var(--sans);cursor:pointer}
           </div>
         </div>
       </div>
-      <div onclick="location.href='bespalov-aleksandr'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
-        <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;font-size:48px">🌍</div>
-        <div style="padding:18px;display:flex;flex-direction:column;flex:1">
-          <a href="bespalov-aleksandr" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Александр Беспалов</a>
-          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Гражданство и ВНЖ за рубежом</div>
-          <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
-            <span>🌍 Онлайн по всему миру</span>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Гражданство</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">ВНЖ за рубежом</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Бизнес/talent-визы</span></div>
-          <div style="display:flex;gap:8px;margin-top:auto">
-            <a href="https://wa.me/79214200995?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
-            <a href="https://t.me/AleksandrBespalov" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#0088cc;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">✈️ Telegram</a>
-          </div>
-        </div>
-      </div>
-      <div onclick="location.href='soloncheva-olga'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
+      <div onclick="location.href='nevzorov-anton'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
         <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative;background:var(--bg-alt)">
-          <img src="foto-olga-soloncheva.jpg" width="400" height="400" alt="Ольга Солончева — gestora administrativa, оформление ВНЖ в Испании" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'" loading="lazy">
+          <img src="foto-anton-nevzorov.jpg" width="400" height="500" alt="Антон Невзоров — оформление ВНЖ Испании" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'" loading="lazy">
           <span style="position:absolute;top:10px;left:10px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700">⭐ На платформе</span>
         </div>
         <div style="padding:18px;display:flex;flex-direction:column;flex:1">
-          <a href="soloncheva-olga" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Ольга Солончева</a>
-          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Gestora administrativa colegiada · № 4211 · Барселона</div>
+          <a href="nevzorov-anton" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Антон Невзоров</a>
+          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Миграционный консультант · ВНЖ</div>
           <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
-            <span>📍 Барселона · онлайн</span>
+            <span>🌍 Онлайн по всей Испании</span>
           </div>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Digital Nomad</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">No Lucrativa</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Pareja de hecho</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">ВНЖ под ситуацию</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Digital Nomad Visa</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Поэтапная оплата</span></div>
           <div style="display:flex;gap:8px;margin-top:auto">
-            <a href="https://wa.me/34695426958?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
+            <a href="https://wa.me/79260731092?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div onclick="location.href='golden-key-nikita'" style="display:flex;flex-direction:column;background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .22s" onmouseover="this.style.borderColor='var(--gold)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(26,23,20,0.10)';this.style.transform='none'">
+        <div style="height:200px;overflow:hidden;flex-shrink:0;position:relative;background:var(--bg-alt)">
+          <img src="foto-nikita-golden-key.jpg" width="522" height="500" alt="Никита — Golden Key" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block" onerror="this.style.display='none'">
+          <span style="position:absolute;top:10px;left:10px;background:var(--gold);color:var(--ink);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:700">⭐ На платформе</span>
+        </div>
+        <div style="padding:18px;display:flex;flex-direction:column;flex:1">
+          <a href="golden-key-nikita" style="font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:3px;color:var(--ink);text-decoration:none;display:block">Никита · Golden Key</a>
+          <div style="font-size:11px;color:var(--ink-light);letter-spacing:.05em;margin-bottom:10px;text-transform:uppercase">Юрист · НИЕ, ТИЕ, документы · Costa Blanca</div>
+          <div style="display:flex;gap:10px;font-size:12px;color:var(--ink-mid);margin-bottom:10px">
+            <span>📍 Costa Blanca</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px"><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">НИЕ / ТИЕ</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Прописка</span><span style="background:var(--bg-alt);border-radius:100px;padding:3px 10px;font-size:11px;color:var(--ink-mid)">Эл. подпись</span></div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a href="tel:+34641034430" onclick="event.stopPropagation()" style="flex:1;background:var(--ink);color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">📞 Позвонить</a>
+            <a href="https://wa.me/34641034430?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%B8%D1%88%D1%83%20%D0%B2%D0%B0%D0%BC%20%D1%81%20Experty.es%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85" onclick="event.stopPropagation()" target="_blank" style="flex:1;background:#25D366;color:#fff;border-radius:6px;padding:9px 6px;font-size:11px;font-weight:600;text-align:center;text-decoration:none;display:block">💬 WhatsApp</a>
           </div>
         </div>
       </div>
