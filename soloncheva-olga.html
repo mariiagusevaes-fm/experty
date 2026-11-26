@@ -79,7 +79,8 @@ a{color:inherit;text-decoration:none}
 
 .stats-bar{background:#111;border-top:1px solid rgba(247,245,242,0.06)}
 .screen1{display:flex;flex-direction:column}
-@media(max-width:600px){.screen1{min-height:100vh;min-height:100dvh}.hero{flex:1 1 auto}.stats-bar{flex:0 0 auto}}
+.screen1-filler{display:none}
+@media(max-width:600px){.screen1{min-height:100vh;min-height:100dvh}.screen1-filler{display:block;flex:1 1 auto;background:#111}}
 .stats-bar-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
 .sbar-item{padding:16px 0;text-align:center;border-right:1px solid rgba(247,245,242,0.06)}
 .sbar-item:last-child{border-right:none}
@@ -202,6 +203,7 @@ a{color:inherit;text-decoration:none}
     <div class="sbar-item"><div class="sbar-num">BCN</div><div class="sbar-label">Барселона<br>и онлайн по Испании</div></div>
   </div>
 </div>
+<div class="screen1-filler"></div>
 </div>
 
 <div class="page">
