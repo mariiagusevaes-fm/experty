@@ -246,7 +246,7 @@ button{font-family:var(--sans);cursor:pointer}
     <a href="/" class="nav-logo"><span class="nav-logo-text">Experty</span><span class="nav-logo-dot">.</span><span class="nav-logo-es">es</span></a>
     <a href="/" class="nav-back">← Все специалисты</a>
     <a href="/realestate/" style="font-size:13px;color:var(--ink-light);white-space:nowrap">Недвижимость</a>
-    <button class="nav-cta" onclick="openModal()">Найти бухгалтера</button>
+    <button class="nav-cta" onclick="document.getElementById('specialists').scrollIntoView({behavior:'smooth'})">Найти бухгалтера</button>
   </div>
 </nav>
 
@@ -306,7 +306,7 @@ button{font-family:var(--sans);cursor:pointer}
     <p style="margin-top:20px;font-size:14px;color:var(--ink-mid)">Разбираете, что выгоднее — autónomo или SL? Статья <a href="sl-v-ispanii" style="color:var(--gold);font-weight:600">«SL в Испании»</a> — реальные расходы на открытие и ведение, налоги компании и банковский счёт для нерезидентов.</p>
   </div>
 </section>
-<section class="specialists-section">
+<section class="specialists-section" id="specialists">
   <div class="specialists-inner">
     <div class="sec-label">Специалисты платформы</div>
     <h2 class="sec-title">Бухгалтеры<br><em>на Experty.es</em></h2>
@@ -344,7 +344,7 @@ button{font-family:var(--sans);cursor:pointer}
       </div>
       <div class="sp-card">
         <div class="sp-card-photo">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;background:var(--bg-alt)">🗂️</div>
+          <img src="foto-gestorium-360.jpg" width="400" height="400" alt="Gestorium 360 — гестория в Барселоне" decoding="async" style="object-fit:cover" onerror="this.outerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;background:var(--bg-alt)\'>🗂️</div>'">
           <span class="sp-card-badge">⭐ На платформе</span>
         </div>
         <div class="sp-card-body">
